@@ -506,6 +506,11 @@
         text.innerText = "Send OTP Code";
         spinner.classList.add('hidden');
 
+        // If email failed and backend returned simulated OTP, show it to the user
+        if (data && data.otp) {
+          alert(`📬 SMTP Server not configured.\n\nSimulated OTP: ${data.otp}\n(In production, this would be sent to your email.)`);
+        }
+
         // Move to step 2
         document.getElementById('forgot-step-1').classList.add('hidden');
         document.getElementById('forgot-step-2').classList.remove('hidden');
