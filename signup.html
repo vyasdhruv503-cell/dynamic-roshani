@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | ROSHANI TECHNOLOGIES</title>
+  <link rel="stylesheet" href="./styles/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.292.0/dist/umd/lucide.min.js"></script>
+  <style>
+    .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+    .dark .glass { background: rgba(15, 23, 42, 0.55); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+    .page-hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f2444 100%); position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(56, 189, 248, 0.15) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(171, 184, 81, 0.12) 0%, transparent 55%); }
+    .orb-animate { animation: float-slow 8s ease-in-out infinite; }
+    @keyframes float-slow { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-20px) scale(1.05); } }
+  </style>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 overflow-x-hidden min-h-screen flex">
+  <!-- Top Left Back to Home Button -->
+  <div class="absolute top-6 left-6 z-50">
+    <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 border border-slate-200 dark:border-slate-800 text-slate-650 dark:text-slate-350 hover:text-brandBlue dark:hover:text-brandBlue rounded-xl transition-all shadow-sm bg-white dark:bg-slate-900 text-xs font-bold uppercase tracking-wider">
+      <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home
+    </a>
+  </div>
+  
+  <!-- Left Side: Interactive Brand Presentation Section (Visible on Large Screens) -->
+  <div class="hidden lg:flex lg:w-1/2 page-hero text-white flex-col justify-between p-16 relative z-10">
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.04]"></div>
+    
+    <!-- Top Brand Header -->
+    <a href="index.html" class="flex items-center gap-3.5 group focus:outline-none z-10">
+      <img src="https://roshaninet.netlify.app/assets/RoshaniLogo2-removebg-preview-CBNwlsGI.png" alt="Logo"
+        class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+        style="filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(56,189,248,0.4));">
+    </a>
+
+    <!-- Center Presentation Content -->
+    <div class="space-y-8 text-left z-10 max-w-lg">
+      <div class="space-y-4">
+        <span class="text-xs font-black text-brandBlue tracking-widest uppercase">India's Premier Digital Academy</span>
+        <h1 class="text-4xl xl:text-5xl font-black font-display tracking-tight text-white leading-tight">
+          Unlock Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandBlue to-brandTeal">Creative Engineering</span> Potential.
+        </h1>
+        <p class="text-slate-350 text-sm font-semibold leading-relaxed">
+          Gain access to industry-recognized CAD, BIM, and Engineering simulation courses designed to bridge the gap between academia and practical execution.
+        </p>
+      </div>
+
+      <!-- Key Academy Highlights -->
+      <div class="space-y-4">
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-brandBlue/35 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-brandBlue/10 border border-brandBlue/20 flex items-center justify-center flex-shrink-0 text-brandBlue">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="text-sm font-black text-white">40+ Years of Corporate Legacy</h4>
+            <p class="text-xs text-slate-400 font-semibold mt-0.5">Guided by industry leaders, corporate directors, and executive governance experts.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-brandTeal/35 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-brandTeal/10 border border-brandTeal/20 flex items-center justify-center flex-shrink-0 text-brandTeal">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h4 class="text-sm font-black text-white">Authorized Partner Accreditations</h4>
+            <p class="text-xs text-slate-400 font-semibold mt-0.5">Certifications recognized by top government bodies, GIDC, ISRO, and major corporations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer Meta -->
+    <div class="text-xs font-semibold text-slate-455 z-10">
+      <p>© 2026 ROSHANI TECHNOLOGIES PVT. LTD. All rights reserved.</p>
+    </div>
+  </div>
+
+  <!-- Right Side: Clean Modern Form Control Section -->
+  <div class="w-full lg:w-1/2 flex flex-col justify-between p-8 sm:p-12 transition-colors duration-300 relative bg-white dark:bg-slate-950">
+    
+    <!-- Header with Theme Toggle -->
+    <div class="flex items-center justify-between z-10 w-full mb-8">
+      <a href="index.html" class="flex lg:hidden items-center gap-2.5 group focus:outline-none">
+        <img src="https://roshaninet.netlify.app/assets/RoshaniLogo2-removebg-preview-CBNwlsGI.png" alt="Logo" class="h-10 w-auto object-contain">
+      </a>
+      <div class="lg:w-full flex justify-end">
+        <button id="theme-toggle" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brandBlue transition-all cursor-pointer shadow-sm bg-white dark:bg-slate-900" aria-label="Toggle dark mode">
+          <svg id="theme-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+          <svg id="theme-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Center Card Container (Maximum visual simplicity) -->
+    <div class="max-w-md w-full mx-auto my-auto z-10 space-y-6">
+      <div class="text-left space-y-1">
+        <h2 class="text-3xl font-black font-display tracking-tight text-slate-900 dark:text-white">Create account</h2>
+        <p class="text-sm font-semibold text-slate-500 dark:text-slate-400">Join Roshani Technologies and start your smart learning journey today.</p>
+      </div>
+
+      <!-- Main Signup Form -->
+      <form id="signup-form" class="space-y-4" onsubmit="handleSignupSubmit(event)">
+        <!-- Name Input -->
+        <div class="space-y-1.5 text-left">
+          <label for="signup-name" class="block text-[11px] font-black text-slate-500 dark:text-slate-400 tracking-wider uppercase">Full Name</label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
+              <i data-lucide="user" class="w-4 h-4"></i>
+            </span>
+            <input type="text" id="signup-name" required
+              class="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl focus:border-brandBlue focus:ring-1 focus:ring-brandBlue text-sm font-semibold outline-none transition-all dark:text-white"
+              placeholder="Rohan Patel">
+          </div>
+        </div>
+
+        <!-- Email Input -->
+        <div class="space-y-1.5 text-left">
+          <label for="signup-email" class="block text-[11px] font-black text-slate-500 dark:text-slate-400 tracking-wider uppercase">Email Address</label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </span>
+            <input type="email" id="signup-email" required
+              class="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl focus:border-brandBlue focus:ring-1 focus:ring-brandBlue text-sm font-semibold outline-none transition-all dark:text-white"
+              placeholder="rohan@example.com">
+          </div>
+        </div>
+
+        <!-- Phone Input -->
+        <div class="space-y-1.5 text-left">
+          <label for="signup-phone" class="block text-[11px] font-black text-slate-500 dark:text-slate-400 tracking-wider uppercase">Mobile Number</label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </span>
+            <input type="tel" id="signup-phone" required
+              class="w-full pl-10 pr-4 py-3 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl focus:border-brandBlue focus:ring-1 focus:ring-brandBlue text-sm font-semibold outline-none transition-all dark:text-white"
+              placeholder="+91 98765 43210">
+          </div>
+        </div>
+
+        <!-- Password Input -->
+        <div class="space-y-1.5 text-left">
+          <label for="signup-password" class="block text-[11px] font-black text-slate-500 dark:text-slate-400 tracking-wider uppercase">Password</label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
+              <i data-lucide="lock" class="w-4 h-4"></i>
+            </span>
+            <input type="password" id="signup-password" required
+              class="w-full pl-10 pr-10 py-3 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl focus:border-brandBlue focus:ring-1 focus:ring-brandBlue text-sm font-semibold outline-none transition-all dark:text-white"
+              placeholder="••••••••">
+            <button type="button" onclick="togglePasswordVisibility('signup-password', 'password-eye-1')" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-650 focus:outline-none">
+              <i id="password-eye-1" data-lucide="eye" class="w-4.5 h-4.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Confirm Password Input -->
+        <div class="space-y-1.5 text-left">
+          <label for="signup-confirm-password" class="block text-[11px] font-black text-slate-500 dark:text-slate-400 tracking-wider uppercase">Confirm Password</label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400">
+              <i data-lucide="lock" class="w-4 h-4"></i>
+            </span>
+            <input type="password" id="signup-confirm-password" required
+              class="w-full pl-10 pr-10 py-3 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-xl focus:border-brandBlue focus:ring-1 focus:ring-brandBlue text-sm font-semibold outline-none transition-all dark:text-white"
+              placeholder="••••••••">
+            <button type="button" onclick="togglePasswordVisibility('signup-confirm-password', 'password-eye-2')" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-650 focus:outline-none">
+              <i id="password-eye-2" data-lucide="eye" class="w-4.5 h-4.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Terms Agreement Checkbox -->
+        <div class="flex items-center text-left">
+          <input type="checkbox" id="terms-agree" required class="w-4 h-4 text-brandBlue border-slate-200 dark:border-slate-800 rounded focus:ring-brandBlue bg-slate-50 dark:bg-slate-900 cursor-pointer">
+          <label for="terms-agree" class="ml-2 text-xs font-semibold text-slate-600 dark:text-slate-350 cursor-pointer select-none">I agree to the <a href="terms.html" target="_blank" class="text-brandBlue hover:underline">Terms of Service</a> & <a href="privacy.html" target="_blank" class="text-brandBlue hover:underline">Privacy Policy</a></label>
+        </div>
+
+        <!-- Error Container -->
+        <div id="signup-error-msg" class="text-red-500 text-xs font-bold hidden text-left bg-red-500/10 border border-red-500/20 p-3 rounded-xl select-none">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submit-btn"
+          class="w-full py-3.5 bg-brandBlue hover:bg-brandBlue/90 text-white font-extrabold uppercase text-xs tracking-widest rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer mt-2 relative overflow-hidden">
+          <span id="btn-text">Create Account</span>
+          <span id="btn-spinner" class="hidden animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent"></span>
+        </button>
+      </form>
+
+      <!-- Social Logins Divider -->
+      <div class="relative my-4">
+        <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-200 dark:border-slate-800/80"></div></div>
+        <div class="relative flex justify-center text-xs font-bold uppercase"><span class="bg-white dark:bg-slate-950 px-3 text-slate-400">Or Access With</span></div>
+      </div>
+
+      <!-- Official Google Sign-In Button (Real Account Login) -->
+      <div class="flex justify-center py-1 select-none">
+        <div id="g_id_onload"
+             data-client_id="1042607308929-j7t1vtj1nefeo7keucvff0p7568a92ji.apps.googleusercontent.com"
+             data-callback="handleCredentialResponse"
+             data-auto_prompt="false">
+        </div>
+        <div class="g_id_signin"
+             data-type="standard"
+             data-size="large"
+             data-theme="outline"
+             data-text="continue_with"
+             data-shape="rectangular"
+             data-logo_alignment="left"
+             data-width="320">
+        </div>
+      </div>
+
+      <!-- Form Switcher Links -->
+      <div class="mt-6 text-center">
+        <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">Already have an account? <a href="login.html" class="text-brandBlue hover:underline font-bold">Sign In Here</a></p>
+      </div>
+    </div>
+
+    <!-- Small Footer at Bottom -->
+    <div class="text-center text-xs font-semibold text-slate-400 mt-8">
+      <p class="lg:hidden">© 2026 ROSHANI TECHNOLOGIES PVT. LTD. All rights reserved.</p>
+    </div>
+  </div>
+
+  <!-- Success Notification Box Overlay (Hidden by default) -->
+  <div id="success-notification" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-md hidden transition-opacity duration-300">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl space-y-5">
+      <div class="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-950 border border-emerald-300/40 dark:border-emerald-800 flex items-center justify-center text-emerald-500 mx-auto">
+        <i data-lucide="check-circle" class="w-8 h-8"></i>
+      </div>
+      <div>
+        <h3 class="text-xl font-black text-slate-900 dark:text-white">Registration Successful!</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-2">Your learning account has been set up successfully. Logging you in now...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MOCK GOOGLE OAUTH MODAL ================= -->
+  <div id="google-oauth-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md transition-opacity duration-300">
+    <div id="google-oauth-content" class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl max-w-sm w-full overflow-hidden transform scale-95 opacity-0 transition-all duration-300 p-6 text-center space-y-5 relative">
+      <!-- Google Logo -->
+      <div class="flex justify-center">
+        <svg class="w-10 h-10" viewBox="0 0 24 24">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l3.66-2.85z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+        </svg>
+      </div>
+
+      <div class="space-y-1">
+        <h3 class="text-lg font-black text-slate-900 dark:text-white">Sign in with Google</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider">Choose an account to continue to Roshani Academy</p>
+      </div>
+
+      <!-- Account Selection List -->
+      <div class="space-y-2.5 text-left">
+        <!-- Account 1 -->
+        <button onclick="selectGoogleAccount('Rohan Patel', 'rohan.patel@gmail.com')" class="w-full flex items-center gap-3 p-3 border border-slate-200 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors cursor-pointer bg-white dark:bg-slate-900">
+          <div class="w-9 h-9 rounded-full bg-brandBlue text-white font-extrabold flex items-center justify-center text-sm shadow-sm">
+            RP
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xs font-black text-slate-900 dark:text-white">Rohan Patel</span>
+            <span class="text-[10px] text-slate-450 dark:text-slate-400 font-semibold">rohan.patel@gmail.com</span>
+          </div>
+        </button>
+
+        <!-- Account 2 -->
+        <button onclick="selectGoogleAccount('Ujala Shah', 'ujala.shah99@gmail.com')" class="w-full flex items-center gap-3 p-3 border border-slate-200 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors cursor-pointer bg-white dark:bg-slate-900">
+          <div class="w-9 h-9 rounded-full bg-brandTeal text-white font-extrabold flex items-center justify-center text-sm shadow-sm">
+            US
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xs font-black text-slate-900 dark:text-white">Ujala Shah</span>
+            <span class="text-[10px] text-slate-450 dark:text-slate-400 font-semibold">ujala.shah99@gmail.com</span>
+          </div>
+        </button>
+
+        <!-- Use another account -->
+        <button onclick="alert('Manual Google Sign-In redirecting...')" class="w-full flex items-center gap-3 p-3 border border-dashed border-slate-300 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors cursor-pointer bg-white dark:bg-slate-900">
+          <div class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 flex items-center justify-center">
+            <i data-lucide="plus" class="w-4.5 h-4.5"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xs font-black text-slate-900 dark:text-white">Use another account</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Loading overlay (Hidden initially) -->
+      <div id="oauth-loading" class="absolute inset-0 bg-white dark:bg-slate-900 flex flex-col justify-center items-center p-6 space-y-4 hidden">
+        <span class="animate-spin rounded-full h-8 w-8 border-3 border-brandBlue border-t-transparent"></span>
+        <div class="space-y-1">
+          <p class="text-sm font-black text-slate-900 dark:text-white">Signing you in...</p>
+          <p id="oauth-loading-desc" class="text-xs text-slate-400 font-semibold">Connecting securely with Google accounts</p>
+        </div>
+      </div>
+
+      <!-- Cancel link -->
+      <div class="pt-1">
+        <button onclick="closeGoogleOAuth()" class="text-xs font-bold text-slate-450 hover:text-slate-650 dark:hover:text-white transition-colors cursor-pointer focus:outline-none">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Real Google Sign-In callback
+    window.handleCredentialResponse = function(response) {
+      try {
+        const credential = response.credential;
+        // Decode JWT payload (base64url decoding)
+        const base64Url = credential.split('.')[1];
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+        
+        const payload = JSON.parse(jsonPayload);
+        console.log("Logged Google User:", payload);
+
+        // Store user state locally
+        const sessionUser = {
+          name: payload.name,
+          email: payload.email,
+          picture: payload.picture,
+          date: new Date().toISOString(),
+          type: "Google Sign In (Signup)"
+        };
+        localStorage.setItem('rtpl_user_session', JSON.stringify(sessionUser));
+
+        // Save to IndexedDB database asynchronously
+        RTPL_DB.saveUser(sessionUser).then(() => {
+          // Update Success notification with real profile details
+          const successBox = document.getElementById('success-notification');
+          const successImgContainer = successBox.querySelector('.w-16');
+          const successTitle = successBox.querySelector('h3');
+          const successDesc = successBox.querySelector('p');
+
+          if (payload.picture) {
+            successImgContainer.innerHTML = `<img src="${payload.picture}" class="w-full h-full rounded-full object-cover border-2 border-emerald-500 shadow-md">`;
+          }
+          successTitle.innerText = "Welcome!";
+          successDesc.innerText = `Successfully signed in as ${payload.name} (${payload.email}). Redirecting...`;
+          
+          successBox.classList.remove('hidden');
+          setTimeout(() => {
+            window.location.href = 'index.html';
+          }, 2500);
+        }).catch(err => {
+          console.error("DB Save Error:", err);
+          window.location.href = 'index.html';
+        });
+      } catch (err) {
+        console.error("JWT Decode Error:", err);
+        alert("Google Authentication succeeded, but could not decode profile details.");
+      }
+    }
+    lucide.createIcons();
+
+    // Dark Mode Controller
+    const htmlEl = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeSun = document.getElementById('theme-sun');
+    const themeMoon = document.getElementById('theme-moon');
+
+    function applyTheme(dark) {
+      dark ? htmlEl.classList.add('dark') : htmlEl.classList.remove('dark');
+      themeSun.classList.toggle('hidden', !dark);
+      themeMoon.classList.toggle('hidden', dark);
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+    const savedTheme = localStorage.getItem('theme');
+    applyTheme(savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+    themeToggle.addEventListener('click', () => applyTheme(!htmlEl.classList.contains('dark')));
+
+    // Toggle Password Visibility
+    function togglePasswordVisibility(inputId, eyeId) {
+      const pInput = document.getElementById(inputId);
+      const eyeIcon = document.getElementById(eyeId);
+      if (pInput.type === 'password') {
+        pInput.type = 'text';
+        eyeIcon.setAttribute('data-lucide', 'eye-off');
+      } else {
+        pInput.type = 'password';
+        eyeIcon.setAttribute('data-lucide', 'eye');
+      }
+      lucide.createIcons();
+    }
+
+    // Handle Form Submit (Client Side Demo)
+    function handleSignupSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('signup-name').value.trim();
+      const email = document.getElementById('signup-email').value.trim();
+      const phone = document.getElementById('signup-phone').value.trim();
+      const pass = document.getElementById('signup-password').value.trim();
+      const confirmPass = document.getElementById('signup-confirm-password').value.trim();
+      const errorEl = document.getElementById('signup-error-msg');
+      const submitBtn = document.getElementById('submit-btn');
+      const btnText = document.getElementById('btn-text');
+      const btnSpinner = document.getElementById('btn-spinner');
+
+      // Validation
+      if (pass !== confirmPass) {
+        errorEl.innerText = 'Passwords do not match.';
+        errorEl.classList.remove('hidden');
+        return;
+      }
+      if (pass.length < 6) {
+        errorEl.innerText = 'Password must be at least 6 characters long.';
+        errorEl.classList.remove('hidden');
+        return;
+      }
+      errorEl.classList.add('hidden');
+
+      // Animate Loading State
+      submitBtn.disabled = true;
+      btnText.innerText = 'Creating account...';
+      btnSpinner.classList.remove('hidden');
+
+      // Call secure registration API endpoint
+      RTPL_DB.register(name, email, pass, phone).then(() => {
+        // Automatically log user in locally
+        const sessionUser = {
+          name: name,
+          email: email,
+          picture: null,
+          date: new Date().toISOString(),
+          type: "Standard Registration Form"
+        };
+        localStorage.setItem('rtpl_user_session', JSON.stringify(sessionUser));
+
+        // Show Success Dialog
+        const successBox = document.getElementById('success-notification');
+        successBox.classList.remove('hidden');
+        
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 1800);
+      }).catch(err => {
+        // Reset loading status
+        submitBtn.disabled = false;
+        btnText.innerText = 'Sign Up';
+        btnSpinner.classList.add('hidden');
+
+        errorEl.innerText = err.message || 'Registration failed.';
+        errorEl.classList.remove('hidden');
+      });
+    }
+
+        // Google OAuth Gateway Demo
+    const oauthModal = document.getElementById('google-oauth-modal');
+    const oauthContent = document.getElementById('google-oauth-content');
+    const oauthLoading = document.getElementById('oauth-loading');
+
+    window.openGoogleOAuth = function() {
+      oauthModal.classList.remove('hidden');
+      setTimeout(() => {
+        oauthContent.classList.remove('scale-95', 'opacity-0');
+        oauthContent.classList.add('scale-100', 'opacity-100');
+        lucide.createIcons();
+      }, 50);
+    }
+
+    window.closeGoogleOAuth = function() {
+      oauthContent.classList.remove('scale-100', 'opacity-100');
+      oauthContent.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        oauthModal.classList.add('hidden');
+        oauthLoading.classList.add('hidden');
+      }, 300);
+    }
+
+    window.selectGoogleAccount = function(name, email) {
+      document.getElementById('oauth-loading-desc').innerText = `Signing in as ${name}`;
+      oauthLoading.classList.remove('hidden');
+      setTimeout(() => {
+        // Show success animation redirect
+        window.location.href = 'index.html';
+      }, 1500);
+    }
+
+    // Handle Social Logins Alert Demo
+    function handleSocialLogin(platform) {
+      alert(`Connecting to ${platform} registration gateway...`);
+    }
+  </script>
+  <script src="./assets/js/db.js"></script>
+</body>
+</html>

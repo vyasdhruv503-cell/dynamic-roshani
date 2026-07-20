@@ -1,0 +1,7 @@
+{
+  "css.lint.unknownVendorSpecificProperties": "ignore",
+  "css.lint.unknownAtRules": "ignore",
+  "files.associations": {
+    "**/styles/output.css": "plaintext"
+  }
+}

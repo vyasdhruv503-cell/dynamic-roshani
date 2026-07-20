@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | ROSHANI TECHNOLOGIES PVT. LTD.</title>
+  <meta name="description" content="Discover why Roshani Technologies is India's premier CAD and BIM training institute.">
+  <link rel="stylesheet" href="./styles/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.292.0/dist/umd/lucide.min.js"></script>
+  <style>
+    .reveal{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1);}
+    .reveal.active{opacity:1;transform:translateY(0);}
+    ::-webkit-scrollbar{width:8px;height:8px;}
+    ::-webkit-scrollbar-track{background:#F1F5F9;}
+    .dark ::-webkit-scrollbar-track{background:#0F172A;}
+    ::-webkit-scrollbar-thumb{background:#CBD5E1;border-radius:4px;}
+    .dark ::-webkit-scrollbar-thumb{background:#334155;}
+    ::-webkit-scrollbar-thumb:hover{background:#94A3B8;}
+    .glass-light{background:rgba(255,255,255,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
+    .glass-dark{background:rgba(15,23,42,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
+    .page-hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 50%,#0f2444 100%);position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(56,189,248,0.12) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(171,184,81,0.10) 0%,transparent 55%);}
+    @keyframes float-slow{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-20px) scale(1.05);}}
+    .orb-animate{animation:float-slow 6s ease-in-out infinite;}
+    .prop-card:hover{box-shadow:0 0 40px rgba(56,189,248,0.12),0 20px 60px rgba(0,0,0,0.3);}
+  </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 overflow-x-hidden">
+
+<!-- NAVBAR -->
+<header id="main-navigation" class="sticky top-0 z-50 transition-all duration-300 border-b border-slate-200/80 dark:border-slate-800/80 glass-light dark:glass-dark shadow-sm">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+        <img src="https://roshaninet.netlify.app/assets/RoshaniLogo2-removebg-preview-CBNwlsGI.png" alt="Roshani Technologies Logo" class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+      </a>
+      <nav class="hidden lg:flex items-center gap-7">
+        <a href="index.html" class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Home</a>
+        <a href="about-us.html" class="text-sm font-semibold tracking-wide text-brandBlue border-b-2 border-brandBlue pb-0.5">About Us</a>
+        <a href="all-courses.html" class="inline-flex items-center justify-center px-4 py-1.5 border border-rose-600 text-rose-600 hover:bg-rose-600 hover:text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all hover:shadow-[0_0_15px_rgba(225,29,72,0.65)]">All Courses</a>
+        <a href="leadership.html" class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Leadership</a>
+        <a href="partners.html" class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Partners</a>
+        <a href="contact.html" class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Contact</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <button id="theme-toggle" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brandBlue transition-all cursor-pointer" aria-label="Toggle dark mode">
+          <svg id="theme-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+          <svg id="theme-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <!-- Sign In / Sign Up (Desktop) -->
+          <div id="desktop-auth-buttons" class="hidden sm:flex items-center gap-3">
+            <a href="login.html"
+              class="inline-flex items-center justify-center px-4 py-2.5 border border-slate-200 dark:border-slate-855 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold text-xs uppercase tracking-wider rounded-xl transition-all">
+              Sign In
+            </a>
+            <a href="signup.html"
+              class="inline-flex items-center justify-center px-4 py-2.5 bg-brandBlue hover:bg-brandBlue/90 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm hover:shadow hover:-translate-y-0.5">
+              Sign Up
+            </a>
+          </div>
+        <button id="mobile-menu-toggle" class="p-2.5 lg:hidden rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer" aria-label="Toggle Navigation Menu">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+    <div class="px-4 pt-4 pb-6 space-y-2">
+      <a href="index.html" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Home</a>
+      <a href="about-us.html" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium bg-brandBlue/10 text-brandBlue font-bold">About Us</a>
+      <a href="all-courses.html" class="mobile-nav-link block px-4 py-2.5 border border-rose-600 text-rose-600 hover:bg-rose-600 hover:text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all hover:shadow-[0_0_15px_rgba(225,29,72,0.65)]">All Courses</a>
+      <a href="leadership.html" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Leadership Team</a>
+      <a href="contact.html" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Contact Us</a>
+      <div id="mobile-auth-buttons" class="pt-4 border-t border-slate-100 dark:border-slate-800 grid grid-cols-2 gap-3">
+          <a href="login.html"
+            class="w-full text-center inline-flex items-center justify-center px-4 py-3 border border-slate-200/80 dark:border-slate-800/80 text-slate-700 dark:text-slate-300 font-bold text-xs uppercase tracking-wider rounded-xl transition-all hover:bg-slate-100 dark:hover:bg-slate-800">
+            Sign In
+          </a>
+          <a href="signup.html"
+            class="w-full text-center inline-flex items-center justify-center px-4 py-3 bg-brandBlue text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm">
+            Sign Up
+          </a>
+        </div>
+        <!-- Mobile Theme Toggle -->
+        <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between px-4">
+          <span class="text-sm font-bold text-slate-600 dark:text-slate-350">Theme Mode</span>
+          <button id="mobile-theme-toggle" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brandBlue transition-all cursor-pointer bg-slate-50 dark:bg-slate-900" aria-label="Toggle dark mode">
+            <svg id="mobile-theme-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+            </svg>
+            <svg id="mobile-theme-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+        </div>
+    </div>
+  </div>
+</header>
+
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 -mb-12 relative z-10">
+  <a href="index.html" class="inline-flex items-center gap-2 text-xs font-black text-brandBlue uppercase tracking-widest hover:text-brandBlue/80 transition-colors">
+    <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to Home
+  </a>
+</div>
+
+  <!-- ================= WHO WE ARE (ABOUT US) SECTION ================= -->
+  <section data-aos="fade-up" id="who-we-are" class="py-20 bg-white dark:bg-slate-950 transition-colors duration-300">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left details column -->
+        <div class="lg:col-span-7 space-y-6 reveal">
+          <span class="text-xs sm:text-sm font-black text-brandBlue tracking-widest uppercase">Who We Are</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-display tracking-tight text-slate-900 dark:text-white leading-tight">
+            Pioneering Technical Solutions Since 1988
+          </h2>
+          <p class="text-sm sm:text-base text-slate-650 dark:text-slate-350 leading-relaxed font-semibold">
+            Roshani Technologies, founded in 1988 by Mr. Dipak Shah, stands as a leading provider of comprehensive consulting and training solutions. We specialize in areas such as engineering, procurement, construction project management, business process, Architecture development, product development, designing, Government sector, manufacturing sector, graphic design, and the entertainment sector.
+          </p>
+          <p class="text-sm text-slate-500 dark:text-slate-450 leading-relaxed">
+            Our commitment extends to enhancing productivity and streamlining processes for Design, analysis, and manufacturing through the effective implementation of IT systems. Over the years, we’ve been instrumental in catalyzing positive transformations for numerous businesses.
+          </p>
+          <p class="text-sm text-slate-500 dark:text-slate-450 leading-relaxed">
+            With a strong reputation, Roshani Technologies is the preferred partner for many, offering not just technical expertise but also financial and operational competitiveness. We remain dedicated to driving innovation and excellence in every facet of our service.
+          </p>
+        </div>
+
+        <!-- Right Visual highlights column -->
+        <div class="lg:col-span-5 space-y-6 reveal">
+          <div class="p-8 bg-slate-900 text-white border border-white/10 rounded-3xl relative overflow-hidden shadow-xl">
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-brandBlue/20 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="relative z-10 space-y-4">
+              <span class="text-xs font-black text-brandBlue tracking-widest uppercase">Presence</span>
+              <h3 class="text-2xl font-black font-display">Widest Reach In India</h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
+                Our infrastructure and distribution systems cover a nationwide academic and reseller network, delivering authentic Autodesk tools and custom corporate solutions to every corner of India.
+              </p>
+              
+              <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
+                <div>
+                  <div class="text-2xl font-black text-white">PAN India</div>
+                  <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">Reach & Network</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-black text-brandGreen">25,000+</div>
+                  <div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mt-0.5">Engineers Placed</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- ================= OUR UNIQUE PROPOSITION (WHY CHOOSE US) ================= -->
+  <section data-aos="fade-up" id="proposition" class="py-20 sm:py-28 bg-slate-900 text-white relative overflow-hidden">
+    <div class="absolute -top-48 -right-48 w-96 h-96 bg-brandBlue/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-48 -left-48 w-[400px] h-[400px] bg-yellow-400/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="mb-16 text-center reveal">
+        <span class="text-xs sm:text-sm font-black text-brandBlue tracking-widest uppercase">Why Choose Us</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-display tracking-tight text-white mt-2">Our Unique Proposition</h2>
+        <p class="mt-4 text-slate-400 font-medium max-w-xl mx-auto text-sm sm:text-base">Five pillars that set Roshani Technologies apart from every other training institute in India.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 items-stretch">
+        <!-- Card 1 -->
+        <div class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[280px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-white/[0.07] hover:border-cyan-500/30 cursor-default relative overflow-hidden">
+          <div class="absolute top-1 left-2 text-white/[0.07] font-serif text-8xl select-none leading-none pointer-events-none">"
+          </div>
+          <div class="w-11 h-11 rounded-2xl bg-brandBlue/15 border border-brandBlue/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="users" class="w-5 h-5 text-brandBlue"></i>
+          </div>
+          <div class="relative z-10"><h3 class="text-lg sm:text-xl font-black text-white tracking-tight leading-snug uppercase">Highly Experienced Faculty</h3></div>
+          <div class="mt-6 pt-4 border-t border-white/10">
+            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-1.5">Industry Experts</span>
+            <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">Learn from professionals with real-world corporate experience. Our mentors have worked on live government and infrastructure projects.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[280px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-white/[0.07] hover:border-cyan-500/30 cursor-default relative overflow-hidden">
+          <div class="absolute top-1 left-2 text-white/[0.07] font-serif text-8xl select-none leading-none pointer-events-none">"
+          </div>
+          <div class="w-11 h-11 rounded-2xl bg-cyan-500/15 border border-cyan-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="user-check" class="w-5 h-5 text-cyan-400"></i>
+          </div>
+          <div class="relative z-10"><h3 class="text-lg sm:text-xl font-black text-white tracking-tight leading-snug uppercase">Personalized Learning</h3></div>
+          <div class="mt-6 pt-4 border-t border-white/10">
+            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-1.5">No Batch System</span>
+            <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">One-to-one attention and flexible timings for every learner. You learn at your speed, on your schedule, with dedicated mentoring.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[280px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-white/[0.07] hover:border-cyan-500/30 cursor-default relative overflow-hidden">
+          <div class="absolute top-1 left-2 text-white/[0.07] font-serif text-8xl select-none leading-none pointer-events-none">"
+          </div>
+          <div class="w-11 h-11 rounded-2xl bg-yellow-400/15 border border-yellow-400/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="briefcase" class="w-5 h-5 text-yellow-400"></i>
+          </div>
+          <div class="relative z-10"><h3 class="text-lg sm:text-xl font-black text-white tracking-tight leading-snug uppercase">100% Placement</h3></div>
+          <div class="mt-6 pt-4 border-t border-white/10">
+            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-1.5">Career Focused</span>
+            <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">Active job placement assistance, resume prep, and interview coaching. 25,000+ engineers placed across India and abroad.</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[280px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-white/[0.07] hover:border-cyan-500/30 cursor-default relative overflow-hidden">
+          <div class="absolute top-1 left-2 text-white/[0.07] font-serif text-8xl select-none leading-none pointer-events-none">"
+          </div>
+          <div class="w-11 h-11 rounded-2xl bg-violet-500/15 border border-violet-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="refresh-cw" class="w-5 h-5 text-violet-400"></i>
+          </div>
+          <div class="relative z-10"><h3 class="text-lg sm:text-xl font-black text-white tracking-tight leading-snug uppercase">Learn Until Satisfaction</h3></div>
+          <div class="mt-6 pt-4 border-t border-white/10">
+            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-1.5">Master Every Topic</span>
+            <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">Study at your own pace until every concept is crystal clear. We never rush — your mastery is our measure of success.</p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[280px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-white/[0.07] hover:border-cyan-500/30 cursor-default relative overflow-hidden">
+          <div class="absolute top-1 left-2 text-white/[0.07] font-serif text-8xl select-none leading-none pointer-events-none">"
+          </div>
+          <div class="w-11 h-11 rounded-2xl bg-orange-500/15 border border-orange-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="book-open" class="w-5 h-5 text-orange-400"></i>
+          </div>
+          <div class="relative z-10"><h3 class="text-lg sm:text-xl font-black text-white tracking-tight leading-snug uppercase">Expert Curriculum</h3></div>
+          <div class="mt-6 pt-4 border-t border-white/10">
+            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-1.5">Industry Ready</span>
+            <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">Syllabus designed by professionals to align with job demands. Updated regularly with the latest software versions and industry standards.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Highlights row -->
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5 reveal">
+        <div class="flex items-center gap-4 bg-white/[0.04] border border-white/10 rounded-2xl px-5 py-4 hover:border-brandBlue/30 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-brandBlue/15 border border-brandBlue/20 flex items-center justify-center flex-shrink-0"><i data-lucide="map-pin" class="w-4 h-4 text-brandBlue"></i></div>
+          <div><div class="text-sm font-black text-white">PAN India Distributor</div><div class="text-[11px] text-slate-400 font-medium mt-0.5">Authorized Autodesk reseller across the nation</div></div>
+        </div>
+        <div class="flex items-center gap-4 bg-white/[0.04] border border-white/10 rounded-2xl px-5 py-4 hover:border-brandBlue/30 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-yellow-400/15 border border-yellow-400/20 flex items-center justify-center flex-shrink-0"><i data-lucide="award" class="w-4 h-4 text-yellow-400"></i></div>
+          <div><div class="text-sm font-black text-white">11 Govt. Accreditations</div><div class="text-[11px] text-slate-400 font-medium mt-0.5">ISRO, Indian Railways, Govt of India &amp; more</div></div>
+        </div>
+        <div class="flex items-center gap-4 bg-white/[0.04] border border-white/10 rounded-2xl px-5 py-4 hover:border-brandBlue/30 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-500/20 flex items-center justify-center flex-shrink-0"><i data-lucide="graduation-cap" class="w-4 h-4 text-cyan-400"></i></div>
+          <div><div class="text-sm font-black text-white">8 University Partners</div><div class="text-[11px] text-slate-400 font-medium mt-0.5">Parul, Ganpat, Indus, Adani University &amp; more</div></div>
+        </div>
+      </div>
+      <!-- Detailed Comparison Section -->
+      <div class="mt-24 max-w-4xl mx-auto reveal">
+        <div class="mb-10 text-center">
+          <span class="text-xs font-black text-brandBlue tracking-widest uppercase">The Roshani Advantage</span>
+          <h3 class="text-2xl sm:text-3xl font-black font-display text-white mt-1">Comparison Checklist</h3>
+        </div>
+
+        <div class="overflow-hidden border border-white/10 rounded-3xl bg-white/[0.02] backdrop-blur-md shadow-xl">
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse text-left text-xs sm:text-sm min-w-[500px]">
+              <thead>
+                <tr class="border-b border-white/10 bg-white/[0.04]">
+                  <th class="p-4 sm:p-5 font-black text-white uppercase tracking-wider">Feature / Parameter</th>
+                  <th class="p-4 sm:p-5 font-black text-brandBlue uppercase tracking-wider">Roshani Technologies</th>
+                  <th class="p-4 sm:p-5 font-black text-slate-400 uppercase tracking-wider">Other Institutes</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/5 font-semibold text-slate-350">
+                <tr>
+                  <td class="p-4 sm:p-5 text-white font-black">Authorized Certification</td>
+                  <td class="p-4 sm:p-5 text-brandGreen flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 flex-shrink-0"></i>
+                    Autodesk Reseller Partner
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-500">Uncertified local certificates</td>
+                </tr>
+                <tr>
+                  <td class="p-4 sm:p-5 text-white font-black">Teaching Model</td>
+                  <td class="p-4 sm:p-5 text-brandGreen flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 flex-shrink-0"></i>
+                    1-on-1 Personalized Mentoring
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-500">Rigid batch system (speed rushed)</td>
+                </tr>
+                <tr>
+                  <td class="p-4 sm:p-5 text-white font-black">Course Timings</td>
+                  <td class="p-4 sm:p-5 text-brandGreen flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 flex-shrink-0"></i>
+                    Fully Flexible (Schedule anytime)
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-500">Fixed timings (missed classes lost)</td>
+                </tr>
+                <tr>
+                  <td class="p-4 sm:p-5 text-white font-black">Mentors' Experience</td>
+                  <td class="p-4 sm:p-5 text-brandGreen flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 flex-shrink-0"></i>
+                    15+ Years corporate engineers
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-500">Junior trainers / Fresh graduates</td>
+                </tr>
+                <tr>
+                  <td class="p-4 sm:p-5 text-white font-black">Placement Guarantee</td>
+                  <td class="p-4 sm:p-5 text-brandGreen flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 flex-shrink-0"></i>
+                    Active corporate tie-ups
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-500">No placements or generic job links</td>
+                </tr>
+                <tr>
+                  <td class="p-4 sm:p-5 text-white font-black">Learning Satisfaction</td>
+                  <td class="p-4 sm:p-5 text-brandGreen flex items-center gap-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 flex-shrink-0"></i>
+                    Learn until completely satisfied
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-500">Course finishes on calendar date</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+<!-- FOOTER -->
+<footer id="platform-footer" class="bg-slate-900 text-slate-400 border-t border-white/5 py-16 text-xs sm:text-sm">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start text-left mb-12">
+      <div class="md:col-span-4 space-y-6">
+        <div class="flex items-center gap-3">
+          <img src="https://roshaninet.netlify.app/assets/RoshaniLogo2-removebg-preview-CBNwlsGI.png" alt="Roshani Technologies Logo" class="h-10 w-auto object-contain brightness-0 invert" style="filter: brightness(0) invert(1);">
+        </div>
+        <p class="leading-relaxed font-semibold text-slate-400 max-w-sm">Follow our official media outlets for corporate compliance announcements, educational roadmaps, and technological updates.</p>
+        <div class="flex gap-3 pt-2">
+          <a href="https://www.instagram.com/roshanitechnologiespvt.ltd" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full border border-slate-800 hover:border-brandBlue hover:text-brandBlue text-slate-400 flex items-center justify-center transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="https://www.facebook.com/RoshaniComputerServices" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full border border-slate-800 hover:border-brandBlue hover:text-brandBlue text-slate-400 flex items-center justify-center transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          <a href="https://wa.me/919408788205" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full border border-slate-800 hover:border-brandGreen hover:text-brandGreen text-slate-400 flex items-center justify-center transition-colors"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
+          <a href="https://www.youtube.com/@ROSHNICOMPUTERSERVICES" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full border border-slate-800 hover:border-red-600 hover:text-red-600 text-slate-400 flex items-center justify-center transition-colors"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+          <a href="https://in.linkedin.com/company/roshanitechnologiespvtltd" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full border border-slate-800 hover:border-blue-500 hover:text-blue-500 text-slate-400 flex items-center justify-center transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+      <div class="md:col-span-2 space-y-4">
+        <h4 class="text-sm font-black text-white uppercase tracking-wider">Quick Links</h4>
+        <ul class="space-y-2.5 font-bold">
+          <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+          <li><a href="about-us.html" class="hover:text-white transition-colors">About Us</a></li>
+          <li><a href="all-courses.html" class="hover:text-white transition-colors">All Courses</a></li>
+          <li><a href="leadership.html" class="hover:text-white transition-colors">Leadership</a></li>
+          <li><a href="partners.html" class="hover:text-white transition-colors">Our Partners</a></li>
+          <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3 space-y-4">
+        <h4 class="text-sm font-black text-white uppercase tracking-wider">Legal & Verification</h4>
+        <ul class="space-y-2.5 font-bold">
+          <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          <li><a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+          <li><a href="refund.html" class="hover:text-white transition-colors">Refund Policy</a></li>
+          <li><a href="student-verification.html" class="hover:text-white transition-colors">Student Verification</a></li>
+          <li><a href="certificate-verification.html" class="hover:text-white transition-colors">Certificate Verification</a></li>
+          <li><a href="sitemap.html" class="hover:text-white transition-colors">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3 space-y-4">
+        <h4 class="text-sm font-black text-white uppercase tracking-wider">Corporate Division</h4>
+        <ul class="space-y-3 font-semibold">
+          <li class="flex gap-2"><span class="text-brandBlue">GSTIN:</span><span class="font-mono text-slate-300">24AANCR6249L17S</span></li>
+          <li class="flex gap-2"><span class="text-brandBlue">Registration:</span><span class="text-slate-300">Ministry of Corporate Affairs (MCA) Approved</span></li>
+          <li class="flex gap-2"><span class="text-brandBlue">Hours:</span><span class="text-slate-300">Mon - Sat (7:00 AM - 10:00 PM)</span></li>
+          <li class="flex gap-2"><span class="text-brandBlue">Head Office:</span><span class="text-slate-300">Karelibaug Water Tank Road, Vadodara, Gujarat</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 font-semibold">
+      <p>© 2026 ROSHANI TECHNOLOGIES PVT. LTD. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+        <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919408788205?text=Hello%20Roshani%20Technologies,%20I'm%20interested%20in%20your%20courses." target="_blank" rel="noreferrer"
+  class="fixed bottom-6 right-6 z-40 p-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl hover:scale-105 transition-all flex items-center justify-center group focus:outline-none">
+  <i data-lucide="message-circle" class="w-6 h-6"></i>
+  <span class="absolute right-14 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Chat with Us</span>
+</a>
+
+
+
+<script>
+  lucide.createIcons();
+
+  // Dark mode
+  const htmlEl = document.documentElement;
+  const themeToggle = document.getElementById('theme-toggle');
+  const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+  const themeSun = document.getElementById('theme-sun');
+  const themeMoon = document.getElementById('theme-moon');
+  const mobileThemeSun = document.getElementById('mobile-theme-sun');
+  const mobileThemeMoon = document.getElementById('mobile-theme-moon');
+
+  function applyTheme(dark) {
+    if (dark) {
+      htmlEl.classList.add('dark');
+      if (themeSun) themeSun.classList.remove('hidden');
+      if (themeMoon) themeMoon.classList.add('hidden');
+      if (mobileThemeSun) mobileThemeSun.classList.remove('hidden');
+      if (mobileThemeMoon) mobileThemeMoon.classList.add('hidden');
+    } else {
+      htmlEl.classList.remove('dark');
+      if (themeSun) themeSun.classList.add('hidden');
+      if (themeMoon) themeMoon.classList.remove('hidden');
+      if (mobileThemeSun) mobileThemeSun.classList.add('hidden');
+      if (mobileThemeMoon) mobileThemeMoon.classList.remove('hidden');
+    }
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }
+
+  const savedTheme = localStorage.getItem('theme');
+  applyTheme(savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => applyTheme(!htmlEl.classList.contains('dark')));
+  }
+  if (mobileThemeToggle) {
+    mobileThemeToggle.addEventListener('click', () => applyTheme(!htmlEl.classList.contains('dark')));
+  }
+
+  // Mobile menu
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  document.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+  // Scroll reveal
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+  // Back to top
+  const btt = document.getElementById('back-to-top');
+  if (btt) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) { btt.classList.remove('opacity-0','pointer-events-none'); btt.classList.add('opacity-100'); }
+      else { btt.classList.remove('opacity-100'); btt.classList.add('opacity-0','pointer-events-none'); }
+    });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+
+  // Team data
+  const teamMembers = [
+    {
+      name: "Dipak O. Shah", title: "Director", badge: "Director",
+      photo: "https://roshaninet.netlify.app/assets/dipakshahremove-bWqubSmV.png",
+      photoClass: "w-full h-full object-contain object-bottom transition-transform duration-500 scale-110",
+      aboutLabel: "About Director",
+      roles: ["Strategic organizational governance and MCA compliance", "Industry liaison for Autodesk reseller partnerships", "Roundabout & Intersection Design with AutoCAD Civil 3D Tools"],
+      about: "Providing premium engineering, design, analysis, and project management consultation. An industry leader committed to transforming governance and digital workflow.",
+      education: "Visionary Leader, Strategic Management",
+      experience: "40+ Years of Corporate & Educational Governance"
+    },
+    {
+      name: "Jagruti D. Shah", title: "Director", badge: "Director",
+      photo: "assets/jagruti.png",
+      photoClass: "w-full h-full object-contain object-bottom transition-transform duration-500 scale-100",
+      aboutLabel: "About Director",
+      roles: ["Pioneering organizational structures & operations", "Quality assurance standards across institutions", "Administrative excellence in educational delivery"],
+      about: "Pioneering organizational structures, operations, quality assurance standards, and administrative excellence across institutions.",
+      education: "Organizational Leadership, Operations Management",
+      experience: "35+ Years of Administrative & Academic Excellence"
+    },
+    {
+      name: "Nachiket D. Shah", title: "CEO", badge: "Chief Executive Officer",
+      photo: "assets/nachiket.png",
+      photoClass: "w-full h-full object-contain object-bottom transition-transform duration-500 scale-110",
+      aboutLabel: "About CEO",
+      roles: ["Spearheading product development & digital simulations", "Robotics architecture and strategic expansion", "Technological innovation across architectural projects"],
+      about: "Spearheading product development, digital simulations, robotics architectures, and strategic technological expansions.",
+      education: "Technology & Product Development",
+      experience: "15+ Years in Digital Innovation & Tech Leadership"
+    },
+    {
+      name: "Ujala D. Shah", title: "Technical Director", badge: "Technical Director",
+      photo: "assets/ujala.png",
+      photoClass: "w-full h-full object-contain object-bottom transition-transform duration-500 scale-110",
+      aboutLabel: "About Technical Director",
+      roles: ["Driving software, CAD & analysis model integrations", "Hardware testing and system-level validation", "Technical system integrations across projects"],
+      about: "Driving software, CAD, analysis models, hardware testing, and technical system-level integrations across architectural projects.",
+      education: "Software Engineering, CAD Systems",
+      experience: "12+ Years in Technical Architecture & Systems"
+    }
+  ];
+
+  const photoEl  = document.getElementById('team-detail-photo');
+  const badgeEl  = document.getElementById('team-detail-badge');
+  const nameEl   = document.getElementById('team-detail-name');
+  const titleEl  = document.getElementById('team-detail-title');
+  const rolesEl  = document.getElementById('team-detail-roles');
+  const aLblEl   = document.getElementById('team-detail-about-label');
+  const aboutEl  = document.getElementById('team-detail-about');
+  const eduEl    = document.getElementById('team-detail-edu');
+  const expEl    = document.getElementById('team-detail-exp');
+
+  function selectTeamMember(index) {
+    document.querySelectorAll('.team-tab-btn').forEach((tab, i) => {
+      tab.className = i === index
+        ? 'team-tab-btn p-4 rounded-2xl border text-left cursor-pointer transition-all flex items-center justify-between group focus:outline-none border-brandTeal shadow-lg ring-1 ring-brandTeal/30 font-black text-white bg-gradient-to-r from-brandTeal to-brandBlue'
+        : 'team-tab-btn p-4 rounded-2xl border text-left cursor-pointer transition-all flex items-center justify-between group focus:outline-none border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/35 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-brandTeal/40 text-slate-900 dark:text-slate-100';
+    });
+    if (photoEl) photoEl.style.opacity = 0;
+    if (nameEl) nameEl.style.opacity  = 0;
+    setTimeout(() => {
+      const m = teamMembers[index];
+      if (!m) return;
+      if (photoEl) {
+        photoEl.src = m.photo; 
+        photoEl.alt = m.name; 
+        photoEl.className = m.photoClass;
+      }
+      if (badgeEl) badgeEl.innerText = m.badge; 
+      if (nameEl) nameEl.innerText = m.name; 
+      if (titleEl) titleEl.innerText = m.title;
+      if (aLblEl) aLblEl.innerText = m.aboutLabel; 
+      if (aboutEl) aboutEl.innerText = m.about;
+      if (eduEl) eduEl.innerText = m.education; 
+      if (expEl) expEl.innerText = m.experience;
+      if (rolesEl) {
+        rolesEl.innerHTML = '';
+        m.roles.forEach(role => {
+          const li = document.createElement('li');
+          li.className = 'flex items-start gap-2 text-[13px] font-semibold';
+          li.innerHTML = `<span class="text-yellow-300 text-xs mt-0.5 flex-shrink-0">✦</span><span>${role}</span>`;
+          rolesEl.appendChild(li);
+        });
+      }
+      if (photoEl) photoEl.style.opacity = 1; 
+      if (nameEl) nameEl.style.opacity = 1;
+      lucide.createIcons();
+    }, 150);
+  }
+
+  selectTeamMember(0);
+</script>
+<script src="./assets/js/auth-session.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100
+        });
+      }
+    });
+  </script>
+</body>
+</html>

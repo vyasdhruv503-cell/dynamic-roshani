@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions | Roshani Technologies</title>
+  <meta name="description" content="Terms & Conditions for Roshani Technologies Pvt. Ltd.">
+  <link rel="stylesheet" href="./styles/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.292.0/dist/umd/lucide.min.js"></script>
+  <style>
+    .reveal{opacity:0;transform:translateY(30px);transition:all 0.8s cubic-bezier(0.16,1,0.3,1);}
+    .reveal.active{opacity:1;transform:translateY(0);}
+    ::-webkit-scrollbar{width:8px;height:8px;}
+    ::-webkit-scrollbar-track{background:#F1F5F9;}
+    .dark ::-webkit-scrollbar-track{background:#0F172A;}
+    ::-webkit-scrollbar-thumb{background:#CBD5E1;border-radius:4px;}
+    .dark ::-webkit-scrollbar-thumb{background:#334155;}
+    ::-webkit-scrollbar-thumb:hover{background:#94A3B8;}
+    .glass-light{background:rgba(255,255,255,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
+    .glass-dark{background:rgba(15,23,42,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
+  </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 overflow-x-hidden">
+
+<!-- NAVBAR -->
+<header id="main-navigation" class="sticky top-0 z-50 transition-all duration-300 border-b border-slate-200/80 dark:border-slate-800/80 glass-light dark:glass-dark shadow-sm">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+        <img src="https://roshaninet.netlify.app/assets/RoshaniLogo2-removebg-preview-CBNwlsGI.png" alt="Roshani Technologies Logo" class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+      </a>
+      <nav class="hidden lg:flex items-center gap-7">
+        <a href="index.html" class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Home</a>
+        <a href="about-us.html" class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">About Us</a>
+        <a href="all-courses.html" class="inline-flex items-center justify-center px-4 py-1.5 border border-rose-600 text-rose-600 hover:bg-rose-600 hover:text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all hover:shadow-[0_0_15px_rgba(225,29,72,0.65)]">All Courses</a>
+        <a href="leadership.html" class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Leadership</a>
+        <a href="partners.html" class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Partners</a>
+        <a href="contact.html" class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Contact</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <button id="theme-toggle" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brandBlue transition-all cursor-pointer" aria-label="Toggle dark mode">
+          <svg id="theme-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
+          <svg id="theme-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <!-- Sign In / Sign Up (Desktop) -->
+        <div id="desktop-auth-buttons" class="hidden lg:flex items-center gap-3">
+          <a href="login.html" class="inline-flex items-center justify-center px-4 py-2.5 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold text-xs uppercase tracking-wider rounded-xl transition-all">Sign In</a>
+          <a href="signup.html" class="inline-flex items-center justify-center px-4 py-2.5 bg-brandBlue hover:bg-brandBlue/90 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm hover:shadow hover:-translate-y-0.5">Sign Up</a>
+        </div>
+        <button id="mobile-menu-toggle" class="p-2.5 lg:hidden rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer" aria-label="Toggle Navigation Menu">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+    <div class="px-4 pt-4 pb-6 space-y-2">
+      <a href="index.html" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Home</a>
+      <a href="about-us.html" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">About Us</a>
+      <a href="all-courses.html" class="mobile-nav-link block px-4 py-2.5 border border-rose-600 text-rose-600 hover:bg-rose-600 hover:text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all hover:shadow-[0_0_15px_rgba(225,29,72,0.65)]">All Courses</a>
+      <a href="leadership.html" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Leadership Team</a>
+      <a href="contact.html" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Contact Us</a>
+      <div id="mobile-auth-buttons" class="pt-4 border-t border-slate-100 dark:border-slate-800 grid grid-cols-2 gap-3">
+        <a href="login.html" class="w-full text-center inline-flex items-center justify-center px-4 py-3 border border-slate-200/80 dark:border-slate-800/80 text-slate-700 dark:text-slate-300 font-bold text-xs uppercase tracking-wider rounded-xl transition-all hover:bg-slate-100 dark:hover:bg-slate-800">Sign In</a>
+        <a href="signup.html" class="w-full text-center inline-flex items-center justify-center px-4 py-3 bg-brandBlue text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm">Sign Up</a>
+      </div>
+      <!-- Mobile Theme Toggle -->
+      <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between px-4">
+        <span class="text-sm font-bold text-slate-600 dark:text-slate-350">Theme Mode</span>
+        <button id="mobile-theme-toggle" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brandBlue transition-all cursor-pointer bg-slate-50 dark:bg-slate-900" aria-label="Toggle dark mode">
+          <svg id="mobile-theme-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+          </svg>
+          <svg id="mobile-theme-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 -mb-12 relative z-10">
+  <a href="index.html" class="inline-flex items-center gap-2 text-xs font-black text-brandBlue uppercase tracking-widest hover:text-brandBlue/80 transition-colors">
+    <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to Home
+  </a>
+</div>
+
+<!-- ================= TERMS & CONDITIONS SECTION ================= -->
+<section id="terms-conditions" class="py-20 sm:py-28 bg-slate-900 text-white relative overflow-hidden mt-16">
+  <div class="absolute -top-48 -right-48 w-96 h-96 bg-brandBlue/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-48 -left-48 w-[400px] h-[400px] bg-yellow-400/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="mb-16 text-center reveal" data-aos="fade-up">
+      <span class="text-xs sm:text-sm font-black text-brandBlue tracking-widest uppercase">Effective Date: July 13, 2026</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-display tracking-tight text-white mt-2">Terms & Conditions</h2>
+      <p class="mt-4 text-slate-400 font-medium max-w-3xl mx-auto text-sm sm:text-base">
+        Welcome to Roshani Technologies Pvt. Ltd. These Terms & Conditions ("Terms") govern your access to and use of our website, training programs, educational services, and related facilities. By accessing our website or enrolling in any course, you agree to comply with these Terms.
+      </p>
+    </div>
+
+    <!-- Terms Grid layout -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-stretch">
+      
+      <!-- Navigation Menu for sections -->
+      <div class="md:col-span-4 space-y-3">
+        <div class="sticky top-28 p-6 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md">
+          <h3 class="text-sm font-black tracking-wider uppercase text-sky-400 mb-4" data-aos="fade-right">Terms Navigation</h3>
+          <ul class="space-y-2.5 font-semibold text-xs sm:text-sm text-slate-300" data-aos="fade-right" data-aos-delay="100">
+            <li><a href="#acceptance" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">1. Acceptance of Terms</a></li>
+            <li><a href="#eligibility" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">2. Eligibility</a></li>
+            <li><a href="#enrollment" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">3. Course Enrollment</a></li>
+            <li><a href="#fees" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">4. Fees & Payments</a></li>
+            <li><a href="#refund" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">5. Refund & Cancellation</a></li>
+            <li><a href="#student-resp" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">6. Student Responsibilities</a></li>
+            <li><a href="#certificates" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">7. Certificates</a></li>
+            <li><a href="#placement" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">8. Placement Assistance</a></li>
+            <li><a href="#ip" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">9. Intellectual Property</a></li>
+            <li><a href="#website-usage" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">10. Website Usage</a></li>
+            <li><a href="#privacy" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">11. Privacy</a></li>
+            <li><a href="#liability" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">12. Limitation of Liability</a></li>
+            <li><a href="#termination" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">13. Suspension or Termination</a></li>
+            <li><a href="#changes-courses" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">14. Course Modifications</a></li>
+            <li><a href="#governing" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">15. Governing Law</a></li>
+            <li><a href="#changes-terms" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">16. Terms Revisions</a></li>
+            <li><a href="#contact" class="hover:text-brandBlue transition-colors block py-1">17. Contact Information</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Terms Detailed text -->
+      <div class="md:col-span-8 space-y-12">
+        
+        <!-- Sec 1 -->
+        <div id="acceptance" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brandBlue/15 border border-brandBlue/20 flex items-center justify-center">
+              <i data-lucide="check-circle" class="w-5 h-5 text-brandBlue"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">1. Acceptance of Terms</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-400 font-semibold leading-relaxed">
+            By using our website or enrolling in any course offered by Roshani Technologies Pvt. Ltd., you acknowledge that you have read, understood, and agree to be bound by these Terms & Conditions.
+          </p>
+          <p class="text-xs sm:text-sm text-slate-400 font-semibold leading-relaxed">
+            If you do not agree with any part of these Terms, please do not use our website or services.
+          </p>
+        </div>
+
+        <!-- Sec 2 -->
+        <div id="eligibility" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-500/20 flex items-center justify-center">
+              <i data-lucide="user-check" class="w-5 h-5 text-cyan-400"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">2. Eligibility</h3>
+          </div>
+          <ul class="list-disc pl-5 text-xs sm:text-sm text-slate-400 space-y-2 font-semibold">
+            <li>Applicants must provide accurate and complete information during registration.</li>
+            <li>Students under the age of 18 may be required to obtain consent from a parent or legal guardian where applicable.</li>
+            <li>Roshani Technologies Pvt. Ltd. reserves the right to refuse admission or terminate enrollment if false information is provided.</li>
+          </ul>
+        </div>
+
+        <!-- Sec 3 -->
+        <div id="enrollment" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-yellow-400/15 border border-yellow-400/20 flex items-center justify-center">
+              <i data-lucide="book-open" class="w-5 h-5 text-yellow-400"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">3. Course Enrollment</h3>
+          </div>
+          <ul class="list-disc pl-5 text-xs sm:text-sm text-slate-400 space-y-2 font-semibold">
+            <li>Admission is subject to seat availability and fulfillment of course requirements.</li>
+            <li>Course fees, schedules, and duration are subject to change without prior notice.</li>
+            <li>Enrollment is confirmed only after successful verification and payment (if applicable).</li>
+          </ul>
+        </div>
+
+        <!-- Sec 4 -->
+        <div id="fees" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-violet-500/15 border border-violet-500/20 flex items-center justify-center">
+              <i data-lucide="credit-card" class="w-5 h-5 text-violet-400"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">4. Fees & Payments</h3>
+          </div>
+          <ul class="list-disc pl-5 text-xs sm:text-sm text-slate-400 space-y-2 font-semibold">
+            <li>Course fees must be paid according to the payment schedule communicated by the institute.</li>
+            <li>Late payments may result in suspension of access to classes or services.</li>
+            <li>Applicable taxes and charges will be added where required by law.</li>
+            <li>Payment receipts should be retained for future reference.</li>
+          </ul>
+        </div>
+
+        <!-- Sec 5 -->
+        <div id="refund" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-orange-500/15 border border-orange-500/20 flex items-center justify-center">
+              <i data-lucide="refresh-cw" class="w-5 h-5 text-orange-400"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">5. Refund & Cancellation</h3>
+          </div>
+          <ul class="list-disc pl-5 text-xs sm:text-sm text-slate-400 space-y-2 font-semibold">
+            <li>Refund requests will be handled according to the institute's official refund policy.</li>
+            <li>Administrative charges may apply where applicable.</li>
+            <li>No refund will be issued after a course has commenced unless otherwise specified in writing.</li>
+            <li>The institute reserves the right to cancel or reschedule courses due to insufficient enrollment, faculty availability, or unforeseen circumstances.</li>
+          </ul>
+        </div>
+
+        <!-- Sec 6 -->
+        <div id="student-resp" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-green-500/15 border border-green-500/20 flex items-center justify-center">
+              <i data-lucide="user-check" class="w-5 h-5 text-brandGreen"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">6. Student Responsibilities</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 font-bold uppercase tracking-wider text-sky-400">Students agree to:</p>
+          <ul class="list-disc pl-5 text-xs sm:text-sm text-slate-400 space-y-2 font-semibold">
+            <li>Maintain respectful behavior toward faculty, staff, and fellow students.</li>
+            <li>Attend classes regularly.</li>
+            <li>Complete assignments and assessments honestly.</li>
+            <li>Follow classroom, laboratory, and online learning guidelines.</li>
+            <li>Avoid plagiarism, cheating, or academic misconduct.</li>
+            <li>Refrain from disrupting classes or damaging institute property.</li>
+          </ul>
+        </div>
+
+        <!-- Sec 7 -->
+        <div id="certificates" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-red-500/15 border border-red-500/20 flex items-center justify-center">
+              <i data-lucide="award" class="w-5 h-5 text-rose-400"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">7. Certificates</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">Certificates may be issued only after:</p>
+          <ul class="list-disc pl-5 text-xs sm:text-sm text-slate-400 space-y-2 font-semibold">
+            <li>Successful completion of the course requirements.</li>
+            <li>Meeting attendance criteria, if applicable.</li>
+            <li>Completion of required assessments or projects.</li>
+            <li>Clearance of any outstanding fees.</li>
+          </ul>
+        </div>
+
+        <!-- Sec 8 -->
+        <div id="placement" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-slate-500/15 border border-slate-500/20 flex items-center justify-center">
+              <i data-lucide="briefcase" class="w-5 h-5 text-slate-300"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">8. Placement Assistance</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">Where placement assistance is offered:</p>
+          <ul class="list-disc pl-5 text-xs sm:text-sm text-slate-400 space-y-2 font-semibold">
+            <li>The institute may provide interview opportunities, career guidance, and employer connections.</li>
+            <li>Employment is not guaranteed.</li>
+            <li>Final hiring decisions are made solely by the recruiting companies.</li>
+          </ul>
+        </div>
+
+        <!-- Sec 9 -->
+        <div id="ip" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-pink-500/15 border border-pink-500/20 flex items-center justify-center">
+              <i data-lucide="lock" class="w-5 h-5 text-pink-400"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">9. Intellectual Property</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-400 font-semibold leading-relaxed">
+            All course materials, notes, videos, software, presentations, assignments, and website content are the intellectual property of Roshani Technologies Pvt. Ltd.
+          </p>
+          <p class="text-xs sm:text-sm text-slate-400 font-semibold leading-relaxed">
+            Students may use these materials only for personal educational purposes and may not copy, reproduce, distribute, or sell them without prior written permission.
+          </p>
+        </div>
+
+        <!-- Sec 10 -->
+        <div id="website-usage" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brandTeal/15 border border-brandTeal/20 flex items-center justify-center">
+              <i data-lucide="globe" class="w-5 h-5 text-brandTeal"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">10. Website Usage</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">Users agree not to:</p>
+          <ul class="list-disc pl-5 text-xs sm:text-sm text-slate-400 space-y-2 font-semibold">
+            <li>Attempt unauthorized access to our systems.</li>
+            <li>Upload malicious software or harmful content.</li>
+            <li>Use the website for unlawful purposes.</li>
+            <li>Interfere with the operation or security of the website.</li>
+          </ul>
+          <p class="text-xs sm:text-sm text-slate-400 font-semibold leading-relaxed">
+            Violation of these rules may result in suspension or legal action.
+          </p>
+        </div>
+
+        <!-- Sec 11 -->
+        <div id="privacy" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center">
+              <i data-lucide="eye" class="w-5 h-5 text-emerald-450"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">11. Privacy</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-400 font-semibold leading-relaxed">
+            Personal information is collected and processed in accordance with our Privacy Policy.
+          </p>
+          <p class="text-xs sm:text-sm text-slate-400 font-semibold leading-relaxed">
+            By using our services, you consent to the collection and use of your information as described in that policy.
+          </p>
+        </div>
+
+        <!-- Sec 12 -->
+        <div id="liability" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/15 border border-indigo-500/20 flex items-center justify-center">
+              <i data-lucide="alert-triangle" class="w-5 h-5 text-indigo-400"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">12. Limitation of Liability</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">Roshani Technologies Pvt. Ltd. shall not be liable for:</p>
+          <ul class="list-disc pl-5 text-xs sm:text-sm text-slate-400 space-y-2 font-semibold">
+            <li>Indirect or consequential losses.</li>
+            <li>Technical interruptions beyond our reasonable control.</li>
+            <li>Loss of personal data caused by external cyberattacks despite reasonable security measures.</li>
+            <li>Employment outcomes following course completion.</li>
+          </ul>
+          <p class="text-xs sm:text-sm text-slate-400 font-semibold leading-relaxed">
+            Our total liability shall be limited to the extent permitted by applicable law.
+          </p>
+        </div>
+
+        <!-- Sec 13 -->
+        <div id="termination" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/15 border border-sky-500/20 flex items-center justify-center">
+              <i data-lucide="slash" class="w-5 h-5 text-sky-400"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">13. Suspension or Termination</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">We reserve the right to suspend or terminate access to our website or services if a user:</p>
+          <ul class="list-disc pl-5 text-xs sm:text-sm text-slate-400 space-y-2 font-semibold">
+            <li>Violates these Terms.</li>
+            <li>Engages in fraudulent or illegal activities.</li>
+            <li>Harasses staff or other students.</li>
+            <li>Misuses institute resources or intellectual property.</li>
+          </ul>
+        </div>
+
+        <!-- Sec 14 -->
+        <div id="changes-courses" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-teal-500/15 border border-teal-500/20 flex items-center justify-center">
+              <i data-lucide="edit" class="w-5 h-5 text-teal-400"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">14. Changes to Courses or Services</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">The institute reserves the right to:</p>
+          <ul class="list-disc pl-5 text-xs sm:text-sm text-slate-400 space-y-2 font-semibold">
+            <li>Modify course content.</li>
+            <li>Change faculty members.</li>
+            <li>Update schedules.</li>
+            <li>Introduce or discontinue courses.</li>
+            <li>Improve website functionality and services.</li>
+          </ul>
+        </div>
+
+        <!-- Sec 15 -->
+        <div id="governing" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center">
+              <i data-lucide="scale" class="w-5 h-5 text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">15. Governing Law</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-400 font-semibold leading-relaxed">
+            These Terms & Conditions shall be governed by and interpreted in accordance with the laws of India.
+          </p>
+          <p class="text-xs sm:text-sm text-slate-400 font-semibold leading-relaxed">
+            Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the competent courts in Vadodara, Gujarat.
+          </p>
+        </div>
+
+        <!-- Sec 16 -->
+        <div id="changes-terms" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-rose-500/15 border border-rose-500/20 flex items-center justify-center">
+              <i data-lucide="history" class="w-5 h-5 text-rose-450"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">16. Changes to These Terms</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-400 font-semibold leading-relaxed">
+            We may revise these Terms & Conditions at any time.
+          </p>
+          <p class="text-xs sm:text-sm text-slate-400 font-semibold leading-relaxed">
+            Updated versions will be published on our website with a revised Effective Date. Continued use of our website or services after such updates constitutes acceptance of the revised Terms.
+          </p>
+        </div>
+
+        <!-- Sec 17 -->
+        <div id="contact" class="p-8 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/15 border border-sky-500/20 flex items-center justify-center">
+              <i data-lucide="mail" class="w-5 h-5 text-sky-400"></i>
+            </div>
+            <h3 class="text-xl font-black text-white uppercase tracking-tight">17. Contact Information</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 font-bold uppercase tracking-wider text-sky-400">Roshani Technologies Pvt. Ltd.</p>
+          <ul class="space-y-2 font-semibold text-xs sm:text-sm text-slate-300">
+            <li class="flex items-center gap-2"><span class="text-brandBlue">Email:</span> <a href="mailto:roshani@roshani.net" class="hover:text-white transition-colors">roshani@roshani.net</a></li>
+            <li class="flex items-center gap-2"><span class="text-brandBlue">Phone:</span> <span>+91 9375805150</span></li>
+            <li class="flex items-center gap-2"><span class="text-brandBlue">Website:</span> <a href="https://roshani.net" target="_blank" class="hover:text-white transition-colors font-mono">https://roshani.net</a></li>
+            <li class="flex items-start gap-2"><span class="text-brandBlue flex-shrink-0">Address:</span> <span>Technology Park Roshani, Near Karelibaug Water Tank, Karelibaug, Vadodara, Gujarat, India.</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="platform-footer" class="bg-slate-900 text-slate-400 border-t border-white/5 py-16 text-xs sm:text-sm">
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start text-left mb-12">
+      <div class="md:col-span-4 space-y-6">
+        <div class="flex items-center gap-3">
+          <img src="https://roshaninet.netlify.app/assets/RoshaniLogo2-removebg-preview-CBNwlsGI.png" alt="Roshani Technologies Logo" class="h-10 w-auto object-contain brightness-0 invert" style="filter: brightness(0) invert(1);">
+        </div>
+        <p class="leading-relaxed font-semibold text-slate-400 max-w-sm">Follow our official media outlets for corporate compliance announcements, educational roadmaps, and technological updates.</p>
+        <div class="flex gap-3 pt-2">
+          <a href="https://www.instagram.com/roshanitechnologiespvt.ltd" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full border border-slate-800 hover:border-brandBlue hover:text-brandBlue text-slate-400 flex items-center justify-center transition-colors"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="https://www.facebook.com/RoshaniComputerServices" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full border border-slate-800 hover:border-brandBlue hover:text-brandBlue text-slate-400 flex items-center justify-center transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          <a href="https://wa.me/919408788205" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full border border-slate-800 hover:border-brandGreen hover:text-brandGreen text-slate-400 flex items-center justify-center transition-colors"><i data-lucide="message-circle" class="w-4 h-4"></i></a>
+          <a href="https://www.youtube.com/@ROSHNICOMPUTERSERVICES" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full border border-slate-800 hover:border-red-600 hover:text-red-600 text-slate-400 flex items-center justify-center transition-colors"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+          <a href="https://in.linkedin.com/company/roshanitechnologiespvtltd" target="_blank" rel="noreferrer" class="w-9 h-9 rounded-full border border-slate-800 hover:border-blue-500 hover:text-blue-500 text-slate-400 flex items-center justify-center transition-colors"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+      <div class="md:col-span-2 space-y-4">
+        <h4 class="text-sm font-black text-white uppercase tracking-wider">Quick Links</h4>
+        <ul class="space-y-2.5 font-bold">
+          <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+          <li><a href="about-us.html" class="hover:text-white transition-colors">About Us</a></li>
+          <li><a href="all-courses.html" class="hover:text-white transition-colors">All Courses</a></li>
+          <li><a href="leadership.html" class="hover:text-white transition-colors">Leadership</a></li>
+          <li><a href="partners.html" class="hover:text-white transition-colors">Our Partners</a></li>
+          <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3 space-y-4">
+        <h4 class="text-sm font-black text-white uppercase tracking-wider">Legal & Verification</h4>
+        <ul class="space-y-2.5 font-bold">
+          <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          <li><a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+          <li><a href="refund.html" class="hover:text-white transition-colors">Refund Policy</a></li>
+          <li><a href="student-verification.html" class="hover:text-white transition-colors">Student Verification</a></li>
+          <li><a href="certificate-verification.html" class="hover:text-white transition-colors">Certificate Verification</a></li>
+          <li><a href="sitemap.html" class="hover:text-white transition-colors">Sitemap</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3 space-y-4">
+        <h4 class="text-sm font-black text-white uppercase tracking-wider">Corporate Division</h4>
+        <ul class="space-y-3 font-semibold">
+          <li class="flex gap-2"><span class="text-brandBlue">GSTIN:</span><span class="font-mono text-slate-300">24AANCR6249L17S</span></li>
+          <li class="flex gap-2"><span class="text-brandBlue">Registration:</span><span class="text-slate-300">Ministry of Corporate Affairs (MCA) Approved</span></li>
+          <li class="flex gap-2"><span class="text-brandBlue">Hours:</span><span class="text-slate-300">Mon - Sat (7:00 AM - 10:00 PM)</span></li>
+          <li class="flex gap-2"><span class="text-brandBlue">Head Office:</span><span class="text-slate-300">Karelibaug Water Tank Road, Vadodara, Gujarat</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 font-semibold">
+      <p>© 2026 ROSHANI TECHNOLOGIES PVT. LTD. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+        <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919408788205?text=Hello%20Roshani%20Technologies,%20I'm%20interested%20in%20your%20courses." target="_blank" rel="noreferrer"
+  class="fixed bottom-6 right-6 z-40 p-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl hover:scale-105 transition-all flex items-center justify-center group focus:outline-none">
+  <i data-lucide="message-circle" class="w-6 h-6"></i>
+  <span class="absolute right-14 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Chat with Us</span>
+</a>
+
+<script>
+  lucide.createIcons();
+
+  // Dark mode
+  const htmlEl = document.documentElement;
+  const themeToggle = document.getElementById('theme-toggle');
+  const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+  const themeSun = document.getElementById('theme-sun');
+  const themeMoon = document.getElementById('theme-moon');
+  const mobileThemeSun = document.getElementById('mobile-theme-sun');
+  const mobileThemeMoon = document.getElementById('mobile-theme-moon');
+
+  function applyTheme(dark) {
+    if (dark) {
+      htmlEl.classList.add('dark');
+      if (themeSun) themeSun.classList.remove('hidden');
+      if (themeMoon) themeMoon.classList.add('hidden');
+      if (mobileThemeSun) mobileThemeSun.classList.remove('hidden');
+      if (mobileThemeMoon) mobileThemeMoon.classList.add('hidden');
+    } else {
+      htmlEl.classList.remove('dark');
+      if (themeSun) themeSun.classList.add('hidden');
+      if (themeMoon) themeMoon.classList.remove('hidden');
+      if (mobileThemeSun) mobileThemeSun.classList.add('hidden');
+      if (mobileThemeMoon) mobileThemeMoon.classList.remove('hidden');
+    }
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }
+
+  const savedTheme = localStorage.getItem('theme');
+  applyTheme(savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => applyTheme(!htmlEl.classList.contains('dark')));
+  }
+  if (mobileThemeToggle) {
+    mobileThemeToggle.addEventListener('click', () => applyTheme(!htmlEl.classList.contains('dark')));
+  }
+
+  // Mobile menu
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  document.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+  // Scroll reveal
+  const ro = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+</script>
+<script src="./assets/js/auth-session.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100
+        });
+      }
+    });
+  </script>
+</body>
+</html>

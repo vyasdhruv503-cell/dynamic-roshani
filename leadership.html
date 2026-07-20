@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leadership & Committee | ROSHANI TECHNOLOGIES PVT. LTD.</title>
+  <meta name="description"
+    content="Discover why Roshani Technologies is India's premier CAD and BIM training institute.">
+  <link rel="stylesheet" href="./styles/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.292.0/dist/umd/lucide.min.js"></script>
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+
+    .dark ::-webkit-scrollbar-track {
+      background: #0F172A;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+      background: #334155;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+
+    .glass-light {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .glass-dark {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .page-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f2444 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(56, 189, 248, 0.12) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(171, 184, 81, 0.10) 0%, transparent 55%);
+    }
+
+    @keyframes float-slow {
+
+      0%,
+      100% {
+        transform: translateY(0) scale(1);
+      }
+
+      50% {
+        transform: translateY(-20px) scale(1.05);
+      }
+    }
+
+    .orb-animate {
+      animation: float-slow 6s ease-in-out infinite;
+    }
+
+    .prop-card:hover {
+      box-shadow: 0 0 40px rgba(56, 189, 248, 0.12), 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body
+  class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <header id="main-navigation"
+    class="sticky top-0 z-50 transition-all duration-300 border-b border-slate-200/80 dark:border-slate-800/80 glass-light dark:glass-dark shadow-sm">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+          <img src="https://roshaninet.netlify.app/assets/RoshaniLogo2-removebg-preview-CBNwlsGI.png"
+            alt="Roshani Technologies Logo"
+            class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        </a>
+        <nav class="hidden lg:flex items-center gap-7">
+          <a href="index.html"
+            class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Home</a>
+          <a href="about-us.html"
+            class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">About Us</a>
+          <a href="all-courses.html"
+            class="inline-flex items-center justify-center px-4 py-1.5 border border-rose-600 text-rose-600 hover:bg-rose-600 hover:text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all hover:shadow-[0_0_15px_rgba(225,29,72,0.65)]">All Courses</a>
+          <a href="leadership.html"
+            class="text-sm font-semibold tracking-wide text-brandBlue border-b-2 border-brandBlue pb-0.5">Leadership</a>
+          <a href="partners.html"
+            class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Partners</a>
+          <a href="contact.html"
+            class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Contact</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <button id="theme-toggle"
+            class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brandBlue transition-all cursor-pointer"
+            aria-label="Toggle dark mode">
+            <svg id="theme-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+            </svg>
+            <svg id="theme-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+          <!-- Sign In / Sign Up (Desktop) -->
+          <div id="desktop-auth-buttons" class="hidden sm:flex items-center gap-3">
+            <a href="login.html"
+              class="inline-flex items-center justify-center px-4 py-2.5 border border-slate-200 dark:border-slate-850 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold text-xs uppercase tracking-wider rounded-xl transition-all">
+              Sign In
+            </a>
+            <a href="signup.html"
+              class="inline-flex items-center justify-center px-4 py-2.5 bg-brandBlue hover:bg-brandBlue/90 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm hover:shadow hover:-translate-y-0.5">
+              Sign Up
+            </a>
+          </div>
+          <button id="mobile-menu-toggle"
+            class="p-2.5 lg:hidden rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer"
+            aria-label="Toggle Navigation Menu">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu"
+      class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+      <div class="px-4 pt-4 pb-6 space-y-2">
+        <a href="index.html"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Home</a>
+        <a href="about-us.html"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">About
+          Us</a>
+        <a href="all-courses.html"
+          class="mobile-nav-link block px-4 py-2.5 border border-rose-600 text-rose-600 hover:bg-rose-600 hover:text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all hover:shadow-[0_0_15px_rgba(225,29,72,0.65)]">All Courses</a>
+        <a href="leadership.html"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium bg-brandBlue/10 text-brandBlue font-bold">Leadership
+          Team</a>
+        <a href="contact.html"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Contact
+          Us</a>
+        <div id="mobile-auth-buttons"
+          class="pt-4 border-t border-slate-100 dark:border-slate-800 grid grid-cols-2 gap-3">
+          <a href="login.html"
+            class="w-full text-center inline-flex items-center justify-center px-4 py-3 border border-slate-200/80 dark:border-slate-800/80 text-slate-700 dark:text-slate-300 font-bold text-xs uppercase tracking-wider rounded-xl transition-all hover:bg-slate-100 dark:hover:bg-slate-800">
+            Sign In
+          </a>
+          <a href="signup.html"
+            class="w-full text-center inline-flex items-center justify-center px-4 py-3 bg-brandBlue text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm">
+            Sign Up
+          </a>
+        </div>
+        <!-- Mobile Theme Toggle -->
+        <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between px-4">
+          <span class="text-sm font-bold text-slate-600 dark:text-slate-350">Theme Mode</span>
+          <button id="mobile-theme-toggle" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brandBlue transition-all cursor-pointer bg-slate-50 dark:bg-slate-900" aria-label="Toggle dark mode">
+            <svg id="mobile-theme-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+            </svg>
+            <svg id="mobile-theme-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 -mb-12 relative z-10">
+    <a href="index.html"
+      class="inline-flex items-center gap-2 text-xs font-black text-brandBlue uppercase tracking-widest hover:text-brandBlue/80 transition-colors">
+      <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to Home
+    </a>
+  </div>
+
+  <!-- ABOUT / LEADERSHIP SECTION -->
+  <section data-aos="fade-up" id="about" class="py-20 sm:py-28 bg-white dark:bg-slate-900 transition-colors duration-300 overflow-hidden">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-16 text-center reveal">
+        <span class="text-xs sm:text-sm font-black text-brandBlue tracking-widest uppercase">Expert Governance</span>
+        <h2
+          class="text-3xl sm:text-4xl lg:text-5xl font-black font-display tracking-tight text-slate-900 dark:text-white mt-2">
+          Leadership &amp; Committee Team</h2>
+        <div
+          class="mt-8 text-slate-600 dark:text-slate-300 font-medium max-w-3xl mx-auto text-sm sm:text-base leading-relaxed space-y-4 text-left sm:text-center p-6 bg-slate-50 dark:bg-slate-800/50 rounded-3xl border border-slate-100 dark:border-slate-800 shadow-sm">
+          <p>
+            Roshani Technologies is driven by a legacy of excellence, guided by a visionary leadership team with over
+            40+ years of combined experience in engineering, architectural design, and technical education. Our core
+            committee ensures that our curriculum remains at the absolute cutting edge of modern industry standards.
+          </p>
+          <p>
+            Under the expert guidance of our Directors and CEO, we have successfully bridged the gap between academic
+            theory and practical industry execution. Our leadership actively collaborates with global software giants
+            like Autodesk, Bentley, and Dassault Systèmes to bring state-of-the-art certification training directly to
+            our students and corporate partners.
+          </p>
+          <p class="text-brandBlue dark:text-blue-400 font-black tracking-wide uppercase text-xs pt-2">
+            Meet the minds behind India's most trusted CAD &amp; BIM training institution
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start text-left reveal">
+        <!-- Tab buttons -->
+        <div class="md:col-span-4 flex flex-col gap-3.5">
+          <button onclick="selectTeamMember(0)" id="team-tab-0"
+            class="team-tab-btn p-4 rounded-2xl border text-left cursor-pointer transition-all flex items-center justify-between group focus:outline-none border-brandTeal shadow-lg ring-1 ring-brandTeal/30 font-black text-white bg-gradient-to-r from-brandTeal to-brandBlue">
+            <div>
+              <h4 class="text-base sm:text-lg font-black leading-tight">Dipak O. Shah</h4>
+              <p class="text-xs sm:text-sm font-bold opacity-90 mt-0.5">Director</p>
+            </div>
+            <i data-lucide="chevron-right"
+              class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </button>
+          <button onclick="selectTeamMember(1)" id="team-tab-1"
+            class="team-tab-btn p-4 rounded-2xl border text-left cursor-pointer transition-all flex items-center justify-between group focus:outline-none border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/35 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-brandTeal/40 text-slate-900 dark:text-slate-100">
+            <div>
+              <h4 class="text-base sm:text-lg font-black leading-tight">Jagruti D. Shah</h4>
+              <p class="text-xs sm:text-sm font-bold text-slate-500 dark:text-slate-400 mt-0.5">Director</p>
+            </div>
+            <i data-lucide="chevron-right"
+              class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </button>
+          <button onclick="selectTeamMember(2)" id="team-tab-2"
+            class="team-tab-btn p-4 rounded-2xl border text-left cursor-pointer transition-all flex items-center justify-between group focus:outline-none border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/35 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-brandTeal/40 text-slate-900 dark:text-slate-100">
+            <div>
+              <h4 class="text-base sm:text-lg font-black leading-tight">Nachiket D. Shah</h4>
+              <p class="text-xs sm:text-sm font-bold text-slate-500 dark:text-slate-400 mt-0.5">CEO</p>
+            </div>
+            <i data-lucide="chevron-right"
+              class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </button>
+          <button onclick="selectTeamMember(3)" id="team-tab-3"
+            class="team-tab-btn p-4 rounded-2xl border text-left cursor-pointer transition-all flex items-center justify-between group focus:outline-none border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/35 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-brandTeal/40 text-slate-900 dark:text-slate-100">
+            <div>
+              <h4 class="text-base sm:text-lg font-black leading-tight">Ujala D. Shah</h4>
+              <p class="text-xs sm:text-sm font-bold text-slate-500 dark:text-slate-400 mt-0.5">Technical Director</p>
+            </div>
+            <i data-lucide="chevron-right"
+              class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </button>
+          <a href="#" onclick="openEnquiryModal(event)"
+            class="mt-2 inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-brandBlue text-white font-black text-xs uppercase tracking-wider rounded-2xl transition-all shadow-md hover:bg-brandBlue/90 hover:-translate-y-0.5">
+            <i data-lucide="send" class="w-4 h-4"></i> Enquire About Courses
+          </a>
+        </div>
+
+        <!-- Detail panel -->
+        <div
+          class="md:col-span-8 bg-gradient-to-br from-brandTeal via-brandBlue to-indigo-800 border border-white/10 rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden flex flex-col gap-8 items-start min-h-[460px] text-white">
+          <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none">
+          </div>
+          <div class="w-full flex flex-col sm:flex-row gap-8 items-start relative z-10">
+            <div
+              class="w-full sm:w-64 md:w-72 h-80 sm:h-[360px] flex-shrink-0 relative rounded-2xl overflow-hidden border border-white/20 shadow-md bg-slate-950/20">
+              <img id="team-detail-photo" src="https://roshaninet.netlify.app/assets/dipakshahremove-bWqubSmV.png"
+                alt="Dipak O. Shah"
+                class="w-full h-full object-contain object-bottom transition-transform duration-500 scale-110"
+                style="transition:opacity 0.3s ease;">
+              <div id="team-detail-badge"
+                class="absolute bottom-3 left-3 right-3 bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold py-1.5 px-3 rounded-lg text-center tracking-wider uppercase leading-none border border-white/10 select-none">
+                Director</div>
+            </div>
+            <div class="flex-1 flex flex-col justify-start space-y-6 text-left w-full pt-1.5">
+              <div>
+                <h3 id="team-detail-name" class="text-2xl sm:text-3xl font-black tracking-tight"
+                  style="transition:opacity 0.3s ease;">Dipak O. Shah</h3>
+                <p id="team-detail-title"
+                  class="text-xs sm:text-sm text-yellow-300 font-extrabold uppercase tracking-widest mt-1">Director</p>
+              </div>
+              <div class="space-y-2 border-t border-white/10 pt-4">
+                <span class="text-[10px] font-black text-yellow-300/90 block uppercase tracking-wider">Roles &amp;
+                  Leadership Handles</span>
+                <ul id="team-detail-roles" class="space-y-1.5 text-xs sm:text-sm font-semibold"></ul>
+              </div>
+              <div class="space-y-2 border-t border-white/10 pt-4">
+                <span id="team-detail-about-label"
+                  class="text-[10px] font-black text-yellow-300/90 block uppercase tracking-wider">About Director</span>
+                <p id="team-detail-about" class="text-xs sm:text-sm leading-relaxed text-slate-100 font-medium">
+                  Providing premium engineering, design, analysis, and project management consultation.</p>
+              </div>
+              <div class="grid grid-cols-2 gap-4 border-t border-white/10 pt-4 text-xs">
+                <div>
+                  <span
+                    class="text-[10px] font-black text-yellow-300/90 block uppercase tracking-wider mb-1">Background</span>
+                  <p id="team-detail-edu" class="font-bold text-sm leading-snug">Visionary Leader, Strategic Management
+                  </p>
+                </div>
+                <div>
+                  <span class="text-[10px] font-black text-yellow-300/90 block uppercase tracking-wider mb-1">Mentorship
+                    Experience</span>
+                  <p id="team-detail-exp" class="font-bold text-sm leading-snug">40+ Years of Corporate &amp;
+                    Educational Governance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ENQUIRY MODAL ================= -->
+  <div id="enquiry-modal"
+    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-md transition-opacity duration-300">
+    <div id="enquiry-modal-content"
+      class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden transform scale-95 opacity-0 transition-all duration-300 relative p-6 sm:p-8">
+
+      <!-- Close Button -->
+      <button onclick="closeEnquiryModal()"
+        class="absolute top-4 right-4 p-2 rounded-xl text-slate-400 hover:text-slate-650 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer focus:outline-none z-20">
+        <i data-lucide="x" class="w-5.5 h-5.5"></i>
+      </button>
+
+      <!-- Form Content -->
+      <form id="modal-enquiry-form" class="space-y-4 text-left" onsubmit="handleModalFormSubmit(event)">
+        <h3 class="text-xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-1">
+          Enquire About Courses
+        </h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider mb-4">Request course
+          brochures and schedules</p>
+
+        <div class="space-y-1.5">
+          <label for="modal-contact-name"
+            class="block text-[11px] font-black text-slate-500 dark:text-slate-400 tracking-wider uppercase">Full
+            Name</label>
+          <input type="text" id="modal-contact-name" required
+            class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl focus:border-brandBlue focus:ring-1 focus:ring-brandBlue text-sm font-semibold outline-none transition-all dark:text-white"
+            placeholder="Rohan Patel">
+        </div>
+
+        <div class="space-y-1.5">
+          <label for="modal-contact-email"
+            class="block text-[11px] font-black text-slate-500 dark:text-slate-400 tracking-wider uppercase">Email
+            ID</label>
+          <input type="email" id="modal-contact-email" required
+            class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl focus:border-brandBlue focus:ring-1 focus:ring-brandBlue text-sm font-semibold outline-none transition-all dark:text-white"
+            placeholder="rohan@example.com">
+        </div>
+
+        <div class="space-y-1.5">
+          <label for="modal-contact-phone"
+            class="block text-[11px] font-black text-slate-500 dark:text-slate-400 tracking-wider uppercase">Mobile
+            Number</label>
+          <input type="tel" id="modal-contact-phone" required
+            class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl focus:border-brandBlue focus:ring-1 focus:ring-brandBlue text-sm font-semibold outline-none transition-all dark:text-white"
+            placeholder="+91 98765 43210">
+        </div>
+
+        <div class="space-y-1.5">
+          <label for="modal-contact-course"
+            class="block text-[11px] font-black text-slate-500 dark:text-slate-400 tracking-wider uppercase">Course of
+            Interest</label>
+          <select id="modal-contact-course" required
+            class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl focus:border-brandBlue focus:ring-1 focus:ring-brandBlue text-sm font-semibold outline-none transition-all dark:text-white">
+            <option value="" disabled selected>Select a Program</option>
+            <option value="Autodesk AutoCAD">Autodesk AutoCAD</option>
+            <option value="Revit Architecture/Structure/MEP">Revit Architecture/Structure/MEP</option>
+            <option value="Trimble SketchUp Pro">Trimble SketchUp Pro</option>
+            <option value="CATIA">CATIA</option>
+            <option value="Autodesk Fusion 360">Autodesk Fusion 360</option>
+            <option value="Lumion 3D">Lumion 3D</option>
+            <option value="Other / Custom Inquiry">Other / Custom Inquiry</option>
+          </select>
+        </div>
+
+        <button type="submit"
+          class="w-full py-3.5 bg-brandBlue hover:bg-brandBlue/90 text-white font-extrabold uppercase text-xs tracking-widest rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer mt-2">
+          <span>Send Enquiry</span>
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+      </form>
+
+      <!-- Form Success Card Overlay -->
+      <div id="modal-form-success-card"
+        class="absolute inset-0 bg-white dark:bg-slate-900 p-8 flex flex-col justify-center items-center text-center space-y-6 hidden z-10 transition-opacity duration-300">
+        <div
+          class="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-950 border border-emerald-300/40 dark:border-emerald-800 flex items-center justify-center text-emerald-500 shadow-inner">
+          <i data-lucide="check-circle" class="w-8 h-8"></i>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Inquiry Received!</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 font-semibold max-w-sm">
+            Thank you for contacting ROSHANI TECHNOLOGIES. Our academic team will connect with you on WhatsApp/Email
+            within the next 24 business hours.
+          </p>
+        </div>
+        <button onclick="closeEnquiryModal()"
+          class="px-6 py-2.5 bg-slate-900 dark:bg-slate-800 text-white text-xs font-black uppercase tracking-wider rounded-xl transition-colors cursor-pointer hover:bg-slate-800">
+          Close Window
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="platform-footer" class="bg-slate-900 text-slate-400 border-t border-white/5 py-16 text-xs sm:text-sm">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start text-left mb-12">
+        <div class="md:col-span-4 space-y-6">
+          <div class="flex items-center gap-3">
+            <img src="https://roshaninet.netlify.app/assets/RoshaniLogo2-removebg-preview-CBNwlsGI.png"
+              alt="Roshani Technologies Logo" class="h-10 w-auto object-contain brightness-0 invert" style="filter: brightness(0) invert(1);">
+          </div>
+          <p class="leading-relaxed font-semibold text-slate-400 max-w-sm">Follow our official media outlets for
+            corporate compliance announcements, educational roadmaps, and technological updates.</p>
+          <div class="flex gap-3 pt-2">
+            <a href="https://www.instagram.com/roshanitechnologiespvt.ltd" target="_blank" rel="noreferrer"
+              class="w-9 h-9 rounded-full border border-slate-800 hover:border-brandBlue hover:text-brandBlue text-slate-400 flex items-center justify-center transition-colors"><i
+                data-lucide="instagram" class="w-4 h-4"></i></a>
+            <a href="https://www.facebook.com/RoshaniComputerServices" target="_blank" rel="noreferrer"
+              class="w-9 h-9 rounded-full border border-slate-800 hover:border-brandBlue hover:text-brandBlue text-slate-400 flex items-center justify-center transition-colors"><i
+                data-lucide="facebook" class="w-4 h-4"></i></a>
+            <a href="https://wa.me/919408788205" target="_blank" rel="noreferrer"
+              class="w-9 h-9 rounded-full border border-slate-800 hover:border-brandGreen hover:text-brandGreen text-slate-400 flex items-center justify-center transition-colors"><i
+                data-lucide="message-circle" class="w-4 h-4"></i></a>
+            <a href="https://www.youtube.com/@ROSHNICOMPUTERSERVICES" target="_blank" rel="noreferrer"
+              class="w-9 h-9 rounded-full border border-slate-800 hover:border-red-600 hover:text-red-600 text-slate-400 flex items-center justify-center transition-colors"><i
+                data-lucide="youtube" class="w-4 h-4"></i></a>
+            <a href="https://in.linkedin.com/company/roshanitechnologiespvtltd" target="_blank" rel="noreferrer"
+              class="w-9 h-9 rounded-full border border-slate-800 hover:border-blue-500 hover:text-blue-500 text-slate-400 flex items-center justify-center transition-colors"><i
+                data-lucide="linkedin" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+        <div class="md:col-span-2 space-y-4">
+          <h4 class="text-sm font-black text-white uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2.5 font-bold">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about-us.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="all-courses.html" class="hover:text-white transition-colors">All Courses</a></li>
+            <li><a href="leadership.html" class="hover:text-white transition-colors">Leadership</a></li>
+            <li><a href="partners.html" class="hover:text-white transition-colors">Our Partners</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="text-sm font-black text-white uppercase tracking-wider">Legal & Verification</h4>
+          <ul class="space-y-2.5 font-bold">
+            <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+            <li><a href="refund.html" class="hover:text-white transition-colors">Refund Policy</a></li>
+            <li><a href="student-verification.html" class="hover:text-white transition-colors">Student Verification</a></li>
+            <li><a href="certificate-verification.html" class="hover:text-white transition-colors">Certificate Verification</a></li>
+            <li><a href="sitemap.html" class="hover:text-white transition-colors">Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="text-sm font-black text-white uppercase tracking-wider">Corporate Division</h4>
+          <ul class="space-y-3 font-semibold">
+            <li class="flex gap-2"><span class="text-brandBlue">GSTIN:</span><span
+                class="font-mono text-slate-300">24AANCR6249L17S</span></li>
+            <li class="flex gap-2"><span class="text-brandBlue">Registration:</span><span
+                class="text-slate-300">Ministry of Corporate Affairs (MCA) Approved</span></li>
+            <li class="flex gap-2"><span class="text-brandBlue">Hours:</span><span class="text-slate-300">Mon - Sat (7:00 AM - 10:00 PM)</span></li>
+            <li class="flex gap-2"><span class="text-brandBlue">Head Office:</span><span class="text-slate-300">Karelibaug Water Tank Road, Vadodara, Gujarat</span></li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 font-semibold">
+        <p>© 2026 ROSHANI TECHNOLOGIES PVT. LTD. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/919408788205?text=Hello%20Roshani%20Technologies,%20I'm%20interested%20in%20your%20courses."
+    target="_blank" rel="noreferrer"
+    class="fixed bottom-6 right-6 z-40 p-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl hover:scale-105 transition-all flex items-center justify-center group focus:outline-none">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+    <span
+      class="absolute right-14 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">Chat
+      with Us</span>
+  </a>
+
+
+
+  <script>
+    lucide.createIcons();
+
+    // Dark mode
+    const htmlEl = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const themeSun = document.getElementById('theme-sun');
+    const themeMoon = document.getElementById('theme-moon');
+    const mobileThemeSun = document.getElementById('mobile-theme-sun');
+    const mobileThemeMoon = document.getElementById('mobile-theme-moon');
+
+    function applyTheme(dark) {
+      if (dark) {
+        htmlEl.classList.add('dark');
+        if (themeSun) themeSun.classList.remove('hidden');
+        if (themeMoon) themeMoon.classList.add('hidden');
+        if (mobileThemeSun) mobileThemeSun.classList.remove('hidden');
+        if (mobileThemeMoon) mobileThemeMoon.classList.add('hidden');
+      } else {
+        htmlEl.classList.remove('dark');
+        if (themeSun) themeSun.classList.add('hidden');
+        if (themeMoon) themeMoon.classList.remove('hidden');
+        if (mobileThemeSun) mobileThemeSun.classList.add('hidden');
+        if (mobileThemeMoon) mobileThemeMoon.classList.remove('hidden');
+      }
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    applyTheme(savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => applyTheme(!htmlEl.classList.contains('dark')));
+    }
+    if (mobileThemeToggle) {
+      mobileThemeToggle.addEventListener('click', () => applyTheme(!htmlEl.classList.contains('dark')));
+    }
+
+    // Mobile menu
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-nav-link').forEach(l => l.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    // Scroll reveal
+    const ro = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+    // Back to top
+    const btt = document.getElementById('back-to-top');
+    if (btt) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) { btt.classList.remove('opacity-0', 'pointer-events-none'); btt.classList.add('opacity-100'); }
+        else { btt.classList.remove('opacity-100'); btt.classList.add('opacity-0', 'pointer-events-none'); }
+      });
+      btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    // Team data
+    const teamMembers = [
+      {
+        name: "Dipak O. Shah", title: "Director", badge: "Director",
+        photo: "https://roshaninet.netlify.app/assets/dipakshahremove-bWqubSmV.png",
+        photoClass: "w-full h-full object-contain object-bottom transition-transform duration-500 scale-110",
+        aboutLabel: "About Director",
+        roles: ["Strategic organizational governance and MCA compliance", "Industry liaison for Autodesk reseller partnerships", "Roundabout & Intersection Design with AutoCAD Civil 3D Tools"],
+        about: "Providing premium engineering, design, analysis, and project management consultation. An industry leader committed to transforming governance and digital workflow.",
+        education: "Visionary Leader, Strategic Management",
+        experience: "40+ Years of Corporate & Educational Governance"
+      },
+      {
+        name: "Jagruti D. Shah", title: "Director", badge: "Director",
+        photo: "assets/jagruti.png",
+        photoClass: "w-full h-full object-contain object-bottom transition-transform duration-500 scale-100",
+        aboutLabel: "About Director",
+        roles: ["Pioneering organizational structures & operations", "Quality assurance standards across institutions", "Administrative excellence in educational delivery"],
+        about: "Pioneering organizational structures, operations, quality assurance standards, and administrative excellence across institutions.",
+        education: "Organizational Leadership, Operations Management",
+        experience: "35+ Years of Administrative & Academic Excellence"
+      },
+      {
+        name: "Nachiket D. Shah", title: "CEO", badge: "Chief Executive Officer",
+        photo: "assets/nachiket.png",
+        photoClass: "w-full h-full object-contain object-bottom transition-transform duration-500 scale-110",
+        aboutLabel: "About CEO",
+        roles: ["Spearheading product development & digital simulations", "Robotics architecture and strategic expansion", "Technological innovation across architectural projects"],
+        about: "Spearheading product development, digital simulations, robotics architectures, and strategic technological expansions.",
+        education: "Technology & Product Development",
+        experience: "15+ Years in Digital Innovation & Tech Leadership"
+      },
+      {
+        name: "Ujala D. Shah", title: "Technical Director", badge: "Technical Director",
+        photo: "assets/ujala.png",
+        photoClass: "w-full h-full object-contain object-bottom transition-transform duration-500 scale-110",
+        aboutLabel: "About Technical Director",
+        roles: ["Driving software, CAD & analysis model integrations", "Hardware testing and system-level validation", "Technical system integrations across projects"],
+        about: "Driving software, CAD, analysis models, hardware testing, and technical system-level integrations across architectural projects.",
+        education: "Software Engineering, CAD Systems",
+        experience: "12+ Years in Technical Architecture & Systems"
+      }
+    ];
+
+    const photoEl = document.getElementById('team-detail-photo');
+    const badgeEl = document.getElementById('team-detail-badge');
+    const nameEl = document.getElementById('team-detail-name');
+    const titleEl = document.getElementById('team-detail-title');
+    const rolesEl = document.getElementById('team-detail-roles');
+    const aLblEl = document.getElementById('team-detail-about-label');
+    const aboutEl = document.getElementById('team-detail-about');
+    const eduEl = document.getElementById('team-detail-edu');
+    const expEl = document.getElementById('team-detail-exp');
+
+    function selectTeamMember(index) {
+      document.querySelectorAll('.team-tab-btn').forEach((tab, i) => {
+        tab.className = i === index
+          ? 'team-tab-btn p-4 rounded-2xl border text-left cursor-pointer transition-all flex items-center justify-between group focus:outline-none border-brandTeal shadow-lg ring-1 ring-brandTeal/30 font-black text-white bg-gradient-to-r from-brandTeal to-brandBlue'
+          : 'team-tab-btn p-4 rounded-2xl border text-left cursor-pointer transition-all flex items-center justify-between group focus:outline-none border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/35 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-brandTeal/40 text-slate-900 dark:text-slate-100';
+      });
+      photoEl.style.opacity = 0;
+      nameEl.style.opacity = 0;
+      setTimeout(() => {
+        const m = teamMembers[index];
+        photoEl.src = m.photo; photoEl.alt = m.name; photoEl.className = m.photoClass;
+        badgeEl.innerText = m.badge; nameEl.innerText = m.name; titleEl.innerText = m.title;
+        aLblEl.innerText = m.aboutLabel; aboutEl.innerText = m.about;
+        eduEl.innerText = m.education; expEl.innerText = m.experience;
+        rolesEl.innerHTML = '';
+        m.roles.forEach(role => {
+          const li = document.createElement('li');
+          li.className = 'flex items-start gap-2 text-[13px] font-semibold';
+          li.innerHTML = `<span class="text-yellow-300 text-xs mt-0.5 flex-shrink-0">✦</span><span>${role}</span>`;
+          rolesEl.appendChild(li);
+        });
+        photoEl.style.opacity = 1; nameEl.style.opacity = 1;
+        lucide.createIcons();
+      }, 150);
+    }
+
+    // Enquiry Modal Logic
+    const enquiryModal = document.getElementById('enquiry-modal');
+    const enquiryModalContent = document.getElementById('enquiry-modal-content');
+
+    window.openEnquiryModal = function (event) {
+      if (event) event.preventDefault();
+      enquiryModal.classList.remove('hidden');
+      setTimeout(() => {
+        enquiryModalContent.classList.remove('scale-95', 'opacity-0');
+        enquiryModalContent.classList.add('scale-100', 'opacity-100');
+        lucide.createIcons();
+      }, 50);
+    }
+
+    window.closeEnquiryModal = function () {
+      enquiryModalContent.classList.remove('scale-100', 'opacity-100');
+      enquiryModalContent.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        enquiryModal.classList.add('hidden');
+        document.getElementById('modal-form-success-card').classList.add('hidden');
+        document.getElementById('modal-enquiry-form').reset();
+      }, 300);
+    }
+
+    window.handleModalFormSubmit = function (event) {
+      event.preventDefault();
+      document.getElementById('modal-form-success-card').classList.remove('hidden');
+    }
+
+    if (enquiryModal) {
+      enquiryModal.addEventListener('click', (e) => {
+        if (e.target === enquiryModal) closeEnquiryModal();
+      });
+    }
+
+    selectTeamMember(0);
+  </script>
+  <script src="./assets/js/auth-session.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

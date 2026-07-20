@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile | ROSHANI TECHNOLOGIES PVT. LTD.</title>
+  <link rel="stylesheet" href="./styles/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.292.0/dist/umd/lucide.min.js"></script>
+  <style>
+    .glass-light { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .glass-dark { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 overflow-x-hidden min-h-screen flex flex-col">
+
+  <!-- ================= HEADER NAVBAR ================= -->
+  <header id="profile-header" class="bg-[#0b1320] text-white px-4 sm:px-6 lg:px-8 py-5 border-b border-slate-850">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+          <img src="https://roshaninet.netlify.app/assets/RoshaniLogo2-removebg-preview-CBNwlsGI.png" alt="Roshani Technologies Logo"
+            class="h-10 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
+            style="filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(56,189,248,0.45));">
+        </a>
+        <div class="h-6 w-px bg-slate-700"></div>
+        <span class="font-display font-black text-sm uppercase tracking-widest text-slate-200">Your Profile</span>
+      </div>
+      <a href="index.html" class="p-2 text-slate-400 hover:text-white transition-colors rounded-xl hover:bg-slate-800/40" aria-label="Close Profile">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= TABS NAVIGATION ================= -->
+  <div class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 select-none">
+    <div class="max-w-4xl mx-auto grid grid-cols-3 text-center">
+      <button onclick="switchTab('info')" id="tab-btn-info" class="py-4 flex flex-col sm:flex-row items-center justify-center gap-2 text-xs font-bold text-slate-400 border-b-2 border-transparent transition-all hover:text-slate-650 cursor-pointer focus:outline-none">
+        <i data-lucide="clipboard-list" class="w-4 h-4"></i>
+        <span>Your Information</span>
+      </button>
+      <button onclick="switchTab('profile')" id="tab-btn-profile" class="py-4 flex flex-col sm:flex-row items-center justify-center gap-2 text-xs font-black text-brandBlue border-b-2 border-brandBlue bg-slate-50/50 dark:bg-slate-800/20 transition-all cursor-pointer focus:outline-none">
+        <i data-lucide="user" class="w-4 h-4"></i>
+        <span>My Profile</span>
+      </button>
+      <button onclick="switchTab('progress')" id="tab-btn-progress" class="py-4 flex flex-col sm:flex-row items-center justify-center gap-2 text-xs font-bold text-slate-400 border-b-2 border-transparent transition-all hover:text-slate-650 cursor-pointer focus:outline-none">
+        <i data-lucide="award" class="w-4 h-4"></i>
+        <span>My Progress</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= MAIN CONTAINER ================= -->
+  <main class="flex-grow max-w-4xl w-full mx-auto px-4 py-8">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-10 shadow-sm">
+      
+      <!-- Tab 1: Edit Profile details -->
+      <div id="section-profile" class="space-y-8">
+        <!-- Photo Update Row -->
+        <div class="flex items-center justify-between gap-6 border-b border-slate-100 dark:border-slate-800 pb-8">
+          <div class="space-y-1 text-left">
+            <h2 class="text-2xl font-black font-display text-slate-900 dark:text-white border-l-4 border-brandBlue pl-3">Update Your Profile Photo</h2>
+            <p class="text-[11px] font-semibold text-slate-450 dark:text-slate-400">Add or change the current profile photo representing your account.</p>
+          </div>
+          <!-- Avatar wrapper -->
+          <div class="relative flex-shrink-0">
+            <div id="profile-avatar-container" class="w-24 h-24 rounded-full overflow-hidden border-2 border-slate-200 dark:border-slate-700 shadow-inner flex items-center justify-center bg-brandBlue/10">
+              <!-- Dynamically populated or Default Initials -->
+              <span class="text-brandBlue font-black text-2xl">U</span>
+            </div>
+            <button onclick="changePhoto()" class="absolute bottom-0 right-0 p-2 bg-brandBlue text-white hover:bg-brandBlue/90 rounded-full shadow-lg border border-white dark:border-slate-900 cursor-pointer focus:outline-none transition-transform hover:scale-105" title="Change Photo">
+              <i data-lucide="rotate-cw" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Form fields layout -->
+        <form id="profile-update-form" class="space-y-6 text-left" onsubmit="saveProfile(event)">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="space-y-1.5">
+              <label for="profile-firstname" class="block text-xs font-black text-slate-500 dark:text-slate-400 tracking-wide uppercase">First Name</label>
+              <input type="text" id="profile-firstname" class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl focus:border-brandBlue focus:ring-1 focus:ring-brandBlue text-sm font-semibold outline-none transition-all dark:text-white">
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="profile-lastname" class="block text-xs font-black text-slate-500 dark:text-slate-400 tracking-wide uppercase">Last Name</label>
+              <input type="text" id="profile-lastname" placeholder="Enter your last name" class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl focus:border-brandBlue focus:ring-1 focus:ring-brandBlue text-sm font-semibold outline-none transition-all dark:text-white">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="space-y-1.5">
+              <label for="profile-phone" class="block text-xs font-black text-slate-500 dark:text-slate-400 tracking-wide uppercase">Mobile Number</label>
+              <input type="tel" id="profile-phone" class="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl focus:border-brandBlue focus:ring-1 focus:ring-brandBlue text-sm font-semibold outline-none transition-all dark:text-white">
+            </div>
+
+            <div class="space-y-1.5">
+              <label for="profile-email" class="block text-xs font-black text-slate-500 dark:text-slate-400 tracking-wide uppercase">Email Address</label>
+              <input type="email" id="profile-email" readonly class="w-full px-4 py-3 bg-slate-50/50 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-850 rounded-xl text-sm font-semibold text-slate-400 outline-none cursor-not-allowed">
+            </div>
+          </div>
+
+          <!-- Bottom CTA Row -->
+          <div class="pt-6 border-t border-slate-100 dark:border-slate-800 space-y-4">
+            <button type="submit" class="w-full py-3.5 bg-brandBlue hover:bg-brandBlue/90 text-white font-extrabold uppercase text-xs tracking-widest rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer">
+              <i data-lucide="save" class="w-4.5 h-4.5"></i>
+              <span>Save Profile Modifications</span>
+            </button>
+
+            <button type="button" onclick="handleLogout()" class="w-full py-3.5 bg-[#0f172a] hover:bg-[#1e293b] text-white font-bold uppercase text-xs tracking-widest rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer">
+              <i data-lucide="log-out" class="w-4 h-4"></i>
+              <span>Log Out</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Tab 2: Your Information (Static placeholder view) -->
+      <div id="section-info" class="space-y-6 hidden text-left">
+        <h2 class="text-xl font-black text-slate-900 dark:text-white border-l-4 border-brandBlue pl-3">Account Information & Security</h2>
+        <div class="p-6 bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 rounded-2xl space-y-4 text-xs font-semibold text-slate-500 dark:text-slate-400">
+          <p>This panel holds account credentials, permission catalogs, and telemetry settings verified for Roshani Technologies academy portal integrations.</p>
+          <div class="grid grid-cols-2 gap-4 pt-2">
+            <div>
+              <p class="font-black text-slate-900 dark:text-white uppercase tracking-wider text-[9px] mb-1">Identity Provider</p>
+              <span id="info-idp">Standard Auth</span>
+            </div>
+            <div>
+              <p class="font-black text-slate-900 dark:text-white uppercase tracking-wider text-[9px] mb-1">Status</p>
+              <span class="text-emerald-500">Verified Active Account</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: My Progress (Static placeholder view) -->
+      <div id="section-progress" class="space-y-6 hidden text-left">
+        <h2 class="text-xl font-black text-slate-900 dark:text-white border-l-4 border-brandBlue pl-3">Enrolled Program Progress</h2>
+        <div class="p-6 bg-slate-50 dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 rounded-2xl text-xs font-semibold text-slate-500 dark:text-slate-400 select-none text-center">
+          <i data-lucide="compass" class="w-8 h-8 mx-auto text-brandBlue mb-3 animate-spin"></i>
+          <p>No active courses or certified blueprint modules added yet.</p>
+          <a href="all-courses.html" class="inline-block mt-4 text-brandBlue font-black hover:underline uppercase tracking-wider text-[10px]">Enroll in a Program</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= AVATAR SELECTOR MODAL ================= -->
+  <div id="avatar-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md transition-opacity duration-300">
+    <div id="avatar-modal-content" class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl max-w-md w-full overflow-hidden transform scale-95 opacity-0 transition-all duration-300 p-6 space-y-6">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-850 pb-3">
+        <h3 class="text-lg font-black text-slate-900 dark:text-white uppercase tracking-wider">Choose Profile Photo</h3>
+        <button onclick="closeAvatarModal()" class="p-1 rounded-lg text-slate-450 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+
+      <!-- Option 1: Built-in Pre-loaded Avatars -->
+      <div class="space-y-2.5 text-left">
+        <span class="block text-[10px] font-black text-slate-400 tracking-widest uppercase">Select an Avatar</span>
+        <div class="grid grid-cols-4 gap-4">
+          <button onclick="selectAvatar('https://api.dicebear.com/7.x/adventurer/svg?seed=Felix')" class="w-full aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-brandBlue transition-all bg-slate-50 hover:scale-105 cursor-pointer">
+            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Felix" alt="Avatar 1" class="w-full h-full object-cover">
+          </button>
+          <button onclick="selectAvatar('https://api.dicebear.com/7.x/adventurer/svg?seed=Aneka')" class="w-full aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-brandBlue transition-all bg-slate-50 hover:scale-105 cursor-pointer">
+            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Aneka" alt="Avatar 2" class="w-full h-full object-cover">
+          </button>
+          <button onclick="selectAvatar('https://api.dicebear.com/7.x/adventurer/svg?seed=Sasha')" class="w-full aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-brandBlue transition-all bg-slate-50 hover:scale-105 cursor-pointer">
+            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Sasha" alt="Avatar 3" class="w-full h-full object-cover">
+          </button>
+          <button onclick="selectAvatar('https://api.dicebear.com/7.x/adventurer/svg?seed=Leo')" class="w-full aspect-square rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-brandBlue transition-all bg-slate-50 hover:scale-105 cursor-pointer">
+            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Leo" alt="Avatar 4" class="w-full h-full object-cover">
+          </button>
+        </div>
+      </div>
+
+      <!-- Option 2: Upload File From Device -->
+      <div class="space-y-2 text-left">
+        <span class="block text-[10px] font-black text-slate-400 tracking-widest uppercase">Upload from Device</span>
+        <label class="w-full flex items-center justify-center gap-2.5 py-3 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors cursor-pointer text-xs font-bold text-slate-600 dark:text-slate-350">
+          <i data-lucide="upload-cloud" class="w-4 h-4 text-brandBlue"></i>
+          <span>Choose Image File</span>
+          <input type="file" accept="image/*" onchange="handleLocalFileUpload(event)" class="hidden">
+        </label>
+      </div>
+
+      <!-- Option 3: External URL Link -->
+      <div class="space-y-2 text-left">
+        <span class="block text-[10px] font-black text-slate-400 tracking-widest uppercase font-sans">Paste Custom Image URL</span>
+        <div class="flex gap-2">
+          <input type="text" id="custom-photo-url" placeholder="https://example.com/image.jpg" class="flex-grow px-4 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-bold outline-none focus:border-brandBlue transition-all text-slate-850 dark:text-white">
+          <button onclick="handleCustomPhotoUrl()" class="px-4 py-2.5 bg-brandBlue hover:bg-brandBlue/90 text-white font-extrabold uppercase text-[10px] tracking-wider rounded-xl transition-all shadow cursor-pointer">Apply</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    let currentSession = null;
+
+    function loadProfile() {
+      const sessionStr = localStorage.getItem('rtpl_user_session');
+      if (!sessionStr) {
+        // Redirect to login if no profile exists
+        window.location.href = 'login.html';
+        return;
+      }
+      currentSession = JSON.parse(sessionStr);
+
+      // Map values
+      const nameParts = currentSession.name ? currentSession.name.split(' ') : ['User', ''];
+      const firstname = nameParts[0];
+      const lastname = nameParts.slice(1).join(' ');
+
+      document.getElementById('profile-firstname').value = firstname;
+      document.getElementById('profile-lastname').value = lastname;
+      document.getElementById('profile-email').value = currentSession.email || '';
+      document.getElementById('profile-phone').value = currentSession.phone || '+91 99999 88888';
+
+      document.getElementById('info-idp').innerText = currentSession.type || 'Google Sign In';
+
+      // Set avatar
+      const avatarContainer = document.getElementById('profile-avatar-container');
+      if (currentSession.picture) {
+        avatarContainer.innerHTML = `<img src="${currentSession.picture}" class="w-full h-full object-cover rounded-full">`;
+      } else {
+        const initials = currentSession.name ? currentSession.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase() : 'U';
+        avatarContainer.innerHTML = `<span class="text-brandBlue font-black text-2xl">${initials}</span>`;
+      }
+    }
+
+    function saveProfile(event) {
+      event.preventDefault();
+      const first = document.getElementById('profile-firstname').value.trim();
+      const last = document.getElementById('profile-lastname').value.trim();
+      const phone = document.getElementById('profile-phone').value.trim();
+
+      if (!first) {
+        alert("First name is required.");
+        return;
+      }
+
+      currentSession.name = `${first} ${last}`.trim();
+      currentSession.phone = phone;
+
+      localStorage.setItem('rtpl_user_session', JSON.stringify(currentSession));
+      
+      RTPL_DB.saveUser(currentSession).then(() => {
+        alert("Profile details updated successfully!");
+        loadProfile();
+      }).catch(err => {
+        console.error("DB Save Profile Error:", err);
+        alert("Profile details updated locally!");
+        loadProfile();
+      });
+    }
+
+    function changePhoto() {
+      // Toggle Avatar Selection Modal
+      const modal = document.getElementById('avatar-modal');
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        document.getElementById('avatar-modal-content').classList.remove('scale-95', 'opacity-0');
+        document.getElementById('avatar-modal-content').classList.add('scale-100', 'opacity-100');
+      }, 50);
+    }
+
+    function closeAvatarModal() {
+      const modalContent = document.getElementById('avatar-modal-content');
+      modalContent.classList.remove('scale-100', 'opacity-100');
+      modalContent.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        document.getElementById('avatar-modal').classList.add('hidden');
+      }, 300);
+    }
+
+    function selectAvatar(url) {
+      currentSession.picture = url;
+      localStorage.setItem('rtpl_user_session', JSON.stringify(currentSession));
+      closeAvatarModal();
+      loadProfile();
+      
+      // Update registration logs in database
+      RTPL_DB.saveUser(currentSession).catch(err => {
+        console.error("DB Update Profile Photo Error:", err);
+      });
+    }
+
+    function handleCustomPhotoUrl() {
+      const url = document.getElementById('custom-photo-url').value.trim();
+      if (url) {
+        selectAvatar(url);
+        document.getElementById('custom-photo-url').value = '';
+      } else {
+        alert("Please enter a valid image URL.");
+      }
+    }
+
+    function handleLocalFileUpload(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          selectAvatar(e.target.result); // Base64 encoding
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function handleLogout() {
+      localStorage.removeItem('rtpl_user_session');
+      window.location.href = 'index.html';
+    }
+
+    function switchTab(tabId) {
+      const secProfile = document.getElementById('section-profile');
+      const secInfo = document.getElementById('section-info');
+      const secProgress = document.getElementById('section-progress');
+
+      const btnProfile = document.getElementById('tab-btn-profile');
+      const btnInfo = document.getElementById('tab-btn-info');
+      const btnProgress = document.getElementById('tab-btn-progress');
+
+      // Hide all
+      secProfile.classList.add('hidden');
+      secInfo.classList.add('hidden');
+      secProgress.classList.add('hidden');
+
+      // Reset button highlights
+      [btnProfile, btnInfo, btnProgress].forEach(btn => {
+        btn.className = "py-4 flex flex-col sm:flex-row items-center justify-center gap-2 text-xs font-bold text-slate-400 border-b-2 border-transparent transition-all hover:text-slate-650 cursor-pointer focus:outline-none";
+      });
+
+      // Show/Highlight target
+      if (tabId === 'profile') {
+        secProfile.classList.remove('hidden');
+        btnProfile.className = "py-4 flex flex-col sm:flex-row items-center justify-center gap-2 text-xs font-black text-brandBlue border-b-2 border-brandBlue bg-slate-50/50 dark:bg-slate-800/20 transition-all cursor-pointer focus:outline-none";
+      } else if (tabId === 'info') {
+        secInfo.classList.remove('hidden');
+        btnInfo.className = "py-4 flex flex-col sm:flex-row items-center justify-center gap-2 text-xs font-black text-brandBlue border-b-2 border-brandBlue bg-slate-50/50 dark:bg-slate-800/20 transition-all cursor-pointer focus:outline-none";
+      } else {
+        secProgress.classList.remove('hidden');
+        btnProgress.className = "py-4 flex flex-col sm:flex-row items-center justify-center gap-2 text-xs font-black text-brandBlue border-b-2 border-brandBlue bg-slate-50/50 dark:bg-slate-800/20 transition-all cursor-pointer focus:outline-none";
+      }
+    }
+
+    // Theme logic
+    const htmlEl = document.documentElement;
+    const themeSun = document.getElementById('theme-sun');
+    const themeMoon = document.getElementById('theme-moon');
+
+    function applyTheme(dark) {
+      dark ? htmlEl.classList.add('dark') : htmlEl.classList.remove('dark');
+      if (themeSun) themeSun.classList.toggle('hidden', !dark);
+      if (themeMoon) themeMoon.classList.toggle('hidden', dark);
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+    const savedTheme = localStorage.getItem('theme');
+    applyTheme(savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
+    
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => applyTheme(!htmlEl.classList.contains('dark')));
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadProfile();
+      lucide.createIcons();
+    });
+  </script>
+  <script src="./assets/js/db.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100
+        });
+      }
+    });
+  </script>
+</body>
+</html>

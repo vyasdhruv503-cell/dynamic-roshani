@@ -1,0 +1,2385 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROSHANI TECHNOLOGIES PVT. LTD. | Smart Digital Academy</title>
+  <meta name="description"
+    content="India's Premier AutoCAD & BIM Reseller & Trainer. Learn Revit, AutoCAD, SketchUp, CATIA, Fusion 360, and Lumion with industry experts.">
+
+  <!-- Tailwind CSS Compiled Local Stylesheet -->
+  <link rel="stylesheet" href="./styles/output.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.292.0/dist/umd/lucide.min.js"></script>
+
+  <!-- Custom Scroll Reveal and Glassmorphism Styles -->
+  <style>
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+
+    .dark ::-webkit-scrollbar-track {
+      background: #0F172A;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+      background: #334155;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+
+    /* Custom Glassmorphism */
+    .glass-light {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .glass-dark {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* Marquee Pause on Hover */
+    .marquee-container:hover .animate-marquee {
+      animation-play-state: paused;
+    }
+  </style>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body
+  class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 overflow-x-hidden">
+
+  <!-- ================= HEADER / STICKY NAVBAR ================= -->
+  <header id="main-navigation"
+    class="sticky top-0 z-50 transition-all duration-300 border-b border-slate-200/80 dark:border-slate-800/80 glass-light dark:glass-dark shadow-sm">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
+          <img src="https://roshaninet.netlify.app/assets/RoshaniLogo2-removebg-preview-CBNwlsGI.png"
+            alt="Roshani Technologies Logo"
+            class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-7">
+          <a href="index.html"
+            class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Home</a>
+          <a href="about-us.html" class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">About Us</a>
+          <a href="all-courses.html"
+            class="inline-flex items-center justify-center px-4 py-1.5 border border-rose-600 text-rose-600 hover:bg-rose-600 hover:text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all hover:shadow-[0_0_15px_rgba(225,29,72,0.65)]">All Courses</a>
+          <a href="leadership.html"
+            class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Leadership</a>
+          <a href="partners.html"
+            class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Partners</a>
+          <a href="contact.html"
+            class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Contact</a>
+        </nav>
+
+        <!-- Actions (Theme Toggle + Mobile Menu Trigger) -->
+        <div class="flex items-center gap-4">
+          <!-- Dark Mode Toggle Button -->
+          <button id="theme-toggle"
+            class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brandBlue transition-all cursor-pointer"
+            aria-label="Toggle dark mode">
+            <!-- Sun Icon (for Dark Mode) -->
+            <svg id="theme-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+            </svg>
+            <!-- Moon Icon (for Light Mode) -->
+            <svg id="theme-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+
+          <!-- Sign In / Sign Up (Desktop) -->
+          <div id="desktop-auth-buttons" class="hidden sm:flex items-center gap-3">
+            <a href="login.html"
+              class="inline-flex items-center justify-center px-4 py-2.5 border border-slate-205 dark:border-slate-850 text-slate-700 dark:text-slate-202 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold text-xs uppercase tracking-wider rounded-xl transition-all">
+              Sign In
+            </a>
+            <a href="signup.html"
+              class="inline-flex items-center justify-center px-4 py-2.5 bg-brandBlue hover:bg-brandBlue/90 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm hover:shadow hover:-translate-y-0.5">
+              Sign Up
+            </a>
+          </div>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobile-menu-toggle"
+            class="p-2.5 lg:hidden rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer"
+            aria-label="Toggle Navigation Menu">
+            <i data-lucide="menu" class="w-5.5 h-5.5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-menu"
+      class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all duration-300">
+      <div class="px-4 pt-4 pb-6 space-y-2">
+        <a href="index.html"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Home</a>
+        <a href="about-us.html"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Why
+          Us</a>
+        <a href="#all-courses"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">All
+          Courses</a>
+        <a href="#team"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Leadership
+          Team</a>
+        <a href="partners.html"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Our
+          Partners</a>
+        <a href="contact.html"
+          class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-medium hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">Contact Us</a>
+        <div id="mobile-auth-buttons" class="pt-4 border-t border-slate-100 dark:border-slate-800 grid grid-cols-2 gap-3">
+          <a href="login.html"
+            class="w-full text-center inline-flex items-center justify-center px-4 py-3 border border-slate-200/80 dark:border-slate-800/80 text-slate-700 dark:text-slate-300 font-bold text-xs uppercase tracking-wider rounded-xl transition-all hover:bg-slate-100 dark:hover:bg-slate-800">
+            Sign In
+          </a>
+          <a href="signup.html"
+            class="w-full text-center inline-flex items-center justify-center px-4 py-3 bg-brandBlue text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm">
+            Sign Up
+          </a>
+        </div>
+        <!-- Mobile Theme Toggle -->
+        <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between px-4">
+          <span class="text-sm font-bold text-slate-600 dark:text-slate-350">Theme Mode</span>
+          <button id="mobile-theme-toggle" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brandBlue transition-all cursor-pointer bg-slate-50 dark:bg-slate-900" aria-label="Toggle dark mode">
+            <svg id="mobile-theme-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+            </svg>
+            <svg id="mobile-theme-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 -mb-12 relative z-10">
+    <a href="index.html"
+      class="inline-flex items-center gap-2 text-xs font-black text-brandBlue uppercase tracking-widest hover:text-brandBlue/80 transition-colors">
+      <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to Home
+    </a>
+  </div>
+
+
+  <!-- ================= FULL COURSE CATALOG ================= -->
+  <section data-aos="fade-up" id="all-courses"
+    class="py-20 sm:py-28 bg-slate-50 dark:bg-slate-950 transition-colors duration-300 overflow-hidden">
+    <!-- Background decorative elements -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="absolute top-32 -right-32 w-96 h-96 bg-brandBlue/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-32 -left-32 w-96 h-96 bg-brandTeal/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Section Header -->
+      <div class="mb-12 text-center reveal">
+        <span class="text-xs sm:text-sm font-black text-brandBlue tracking-widest uppercase">Complete Program
+          Catalogue</span>
+        <h2
+          class="text-3xl sm:text-4xl lg:text-5xl font-black font-display tracking-tight text-slate-900 dark:text-white mt-2">
+          60+ Professional Courses
+        </h2>
+        <p class="mt-4 text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-sm sm:text-base font-medium">
+          Explore our complete range of industry-aligned programs across Engineering, Design, Technology, AI & more.
+          Every course includes hands-on training with certified instructors.
+        </p>
+        <!-- Stats bar -->
+        <div class="flex flex-wrap justify-center gap-6 mt-8">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 dark:text-slate-400">
+            <span class="w-2.5 h-2.5 rounded-full bg-brandBlue inline-block"></span> 14 Departments
+          </div>
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 dark:text-slate-400">
+            <span class="w-2.5 h-2.5 rounded-full bg-brandGreen inline-block"></span> 65+ Courses
+          </div>
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 dark:text-slate-400">
+            <span class="w-2.5 h-2.5 rounded-full bg-brandTeal inline-block"></span> 100% Placement Support
+          </div>
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-500 dark:text-slate-400">
+            <span class="w-2.5 h-2.5 rounded-full bg-purple-500 inline-block"></span> Certified Faculty
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="reveal mb-10 overflow-x-auto pb-2">
+        <div id="catalog-tabs" class="flex gap-2 min-w-max mx-auto w-fit">
+          <!-- tabs generated by JS -->
+        </div>
+      </div>
+
+      <!-- Course Cards Grid -->
+      <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+        <!-- cards generated by JS -->
+      </div>
+
+      <!-- Enroll CTA Banner -->
+      <div class="mt-14 reveal">
+        <div
+          class="relative rounded-3xl bg-gradient-to-br from-brandBlue to-brandTeal p-8 sm:p-12 overflow-hidden text-center shadow-2xl">
+          <div
+            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNCI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptMC0zNHY2aDZ2LTZoLTZ6bS0zNiAzNHY2aDZ2LTZIMHptMC0zNHY2aDZ2LTZIMHoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-30">
+          </div>
+          <div class="relative z-10">
+            <h3 class="text-2xl sm:text-3xl font-black text-white font-display mb-3">Can't Find Your Course?</h3>
+            <p class="text-white/80 text-sm sm:text-base font-medium mb-6 max-w-xl mx-auto">We offer customized
+              corporate training, short-term workshops, and tailored programs for institutions. Contact us to design
+              your program.</p>
+            <div class="flex flex-wrap gap-4 justify-center">
+              <a href="contact.html"
+                class="px-8 py-3 bg-white text-brandBlue font-black text-sm uppercase tracking-wider rounded-2xl hover:shadow-lg transition-all hover:-translate-y-0.5">
+                Enquire for Custom Course
+              </a>
+              <a href="tel:+919408788205"
+                class="px-8 py-3 bg-white/15 border border-white/30 text-white font-black text-sm uppercase tracking-wider rounded-2xl hover:bg-white/25 transition-all">
+                Call: +91 94087 88205
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- ================= PARTNER SEARCH & COLLABORATIONS MODAL ================= -->
+  <div id="partner-modal"
+    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-md transition-opacity duration-300">
+    <div id="partner-modal-content"
+      class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden transform scale-95 opacity-0 transition-all duration-300">
+
+      <!-- Modal Header -->
+      <div class="p-6 border-b border-slate-200/80 dark:border-slate-800/80 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="p-2 rounded-xl bg-brandBlue/10 text-brandBlue flex items-center justify-center">
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </div>
+          <div class="text-left">
+            <h3 class="text-lg font-black text-slate-900 dark:text-white tracking-tight">Partner Search</h3>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-wider mt-0.5">Explore
+              collaborations and pathways</p>
+          </div>
+        </div>
+        <button onclick="closePartnerModal()"
+          class="p-2 rounded-xl text-slate-400 hover:text-slate-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer focus:outline-none">
+          <i data-lucide="x" class="w-5.5 h-5.5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 space-y-5 text-left">
+        <!-- Logo and Partner info -->
+        <div
+          class="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/20 border border-slate-100 dark:border-slate-800/60">
+          <div
+            class="bg-white p-2.5 rounded-xl border border-slate-200/60 max-w-[100px] flex items-center justify-center">
+            <img id="partner-modal-logo" src="" alt="Partner Logo" class="h-10 w-auto object-contain">
+          </div>
+          <div>
+            <h4 id="partner-modal-name" class="font-black text-slate-900 dark:text-white text-base">Partner Name</h4>
+            <span
+              class="text-[10px] px-2 py-0.5 font-bold bg-brandGreen/10 text-brandGreen border border-brandGreen/20 rounded-md">Verified
+              Academic Partner</span>
+          </div>
+        </div>
+
+        <!-- Collaborations Details -->
+        <div class="space-y-2">
+          <h5 class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Collaboration & Training Programs
+          </h5>
+          <p id="partner-modal-details"
+            class="text-sm font-semibold text-slate-600 dark:text-slate-300 leading-relaxed">
+            <!-- Dynamically populated -->
+          </p>
+        </div>
+
+        <!-- Course suggestions -->
+        <div class="space-y-3">
+          <h5 class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Recommended Career Pathways</h5>
+          <div id="partner-modal-courses" class="grid grid-cols-1 gap-2">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div
+        class="p-6 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-800/10 flex items-center justify-between">
+        <a id="partner-modal-google-btn" href="" target="_blank"
+          class="flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-300 hover:text-brandBlue dark:hover:text-brandBlue transition-colors">
+          <i data-lucide="external-link" class="w-4 h-4"></i> Search partnership on Google
+        </a>
+        <button onclick="closePartnerModal()"
+          class="px-5 py-2.5 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all cursor-pointer">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= DETAILED SYLLABUS MODAL ================= -->
+  <div id="syllabus-modal"
+    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md transition-opacity duration-300">
+    <div id="syllabus-modal-content"
+      class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl max-w-2xl w-full max-h-[85vh] flex flex-col justify-between overflow-hidden transform scale-95 opacity-0 transition-all duration-300">
+
+      <!-- Modal Header -->
+      <div class="p-6 border-b border-slate-200/80 dark:border-slate-800/80 flex items-center justify-between">
+        <div class="space-y-1 text-left">
+          <span id="modal-course-cat"
+            class="px-2.5 py-0.5 bg-brandBlue/15 border border-brandBlue/35 text-brandBlue text-[10px] font-black uppercase rounded-md tracking-wider">Category</span>
+          <h3 id="modal-course-title"
+            class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight mt-1">Course Syllabus
+          </h3>
+          <p id="modal-course-duration" class="text-xs font-mono text-slate-500 dark:text-slate-400">Duration: 8 Weeks
+          </p>
+        </div>
+        <button onclick="closeSyllabusModal()"
+          class="p-2 rounded-xl text-slate-400 hover:text-slate-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer focus:outline-none">
+          <i data-lucide="x" class="w-5.5 h-5.5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable Modules) -->
+      <div class="p-6 space-y-5 overflow-y-auto text-left" style="max-height:60vh;">
+        <!-- Meta bar: tools, career, cert -->
+        <div id="modal-meta-bar" class="flex flex-wrap gap-2 text-[10px] font-black tracking-wider uppercase"></div>
+        <div id="modal-course-body">
+          <!-- Populated Dynamically -->
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div
+        class="p-6 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-800/10 flex flex-wrap gap-4 items-center justify-between">
+        <div id="modal-cert-note" class="text-xs text-slate-500 dark:text-slate-400 font-semibold">
+          * Certification & Assessment on completion
+        </div>
+        <a id="modal-enquire-btn" href="contact.html" onclick="closeSyllabusModal()"
+          class="px-6 py-2.5 bg-brandBlue hover:bg-brandBlue/90 text-white text-xs font-bold uppercase tracking-widest rounded-xl transition-all shadow-sm">
+          Enquire Now
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ================= COMMITTEE / LEADERSHIP TEAM ================= -->
+  <section data-aos="fade-up" id="team" class="py-20 sm:py-28 bg-white dark:bg-slate-900 transition-colors duration-300 overflow-hidden">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-16 text-center reveal">
+        <span class="text-xs sm:text-sm font-black text-brandBlue tracking-widest uppercase">Expert Governance</span>
+        <h2
+          class="text-3xl sm:text-4xl lg:text-5xl font-black font-display tracking-tight text-slate-900 dark:text-white mt-2">
+          Leadership &amp; Committee Team</h2>
+        <p class="mt-4 text-slate-500 dark:text-slate-400 font-medium max-w-xl mx-auto text-sm sm:text-base">Meet the
+          visionary leaders who built Roshani Technologies into India's most trusted CAD &amp; BIM training institution
+          over 40+ years.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start text-left reveal">
+        <!-- Tab Buttons -->
+        <div class="md:col-span-4 flex flex-col gap-3.5">
+          <button onclick="selectTeamMember(0)" id="team-tab-0"
+            class="team-tab-btn p-4 rounded-2xl border text-left cursor-pointer transition-all flex items-center justify-between group focus:outline-none border-brandTeal shadow-lg ring-1 ring-brandTeal/30 font-black text-white bg-gradient-to-r from-brandTeal to-brandBlue">
+            <div>
+              <h4 class="text-base sm:text-lg font-black leading-tight">Dipak O. Shah</h4>
+              <p class="text-xs sm:text-sm font-bold opacity-90 mt-0.5">Director</p>
+            </div>
+            <i data-lucide="chevron-right"
+              class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </button>
+          <button onclick="selectTeamMember(1)" id="team-tab-1"
+            class="team-tab-btn p-4 rounded-2xl border text-left cursor-pointer transition-all flex items-center justify-between group focus:outline-none border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/35 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-brandTeal/40 text-slate-900 dark:text-slate-100">
+            <div>
+              <h4 class="text-base sm:text-lg font-black leading-tight">Jagruti D. Shah</h4>
+              <p class="text-xs sm:text-sm font-bold text-slate-500 dark:text-slate-400 mt-0.5">Director</p>
+            </div>
+            <i data-lucide="chevron-right"
+              class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </button>
+          <button onclick="selectTeamMember(2)" id="team-tab-2"
+            class="team-tab-btn p-4 rounded-2xl border text-left cursor-pointer transition-all flex items-center justify-between group focus:outline-none border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/35 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-brandTeal/40 text-slate-900 dark:text-slate-100">
+            <div>
+              <h4 class="text-base sm:text-lg font-black leading-tight">Nachiket D. Shah</h4>
+              <p class="text-xs sm:text-sm font-bold text-slate-500 dark:text-slate-400 mt-0.5">CEO</p>
+            </div>
+            <i data-lucide="chevron-right"
+              class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </button>
+          <button onclick="selectTeamMember(3)" id="team-tab-3"
+            class="team-tab-btn p-4 rounded-2xl border text-left cursor-pointer transition-all flex items-center justify-between group focus:outline-none border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/35 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-brandTeal/40 text-slate-900 dark:text-slate-100">
+            <div>
+              <h4 class="text-base sm:text-lg font-black leading-tight">Ujala D. Shah</h4>
+              <p class="text-xs sm:text-sm font-bold text-slate-500 dark:text-slate-400 mt-0.5">Technical Director</p>
+            </div>
+            <i data-lucide="chevron-right"
+              class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </button>
+          <a href="contact.html"
+            class="mt-2 inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-brandBlue text-white font-black text-xs uppercase tracking-wider rounded-2xl transition-all shadow-md hover:bg-brandBlue/90 hover:-translate-y-0.5">
+            <i data-lucide="send" class="w-4 h-4"></i> Enquire About Courses
+          </a>
+        </div>
+
+        <!-- Detail Panel -->
+        <div
+          class="md:col-span-8 bg-gradient-to-br from-brandTeal via-brandBlue to-indigo-800 border border-white/10 rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden flex flex-col gap-8 items-start min-h-[460px] text-white">
+          <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none">
+          </div>
+          <div class="w-full flex flex-col sm:flex-row gap-8 items-start relative z-10">
+            <div
+              class="w-full sm:w-64 md:w-72 h-80 sm:h-[360px] flex-shrink-0 relative rounded-2xl overflow-hidden border border-white/20 shadow-md bg-slate-950/20">
+              <img id="team-detail-photo" src="https://roshaninet.netlify.app/assets/dipakshahremove-bWqubSmV.png"
+                alt="Dipak O. Shah" class="w-full h-full object-contain transition-transform duration-500 scale-110"
+                style="transition:opacity 0.3s ease;">
+              <div id="team-detail-badge"
+                class="absolute bottom-3 left-3 right-3 bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold py-1.5 px-3 rounded-lg text-center tracking-wider uppercase leading-none border border-white/10 select-none">
+                Director</div>
+            </div>
+            <div class="flex-1 flex flex-col justify-start space-y-6 text-left w-full pt-1.5">
+              <div>
+                <h3 id="team-detail-name" class="text-2xl sm:text-3xl font-black tracking-tight"
+                  style="transition:opacity 0.3s ease;">Dipak O. Shah</h3>
+                <p id="team-detail-title"
+                  class="text-xs sm:text-sm text-yellow-300 font-extrabold uppercase tracking-widest mt-1">Director</p>
+              </div>
+              <div class="space-y-2 border-t border-white/10 pt-4">
+                <span class="text-[10px] font-black text-yellow-300/90 block uppercase tracking-wider">Roles &amp;
+                  Leadership Handles</span>
+                <ul id="team-detail-roles" class="space-y-1.5 text-xs sm:text-sm font-semibold"></ul>
+              </div>
+              <div class="space-y-2 border-t border-white/10 pt-4">
+                <span id="team-detail-about-label"
+                  class="text-[10px] font-black text-yellow-300/90 block uppercase tracking-wider">About Director</span>
+                <p id="team-detail-about" class="text-xs sm:text-sm leading-relaxed text-slate-100 font-medium">
+                  Providing premium engineering, design, analysis, and project management consultation. An industry
+                  leader committed to transforming governance and digital workflow.</p>
+              </div>
+              <div class="grid grid-cols-2 gap-4 border-t border-white/10 pt-4 text-xs">
+                <div>
+                  <span
+                    class="text-[10px] font-black text-yellow-300/90 block uppercase tracking-wider mb-1">Background</span>
+                  <p id="team-detail-edu" class="font-bold text-sm leading-snug">Visionary Leader, Strategic Management
+                  </p>
+                </div>
+                <div>
+                  <span class="text-[10px] font-black text-yellow-300/90 block uppercase tracking-wider mb-1">Mentorship
+                    Experience</span>
+                  <p id="team-detail-exp" class="font-bold text-sm leading-snug">40+ Years of Corporate &amp;
+                    Educational Governance</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= FOOTER SECTION ================= -->
+  <footer id="platform-footer" class="bg-slate-900 text-slate-400 border-t border-white/5 py-16 text-xs sm:text-sm">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-start text-left mb-12">
+
+        <!-- Brand Info -->
+        <div class="md:col-span-4 space-y-6">
+          <div class="flex items-center gap-3">
+            <img src="https://roshaninet.netlify.app/assets/RoshaniLogo2-removebg-preview-CBNwlsGI.png"
+              alt="Roshani Technologies Logo" class="h-10 w-auto object-contain brightness-0 invert" style="filter: brightness(0) invert(1);">
+          </div>
+          <p class="leading-relaxed font-semibold text-slate-400 max-w-sm">
+            Follow our official media outlets for corporate compliance announcements, educational roadmaps, and
+            technological updates.
+          </p>
+          <!-- Social Icons -->
+          <div class="flex gap-3 pt-2">
+            <a href="https://www.instagram.com/roshanitechnologiespvt.ltd?igsh=cXY5aTczbXV2OWJ3" target="_blank"
+              rel="noreferrer"
+              class="w-9 h-9 rounded-full border border-slate-800 hover:border-brandBlue hover:text-brandBlue text-slate-400 flex items-center justify-center transition-colors">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="https://www.facebook.com/RoshaniComputerServices" target="_blank" rel="noreferrer"
+              class="w-9 h-9 rounded-full border border-slate-800 hover:border-brandBlue hover:text-brandBlue text-slate-400 flex items-center justify-center transition-colors">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/919408788205" target="_blank" rel="noreferrer"
+              class="w-9 h-9 rounded-full border border-slate-800 hover:border-brandGreen hover:text-brandGreen text-slate-400 flex items-center justify-center transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </a>
+            <a href="https://www.youtube.com/@ROSHNICOMPUTERSERVICES" target="_blank" rel="noreferrer"
+              class="w-9 h-9 rounded-full border border-slate-800 hover:border-red-600 hover:text-red-600 text-slate-400 flex items-center justify-center transition-colors">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+            <a href="https://in.linkedin.com/company/roshanitechnologiespvtltd" target="_blank" rel="noreferrer"
+              class="w-9 h-9 rounded-full border border-slate-800 hover:border-blue-500 hover:text-blue-500 text-slate-400 flex items-center justify-center transition-colors">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-2 space-y-4">
+          <h4 class="text-sm font-black text-white uppercase tracking-wider">Quick Links</h4>
+          <ul class="space-y-2.5 font-bold">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about-us.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="all-courses.html" class="hover:text-white transition-colors">All Courses</a></li>
+            <li><a href="leadership.html" class="hover:text-white transition-colors">Leadership</a></li>
+            <li><a href="partners.html" class="hover:text-white transition-colors">Our Partners</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal & Verification -->
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="text-sm font-black text-white uppercase tracking-wider">Legal & Verification</h4>
+          <ul class="space-y-2.5 font-bold">
+            <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+            <li><a href="refund.html" class="hover:text-white transition-colors">Refund Policy</a></li>
+            <li><a href="student-verification.html" class="hover:text-white transition-colors">Student Verification</a></li>
+            <li><a href="certificate-verification.html" class="hover:text-white transition-colors">Certificate Verification</a></li>
+            <li><a href="sitemap.html" class="hover:text-white transition-colors">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <!-- Working Hours / Corporate Info -->
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="text-sm font-black text-white uppercase tracking-wider">Corporate Division</h4>
+          <ul class="space-y-3 font-semibold">
+            <li class="flex gap-2">
+              <span class="text-brandBlue">GSTIN:</span>
+              <span class="font-mono text-slate-300">24AANCR6249L17S</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-brandBlue">Registration:</span>
+              <span class="text-slate-300">Ministry of Corporate Affairs (MCA) Approved</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-brandBlue">Hours:</span>
+              <span class="text-slate-300">Mon - Sat (7:00 AM - 10:00 PM)</span>
+            </li>
+            <li class="flex gap-2">
+              <span class="text-brandBlue">Head Office:</span>
+              <span class="text-slate-300">Karelibaug Water Tank Road, Vadodara, Gujarat</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div
+        class="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 font-semibold">
+        <p>© 2026 ROSHANI TECHNOLOGIES PVT. LTD. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ================= FLOATING ACTION BUTTONS ================= -->
+  <!-- Floating WhatsApp Widget -->
+  <a href="https://wa.me/919408788205?text=Hello%20Roshani%20Technologies,%20I'm%20interested%20in%20enrolling%20for%20your%20CAD/BIM%20courses."
+    target="_blank" rel="noreferrer"
+    class="fixed bottom-6 right-6 z-40 p-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl hover:scale-105 transition-all flex items-center justify-center group focus:outline-none">
+    <i data-lucide="message-circle" class="w-6.5 h-6.5"></i>
+    <span
+      class="absolute right-14 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-md pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+      Chat with Us
+    </span>
+  </a>
+
+
+
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    /* ================= COURSE CATALOG ENGINE ================= */
+    const catalogData = [
+      {
+        id: "arch-bim",
+        label: "Architecture & BIM",
+        icon: "building-2",
+        color: "bg-brandBlue",
+        textColor: "text-brandBlue",
+        borderColor: "border-brandBlue/30",
+        bgLight: "bg-brandBlue/8",
+        courses: [
+          "Autodesk Revit Architecture", "Revit Structure", "Revit MEP",
+          "BIM Professional Masterclass", "Navisworks Manage",
+          "BIM Coordination", "BIM 360", "Autodesk Construction Cloud"
+        ]
+      },
+      {
+        id: "civil",
+        label: "Civil Engineering",
+        icon: "hard-hat",
+        color: "bg-amber-500",
+        textColor: "text-amber-600 dark:text-amber-400",
+        borderColor: "border-amber-500/30",
+        bgLight: "bg-amber-500/8",
+        courses: [
+          "AutoCAD Civil 3D", "STAAD.Pro", "ETABS", "SAFE",
+          "Primavera P6", "Microsoft Project",
+          "Quantity Surveying", "RCC Design", "Steel Structure Design"
+        ]
+      },
+      {
+        id: "mechanical",
+        label: "Mechanical Engineering",
+        icon: "settings",
+        color: "bg-slate-600",
+        textColor: "text-slate-600 dark:text-slate-300",
+        borderColor: "border-slate-500/30",
+        bgLight: "bg-slate-500/8",
+        courses: [
+          "AutoCAD Mechanical", "SolidWorks", "CATIA",
+          "Creo (Pro/E)", "Siemens NX",
+          "Autodesk Inventor", "Solid Edge"
+        ]
+      },
+      {
+        id: "cam",
+        label: "CAM & Manufacturing",
+        icon: "cpu",
+        color: "bg-orange-500",
+        textColor: "text-orange-600 dark:text-orange-400",
+        borderColor: "border-orange-500/30",
+        bgLight: "bg-orange-500/8",
+        courses: [
+          "Mastercam", "PowerMill", "Edgecam", "CAMWorks", "CNC Programming"
+        ]
+      },
+      {
+        id: "cae",
+        label: "CAE & Simulation",
+        icon: "activity",
+        color: "bg-red-500",
+        textColor: "text-red-600 dark:text-red-400",
+        borderColor: "border-red-500/30",
+        bgLight: "bg-red-500/8",
+        courses: [
+          "ANSYS", "HyperMesh", "Abaqus", "CFD Analysis", "FEA Analysis"
+        ]
+      },
+      {
+        id: "arch-interior",
+        label: "Architecture & Interior",
+        icon: "home",
+        color: "bg-brandTeal",
+        textColor: "text-brandTeal",
+        borderColor: "border-brandTeal/30",
+        bgLight: "bg-brandTeal/8",
+        courses: [
+          "AutoCAD", "SketchUp", "Lumion", "Twinmotion",
+          "Rhino 3D", "ArchiCAD", "V-Ray", "Enscape"
+        ]
+      },
+      {
+        id: "electrical",
+        label: "Electrical Engineering",
+        icon: "zap",
+        color: "bg-yellow-500",
+        textColor: "text-yellow-600 dark:text-yellow-400",
+        borderColor: "border-yellow-500/30",
+        bgLight: "bg-yellow-500/8",
+        courses: [
+          "AutoCAD Electrical", "Revit MEP Electrical", "EPLAN Electric P8"
+        ]
+      },
+      {
+        id: "gis",
+        label: "GIS & Survey",
+        icon: "map",
+        color: "bg-green-600",
+        textColor: "text-green-600 dark:text-green-400",
+        borderColor: "border-green-600/30",
+        bgLight: "bg-green-600/8",
+        courses: [
+          "ArcGIS", "QGIS", "Remote Sensing", "Drone Survey & Mapping"
+        ]
+      },
+      {
+        id: "product",
+        label: "Product Design",
+        icon: "box",
+        color: "bg-purple-600",
+        textColor: "text-purple-600 dark:text-purple-400",
+        borderColor: "border-purple-600/30",
+        bgLight: "bg-purple-600/8",
+        courses: [
+          "Fusion 360", "Autodesk Alias", "Inventor Professional", "Product Lifecycle Design"
+        ]
+      },
+      {
+        id: "ai-data",
+        label: "AI & Data",
+        icon: "brain",
+        color: "bg-indigo-600",
+        textColor: "text-indigo-600 dark:text-indigo-400",
+        borderColor: "border-indigo-600/30",
+        bgLight: "bg-indigo-600/8",
+        courses: [
+          "Artificial Intelligence", "Machine Learning", "Deep Learning",
+          "Python Programming", "Data Analytics", "Power BI", "Business Intelligence"
+        ]
+      },
+      {
+        id: "arvr",
+        label: "AR / VR",
+        icon: "glasses",
+        color: "bg-pink-600",
+        textColor: "text-pink-600 dark:text-pink-400",
+        borderColor: "border-pink-600/30",
+        bgLight: "bg-pink-600/8",
+        courses: [
+          "Unity 3D", "Unreal Engine", "Mixed Reality Development"
+        ]
+      },
+      {
+        id: "iot",
+        label: "IoT & Embedded",
+        icon: "wifi",
+        color: "bg-cyan-600",
+        textColor: "text-cyan-600 dark:text-cyan-400",
+        borderColor: "border-cyan-600/30",
+        bgLight: "bg-cyan-600/8",
+        courses: [
+          "Internet of Things (IoT)", "Embedded Systems", "Smart Automation"
+        ]
+      },
+      {
+        id: "graphic",
+        label: "Graphic Design",
+        icon: "palette",
+        color: "bg-rose-500",
+        textColor: "text-rose-600 dark:text-rose-400",
+        borderColor: "border-rose-500/30",
+        bgLight: "bg-rose-500/8",
+        courses: [
+          "Adobe Photoshop", "Illustrator", "CorelDRAW", "InDesign",
+          "Autodesk Maya", "3ds Max", "Blender"
+        ]
+      },
+      {
+        id: "corporate",
+        label: "Corporate & Exam",
+        icon: "briefcase",
+        color: "bg-brandGreen",
+        textColor: "text-brandGreen",
+        borderColor: "border-brandGreen/30",
+        bgLight: "bg-brandGreen/8",
+        courses: [
+          "Autodesk Certified Courses", "Bentley Software Training",
+          "Corporate Training Programs", "Industrial Projects",
+          "Placement-Oriented Skill Development",
+          "Competitive Exam Coaching", "GATE Mechanical Engineering"
+        ]
+      }
+    ];
+
+    let activeCatalogTab = 'all';
+
+    function renderCatalogTabs() {
+      const tabContainer = document.getElementById('catalog-tabs');
+      tabContainer.innerHTML = '';
+
+      // All button
+      const allBtn = document.createElement('button');
+      allBtn.id = 'tab-all';
+      allBtn.className = `px-4 py-2 rounded-xl text-xs font-black tracking-wider uppercase transition-all cursor-pointer whitespace-nowrap ${activeCatalogTab === 'all' ? 'bg-rose-600 text-white shadow-lg shadow-[0_0_15px_rgba(225,29,72,0.5)]' : 'bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-rose-600/40 hover:text-rose-600'}`;
+      allBtn.textContent = '✦ All Courses';
+      allBtn.onclick = () => { activeCatalogTab = 'all'; renderCatalogTabs(); renderCatalogGrid(); };
+      tabContainer.appendChild(allBtn);
+
+      catalogData.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.id = `tab-${cat.id}`;
+        btn.className = `px-4 py-2 rounded-xl text-xs font-black tracking-wider uppercase transition-all cursor-pointer whitespace-nowrap ${activeCatalogTab === cat.id ? `${cat.color} text-white shadow-lg` : `bg-white dark:bg-slate-900 ${cat.textColor} border ${cat.borderColor} hover:opacity-90`}`;
+        btn.textContent = cat.label;
+        btn.onclick = () => { activeCatalogTab = cat.id; renderCatalogTabs(); renderCatalogGrid(); };
+        tabContainer.appendChild(btn);
+      });
+    }
+
+    function renderCatalogGrid() {
+      const grid = document.getElementById('catalog-grid');
+      grid.innerHTML = '';
+
+      const toRender = activeCatalogTab === 'all'
+        ? catalogData
+        : catalogData.filter(c => c.id === activeCatalogTab);
+
+      toRender.forEach(cat => {
+        cat.courses.forEach((course, idx) => {
+          const card = document.createElement('div');
+          card.className = `group flex flex-col justify-between p-5 rounded-2xl border ${cat.borderColor} ${cat.bgLight} dark:bg-slate-900/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-pointer`;
+          card.style.animationDelay = `${idx * 30}ms`;
+          card.innerHTML = `
+            <div class="space-y-2">
+              <span class="inline-block px-2.5 py-0.5 text-[9px] font-black tracking-widest uppercase rounded-md ${cat.textColor} bg-white/60 dark:bg-slate-800/60 border ${cat.borderColor}">${cat.label}</span>
+              <h4 class="text-sm font-black text-slate-900 dark:text-white leading-snug group-hover:${cat.textColor.replace('text-', 'text-')} transition-colors">${course}</h4>
+            </div>
+            <div class="flex items-center justify-between mt-4 pt-3 border-t ${cat.borderColor}">
+              <button onclick="openSyllabusModal('${course.replace(/'/g, "\\'")}', '${cat.label.replace(/'/g, "\\'")}')" class="flex items-center gap-1 px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-all shadow-sm">
+                View Syllabus
+              </button>
+              <a href="contact.html" onclick="setEnquirySubject('${course.replace(/'/g, "\\'")}')" class="flex items-center gap-1 px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-white rounded-lg ${cat.color} hover:opacity-90 transition-all shadow-sm">
+                Apply →
+              </a>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      });
+
+      // Re-init lucide icons in the new cards
+      lucide.createIcons();
+    }
+
+    // Populate contact form dropdown with all courses
+    function populateCourseDropdown() {
+      const select = document.getElementById('contact-course');
+      if (!select) return;
+      // Remove old options except the default
+      while (select.options.length > 1) select.remove(1);
+      catalogData.forEach(cat => {
+        const group = document.createElement('optgroup');
+        group.label = cat.label;
+        cat.courses.forEach(course => {
+          const opt = document.createElement('option');
+          opt.value = course;
+          opt.textContent = course;
+          group.appendChild(opt);
+        });
+        select.appendChild(group);
+      });
+    }
+
+    // Initialize catalog on page load
+    renderCatalogTabs();
+    renderCatalogGrid();
+    populateCourseDropdown();
+
+
+    /* ================= SYSTEM THEME / DARK MODE ================= */
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+    const sunIcon = document.getElementById('theme-sun');
+    const moonIcon = document.getElementById('theme-moon');
+    const mobileSunIcon = document.getElementById('mobile-theme-sun');
+    const mobileMoonIcon = document.getElementById('mobile-theme-moon');
+
+    function updateThemeUI(isDark) {
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        if (sunIcon) sunIcon.classList.remove('hidden');
+        if (moonIcon) moonIcon.classList.add('hidden');
+        if (mobileSunIcon) mobileSunIcon.classList.remove('hidden');
+        if (mobileMoonIcon) mobileMoonIcon.classList.add('hidden');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+        if (sunIcon) sunIcon.classList.add('hidden');
+        if (moonIcon) moonIcon.classList.remove('hidden');
+        if (mobileSunIcon) mobileSunIcon.classList.add('hidden');
+        if (mobileMoonIcon) mobileMoonIcon.classList.remove('hidden');
+      }
+    }
+
+    // Check system preference or localStorage
+    const isDarkTheme = localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    updateThemeUI(isDarkTheme);
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        const currentlyDark = document.documentElement.classList.contains('dark');
+        updateThemeUI(!currentlyDark);
+      });
+    }
+
+    if (mobileThemeToggleBtn) {
+      mobileThemeToggleBtn.addEventListener('click', () => {
+        const currentlyDark = document.documentElement.classList.contains('dark');
+        updateThemeUI(!currentlyDark);
+      });
+    }
+
+    /* ================= MOBILE HAMBURGER MENU ================= */
+    const mobileMenuBtn = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on clicking any navigation link
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    /* ================= HERO SECTION CAROUSEL SLIDER ================= */
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    const indicators = document.querySelectorAll('.slide-indicator');
+    const totalSlides = slides.length;
+    if (totalSlides > 0) { window.slideInterval = setInterval(nextHeroSlide, 5000); }
+
+    function showSlide(index) {
+      if (totalSlides === 0) return;
+      // Clear interval to prevent overlap
+      if (window.slideInterval) clearInterval(window.slideInterval);
+
+      slides[currentSlide].classList.remove('opacity-100', 'z-10');
+      slides[currentSlide].classList.add('opacity-0', 'z-0');
+      indicators[currentSlide].classList.remove('bg-white');
+      indicators[currentSlide].classList.add('bg-white/40');
+
+      currentSlide = index;
+
+      slides[currentSlide].classList.remove('opacity-0', 'z-0');
+      slides[currentSlide].classList.add('opacity-100', 'z-10');
+      indicators[currentSlide].classList.remove('bg-white/40');
+      indicators[currentSlide].classList.add('bg-white');
+
+      // Restart auto play interval
+      slideInterval = setInterval(nextHeroSlide, 5000);
+    }
+
+    function nextHeroSlide() {
+      if (totalSlides === 0) return;
+      const nextIdx = (currentSlide + 1) % totalSlides;
+      showSlide(nextIdx);
+    }
+
+
+
+    function prevHeroSlide() {
+      const prevIdx = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(prevIdx);
+    }
+
+    const nextBtn = document.getElementById('next-slide');
+    if (nextBtn) nextBtn.addEventListener('click', nextHeroSlide);
+    const prevBtn = document.getElementById('prev-slide');
+    if (prevBtn) prevBtn.addEventListener('click', prevHeroSlide);
+
+    indicators.forEach(indicator => {
+      indicator.addEventListener('click', (e) => {
+        const slideIdx = parseInt(e.target.getAttribute('data-slide'));
+        showSlide(slideIdx);
+      });
+    });
+
+
+    /* ================= SYLLABUS DATA & MODAL LOGIC ================= */
+    const courseSyllabus = {
+      "autocad": {
+        description: "A comprehensive program designed to build foundational and advanced skills in 2D drafting and 3D modeling using industry-standard AutoCAD software.",
+        title: "Autodesk AutoCAD Studio",
+        duration: "8 Weeks | 24 Modules | 96 Hours",
+        category: "CAD, Drafting & Design",
+        tools: ["AutoCAD 2025", "AutoCAD LT", "AutoCAD Web App"],
+        careers: ["Draftsman", "CAD Technician", "Design Engineer", "Site Supervisor"],
+        cert: "Autodesk Certified User (ACU) — AutoCAD",
+        phases: [
+          {
+            title: "Phase 1 — Foundation & Interface (Week 1–2)",
+            items: [
+              "Introduction to AutoCAD Interface, Ribbons & Custom Workspaces",
+              "Navigation: Pan, Zoom, Orbit & Coordinate System (WCS / UCS)",
+              "Basic Geometry: Lines, Circles, Arcs, Ellipses, Polygons & Splines",
+              "Precision Drafting: Absolute, Relative & Polar Coordinate Inputs",
+              "Object Snapping (OSNAP), Tracking & Polar Tracking",
+              "Selection Methods: Window, Crossing, Fence, Quick Select"
+            ]
+          },
+          {
+            title: "Phase 2 — Editing & Layers (Week 3–4)",
+            items: [
+              "Modifying Commands: Move, Copy, Rotate, Mirror, Offset, Trim, Extend",
+              "Scale, Stretch, Break, Fillet, Chamfer & Lengthen",
+              "Grips Editing & Multi-functional Grip Commands",
+              "Layer Management: Creation, Freeze/Thaw, Lock, Viewport Override",
+              "Linetypes, Lineweights, Color-by-Layer vs Override",
+              "Object Properties Manager & Quick Properties Panel"
+            ]
+          },
+          {
+            title: "Phase 3 — Annotation & Text (Week 4–5)",
+            items: [
+              "Dimensioning: Linear, Aligned, Angular, Radial & Ordinate Dimensions",
+              "Dimension Styles (DIMSTYLE): Tolerances, Precision, Arrowheads",
+              "Multileaders: Custom Arrow Styles & Content Blocks",
+              "Text Styles & Multi-line Text (MTEXT) with Rich Formatting",
+              "Tables: AutoCAD Table Styles, Formula Cells & Linked Excel Data",
+              "Fields: Automatic Date/Area/Sheet Count Populating"
+            ]
+          },
+          {
+            title: "Phase 4 — Blocks, Xrefs & Parametric (Week 5–6)",
+            items: [
+              "Block Creation, Insertion & In-place Editing",
+              "Attribute Definitions, BAttedit & Data Extraction to Excel",
+              "Dynamic Blocks: Parameters, Actions, Visibility States",
+              "Wblocks & Design Center for Library Management",
+              "External References (Xrefs): Attach, Overlay, Clip & Bind",
+              "Parametric Constraints: Geometric & Dimensional Constraints"
+            ]
+          },
+          {
+            title: "Phase 5 — Layouts, Plotting & 3D Basics (Week 7–8)",
+            items: [
+              "Model Space vs Paper Space: Layout Setup & Viewports",
+              "Viewport Scaling, Freezing Layers per Viewport",
+              "Plot Styles (CTB/STB), Plotter Configuration & DPI Settings",
+              "Publish: Multi-sheet PDF Batch Plotting",
+              "3D Basics: 3D Orbit, Extrusion, Revolve & Section Plane",
+              "Introduction to AutoCAD Electrical & Mechanical Verticals"
+            ]
+          }
+        ]
+      },
+
+      "revit-arch": {
+        description: "Master Building Information Modeling (BIM) with Revit. Learn to design, document, and collaborate on architectural, structural, and MEP projects efficiently.",
+        title: "Revit Architecture / Structure / MEP",
+        duration: "12 Weeks | 36 Modules | 144 Hours",
+        category: "BIM & Structural Design",
+        tools: ["Revit 2025", "Navisworks", "BIM 360", "AutoCAD Architecture"],
+        careers: ["BIM Coordinator", "Revit Modeler", "Structural Engineer", "MEP Designer", "Project Architect"],
+        cert: "Autodesk Certified Professional — Revit for Architectural Design",
+        phases: [
+          {
+            title: "Phase 1 — BIM Concepts & Interface (Week 1–2)",
+            items: [
+              "Building Information Modeling (BIM) Core Principles & LOD Standards",
+              "Revit Interface: Project Browser, Properties Panel, Ribbon & Keyboard Shortcuts",
+              "Project Setup: Templates, Units, Coordinates & Levels",
+              "Grid Lines, Datum Elements & Discipline Filters",
+              "Walls: Basic, Compound, Stacked & Curtain Wall Systems",
+              "Doors & Windows: Families, Scheduling & Tag Annotations"
+            ]
+          },
+          {
+            title: "Phase 2 — Architectural Elements (Week 3–4)",
+            items: [
+              "Floors: Structural Slab, Floor Finish, Shaft Opening",
+              "Roof Types: Basic, Hip, Shed, Slope Arrow & Complex Compound",
+              "Ceiling Systems: Compound Ceilings & Soffit Geometry",
+              "Stairs: Assembled, Custom Run-Landing & Railing System",
+              "Ramps, Curtain Grids & Panel Assignments",
+              "Rooms, Areas & Color Schemes for Space Planning"
+            ]
+          },
+          {
+            title: "Phase 3 — Structural BIM (Week 5–6)",
+            items: [
+              "Structural Columns, Framing & Analytical Model Setup",
+              "Structural Walls, Floors, Foundations & Pile Caps",
+              "Structural Grid & Section Elevations for IFC Export",
+              "Rebar in Concrete: Area, Path & Structural Shape Families",
+              "Linking Architectural Model to Structural for Coordination",
+              "Exporting to ETABS, STAAD.Pro via IFC for FEA Handoff"
+            ]
+          },
+          {
+            title: "Phase 4 — MEP Systems (Week 7–8)",
+            items: [
+              "Mechanical: Duct Systems, HVAC Zones & Air Terminal Families",
+              "Plumbing: Pipe Systems, Fittings, Sanitary & Water Supply Routing",
+              "Electrical: Cable Trays, Conduit, Lighting & Electrical Panels",
+              "MEP Coordination: Clash Detection with Architectural & Structural Models",
+              "Sloped Piping, Mechanical Equipment Families & Duct Fittings",
+              "Load Analysis & Energy Efficiency Reporting via gbXML Export"
+            ]
+          },
+          {
+            title: "Phase 5 — Worksharing & Collaboration (Week 9–10)",
+            items: [
+              "BIM Worksharing: Central Model, Local Copies & Worksets",
+              "Synchronize with Central, Editing Requests & Workset Visibility",
+              "Model Linking: Host Model, Linked Model Coordinates & Shared Positioning",
+              "Revit Cloud (BIM 360 / Autodesk Docs): Cloud Worksharing Setup",
+              "Clash Detection via Navisworks: TimeLiner & Interference Check",
+              "IFC Import/Export for OpenBIM & Interoperability"
+            ]
+          },
+          {
+            title: "Phase 6 — Documentation & Presentation (Week 11–12)",
+            items: [
+              "Views: Floor Plans, Sections, Elevations, 3D, Drafting & Legend Views",
+              "Schedules: Room, Door, Material Takeoff & Key Schedules",
+              "Sheet Setup: Title Block Families, Revision Control & Sheet Index",
+              "Dimensions, Tags, Keynotes & Annotation Families",
+              "Rendering: Ray Trace, Enscape Live Link & Material Library",
+              "Camera Walkthrough Animation & Sun Study Exports"
+            ]
+          }
+        ]
+      },
+
+      "sketchup-pro": {
+        description: "Learn intuitive 3D modeling for architecture and interior design. Transform your ideas into stunning 3D models and professional presentations with SketchUp Pro.",
+        title: "Trimble SketchUp Pro",
+        duration: "8 Weeks | 24 Modules | 96 Hours",
+        category: "3D Modeling & Presentation",
+        tools: ["SketchUp Pro 2024", "LayOut", "V-Ray for SketchUp", "Enscape", "Extension Warehouse"],
+        careers: ["Interior Designer", "Architect", "3D Visualizer", "Landscape Designer", "Product Designer"],
+        cert: "Trimble SketchUp Certified Designer",
+        phases: [
+          {
+            title: "Phase 1 — Interface & Direct Modeling (Week 1–2)",
+            items: [
+              "SketchUp Interface: Drawing Axes, Toolbars, Default Tray & Templates",
+              "Line, Rectangle, Circle, Polygon, Arc & Freehand Drawing Tools",
+              "Inference Engine: On Axis, Midpoint, Endpoint & Perpendicular Locks",
+              "Push/Pull: Extrusion with Follow-Me for Mouldings & Paths",
+              "Move, Copy, Rotate, Scale & Flip tools with precise measurements",
+              "Tape Measure, Protractor, Dimension & Text Annotation Tools"
+            ]
+          },
+          {
+            title: "Phase 2 — Groups, Components & 3DWH (Week 3–4)",
+            items: [
+              "Groups vs Components: Understanding the Key Difference",
+              "Creating Reusable Components: Door, Window & Furniture Families",
+              "Nested Components & Dynamic Component Parameters (DCF)",
+              "3D Warehouse: Downloading, Optimizing & Replacing Models",
+              "Entity Info, Materials & Textures: Applying UV Projection",
+              "Solid Tools Pro: Union, Subtract, Intersect, Trim, Split & Outer Shell"
+            ]
+          },
+          {
+            title: "Phase 3 — Materials, Scenes & Camera (Week 5–6)",
+            items: [
+              "Material Editor: Color, Texture Scale, Opacity & Custom Imports",
+              "Shadow Settings: Geographic Coordinates, Date/Time, Shadow Display",
+              "Fog, Depth of Field, Sky & Watermark Settings",
+              "Camera: Field of View, Two-Point Perspective & Match Photo",
+              "Scenes: Creating, Updating, Managing Tabs & Transition Timing",
+              "Sandbox Tools: From Contours, From Scratch, Smoove, Stamp & Drape"
+            ]
+          },
+          {
+            title: "Phase 4 — Extensions & Advanced Techniques (Week 6–7)",
+            items: [
+              "Extension Warehouse: Top Plugins — Curviloft, Artisan, RoundCorner, Weld",
+              "Curvature Modeling: Organic Roofs, Facades & Terrain Blending",
+              "Rendering Integration: V-Ray Material Setup, HDRI Lighting & Camera",
+              "Enscape Live Link: Real-time Walkthrough, VR Mode & Render Output",
+              "FredoScale, QuadFace Tools & SubD for Complex Mesh Modeling",
+              "Profile Builder & Instant Roof Plugins for Parametric Architecture"
+            ]
+          },
+          {
+            title: "Phase 5 — LayOut & Project Delivery (Week 7–8)",
+            items: [
+              "LayOut Interface: Pages, Templates, Title Blocks & Paper Sizes",
+              "Viewport Setup: Model Reference, Scale, Rendering Mode & Layer Control",
+              "Dimension, Label, Text & Table Tools in LayOut",
+              "Stacking Viewports for Plan, Section, Elevation & 3D Sheets",
+              "PDF Export: High-Res Publishing & Sheet Set Management",
+              "DWG/DXF Export from SketchUp for AutoCAD & Revit Integration"
+            ]
+          }
+        ]
+      },
+
+      "catia": {
+        description: "Advanced engineering design course focusing on complex surface modeling, parametric solid modeling, and assembly design for automotive and aerospace industries.",
+        title: "CATIA V5 — Advanced Engineering",
+        duration: "14 Weeks | 42 Modules | 168 Hours",
+        category: "Mechanical & Aerospace Engineering",
+        tools: ["CATIA V5 R28", "ENOVIA VPM", "DELMIA", "SIMULIA Abaqus"],
+        careers: ["Mechanical Design Engineer", "Aerospace Engineer", "Automotive Designer", "PLM Consultant", "Surface Modeler"],
+        cert: "Dassault Systèmes CATIA Certified Associate (CCA)",
+        phases: [
+          {
+            title: "Phase 1 — Interface, Sketcher & Part Design Foundation (Week 1–3)",
+            items: [
+              "CATIA V5 UI: Workbench Selector, Menus, Toolbars & SPEC Tree",
+              "Sketcher: Profile, Constraint Types (Dimensional & Geometric), Sketch Analysis",
+              "Part Design: Pad, Pocket, Shaft, Groove & Multi-Section Solid (Loft)",
+              "Fillets: Edge Fillet, Variable Radius, Chordal Fillet & Face-Face",
+              "Chamfer, Draft Angle, Shell, Thickness & Thread/Tap Definition",
+              "Boolean Operations: Assemble, Add, Remove, Intersect & Union Trim"
+            ]
+          },
+          {
+            title: "Phase 2 — Assembly Design & DMU (Week 4–5)",
+            items: [
+              "Assembly Design: Insert Existing Components & New Parts In-Context",
+              "Constraints: Coincidence, Surface Contact, Offset, Angle & Fix",
+              "Assembly Annotations, BOM with 3D Annotations & Balloon Callouts",
+              "Digital Mockup (DMU) Navigator: Product Hierarchy & Interference Check",
+              "DMU Fitting Simulator: Simulate Assembly/Disassembly Sequences",
+              "DMU Tolerancing Analyzer: GD&T Stack-Up & Statistical Analysis"
+            ]
+          },
+          {
+            title: "Phase 3 — Generative Shape Design (Week 6–8)",
+            items: [
+              "Wireframe: Point, Line, Plane, Circle & 3D Curve Creation",
+              "Surfaces: Extrude, Revolve, Sweep, Fill & Blend Surface Commands",
+              "Multi-Section Surface (Loft) with Closing Point & Coupling Vertices",
+              "Surface Operations: Join, Trim, Split, Boundary & Extract",
+              "Shape Morphing: Deformation, Wrap & Shape Sculpting Tools",
+              "Class-A Surface Quality Check with Zebra, Inflection & Curvature Analysis"
+            ]
+          },
+          {
+            title: "Phase 4 — Sheet Metal & Kinematics (Week 9–11)",
+            items: [
+              "Generative Sheet Metal: Wall from Edge, Bending Radius & K-Factor",
+              "Stamps, Louvers, Flanges, Rolled Walls & Corner Relief Types",
+              "Unfolding: Flat Pattern Generation & DXF Export for CNC Laser Cutting",
+              "DMU Kinematics Simulator: Revolute, Prismatic, Cylindrical & Gear Joints",
+              "Mechanism Simulation: Speed Profiles, Envelope Sweeps & Collision Reports",
+              "Integration with DELMIA for Manufacturing Process Simulation"
+            ]
+          },
+          {
+            title: "Phase 5 — FEA, Drafting & PLM (Week 12–14)",
+            items: [
+              "Generative Structural Analysis (GPS): Mesh Properties & Material Assignment",
+              "Static & Frequency Case Setup: Clamps, Loads, Pressure & Gravity",
+              "Von Mises Stress, Displacement, Principal Stresses & Safety Factor Maps",
+              "Advanced Meshing Tools: Surface, Sweeping & Octree Tetrahedron Mesh",
+              "Drafting: Front, Top, Section, Auxiliary & Isometric Views with GD&T",
+              "PLM via ENOVIA VPM: Revision Control, ECO Management & Multi-CAD Vaulting"
+            ]
+          }
+        ]
+      },
+
+      "fusion-360": {
+        description: "Explore cloud-based CAD, CAM, and CAE with Fusion 360. Perfect for product design, mechanical engineering, and manufacturing workflows.",
+        title: "Autodesk Fusion 360",
+        duration: "10 Weeks | 30 Modules | 120 Hours",
+        category: "Cloud CAD / CAM / CAE",
+        tools: ["Fusion 360", "Autodesk Drive", "Eagle PCB", "HSMWorks"],
+        careers: ["Product Designer", "CNC Programmer", "Mechanical Engineer", "3D Printing Specialist", "Prototype Engineer"],
+        cert: "Autodesk Certified Professional — Fusion 360",
+        phases: [
+          {
+            title: "Phase 1 — Cloud Setup & Parametric Sketching (Week 1–2)",
+            items: [
+              "Fusion 360 Cloud Hub: Project Folders, Version History & Team Collaboration",
+              "Interface: Timeline, Browser, Data Panel & Keyboard Shortcuts",
+              "Parametric Sketching: Sketch Constraints (Coincident, Parallel, Tangent)",
+              "Equations & Parameters: Driven Dimensions & Global Parameters Table",
+              "Sketch Tools: Polygon, Slot, Project, Offset, Mirror & Circular Pattern",
+              "Reference Geometry: Origin Planes, Construction Lines & Midpoint References"
+            ]
+          },
+          {
+            title: "Phase 2 — Solid & Surface Modeling (Week 3–4)",
+            items: [
+              "Solid Modeling: Extrude, Revolve, Sweep, Loft, Rib & Web Features",
+              "Hole Wizard: Simple, Counterbore, Countersink & Threaded Holes",
+              "Fillet, Chamfer, Shell, Draft, Scale & Mirror Body Tools",
+              "Surface Modeling: Extrude, Revolve, Patch, Stitch & Thicken",
+              "T-Splines Sculpt Workspace: Push/Pull, Insert Point, Crease & Weld Edge",
+              "Mesh Workspace: Direct Editing of STL/OBJ Mesh Bodies for 3D Printing"
+            ]
+          },
+          {
+            title: "Phase 3 — Assembly & Joints (Week 5–6)",
+            items: [
+              "Assembly Design: Bottom-Up, Top-Down & In-Context Modeling Strategies",
+              "Joint Types: Rigid, Revolute, Slider, Cylindrical, Pin-Slot & Ball Joint",
+              "As-Built Joints: Placing Joints on Existing Geometry without Moving Bodies",
+              "Contact Sets, Motion Links (Gear Pairs) & Joint Limits",
+              "Exploded Views: Storyboard Animation & Explode/Collapse Sequences",
+              "Bill of Materials (BOM): Automated Part Numbers & Properties Table"
+            ]
+          },
+          {
+            title: "Phase 4 — CAM & Manufacturing (Week 7–8)",
+            items: [
+              "CAM Setup: Machine Config, WCS & Stock Definition (Box, Cylinder, Body)",
+              "2D Operations: Facing, Adaptive Clearing, Contour, Pocket & Drilling",
+              "3D Operations: Adaptive, Scallop, Horizontal, Pencil & Ramp Toolpaths",
+              "Tool Library: Custom Endmill, Ball Nose, Drill & Tapping Tool Setup",
+              "Post-Processor: G-Code Output for Fanuc, Haas, GRBL & Siemens CNC",
+              "Simulation: Toolpath Verification, Material Removal & Collision Check"
+            ]
+          },
+          {
+            title: "Phase 5 — FEA, Generative Design & Printing (Week 9–10)",
+            items: [
+              "Simulation: Static Stress, Modal Frequency & Thermal Analysis Setup",
+              "Mesh Types: Adaptive, Manual Refinement & Convergence Settings",
+              "Results: Safety Factor, Von Mises Stress, Displacement & Reaction Forces",
+              "Generative Design: Obstacle Bodies, Preserve Bodies & Mass Reduction Goals",
+              "AI Outcomes: Reviewing, Comparing & Choosing Structural Generative Results",
+              "3D Print Workspace: Slicer Integration, Support Generation & Bed Layout"
+            ]
+          }
+        ]
+      },
+
+      "lumion-3d": {
+        description: "Bring your architectural designs to life with Lumion. Learn real-time 3D rendering, animation, and photorealistic visualization techniques.",
+        title: "Lumion 3D Professional",
+        duration: "8 Weeks | 24 Modules | 96 Hours",
+        category: "Architectural Rendering & CGI",
+        tools: ["Lumion 2024 Pro", "LiveSync (Revit/SketchUp)", "Enscape", "Adobe Premiere Pro"],
+        careers: ["Architectural Visualizer", "3D Renderer", "VFX Artist", "Interior CGI Specialist", "Brand Storyteller"],
+        cert: "Lumion Certified Professional",
+        phases: [
+          {
+            title: "Phase 1 — Interface & Model Import (Week 1–2)",
+            items: [
+              "Lumion Interface: Navigator, Scene Editor, Build Mode & Render Mode",
+              "System Requirements: GPU Recommendations, VRAM & Project File Structure",
+              "Importing Models: .SKP, .FBX, .OBJ, .3DS, .MAX, .RVT & DWG Workflows",
+              "LiveSync for Revit & SketchUp: Real-Time Model Sync Updates",
+              "Object Placement: Grid Snap, Rotation, Height Lock & Cluster Objects",
+              "Library Browser: Searching, Filtering & Saving Custom Favorites"
+            ]
+          },
+          {
+            title: "Phase 2 — Landscape & Terrain Sculpting (Week 2–3)",
+            items: [
+              "Terrain Editor: Raise, Lower, Flatten, Smoothen, Paint & Level Tools",
+              "Water Bodies: Ocean, Lake, Swimming Pool & River Water Systems",
+              "OpenStreetMap Import: Real Site Data with Topographic Accuracy",
+              "Landscape Objects: Trees, Shrubs, Grasses & Scattered Surface Materials",
+              "Natural Light: Sun Altitude, Azimuth, Cloud Coverage & Fog Settings",
+              "Weather Systems: Rain, Snow, Storm & Wind Intensity Sliders"
+            ]
+          },
+          {
+            title: "Phase 3 — Materials & Lighting (Week 3–5)",
+            items: [
+              "Material Library: Surface Types — Concrete, Wood, Glass, Metal & Fabric",
+              "Custom Materials: Texture Import, Tiling, Bump, Glossiness & Reflectivity",
+              "PBR Materials: Albedo, Normal, Roughness & Metallic Map Channels",
+              "Real Skies: SpeedTree Sky, HDRI Dome & Custom Sky Gradient Setup",
+              "Global Illumination: Bounce Lighting, Ambient Occlusion & Color Bleed",
+              "Artificial Lighting: Omni, Spotlights, IES Profiles & Neon Glow Objects"
+            ]
+          },
+          {
+            title: "Phase 4 — Photo Rendering & Effects (Week 5–6)",
+            items: [
+              "Camera Setup: Field of View, Tilt Shift, Exposure & White Balance",
+              "Render Styles: Artistic, Natural, Fine Detail, Ultra High & Custom Preset",
+              "Effects Stack: Bloom, Chromatic Aberration, Vignette, SSAO & Film Grain",
+              "Real Glass: Reflections, Refraction, Tint & Fresnel Glossiness Tuning",
+              "People, Vehicles & Animated Objects: Placing Crowd & Custom Animations",
+              "360° Panorama: Equirectangular Output & VR Headset Preview Export"
+            ]
+          },
+          {
+            title: "Phase 5 — Animation & VR Delivery (Week 7–8)",
+            items: [
+              "Movie Mode: Clip System, Timeline Keyframes & Clip Speed Control",
+              "Camera Paths: Freefly, Orbit, Walk-in & Swivel Camera Motions",
+              "Transitions & Cuts: Jump Cut, Overlap & Custom Transition Duration",
+              "Daylight Transition Animations: Time-Lapse & Sunrise-to-Sunset Effects",
+              "MP4 / AVI / Image Sequence Export: Resolution up to 8K with Anti-Aliasing",
+              "VR Experience Export: Stereoscopic Side-by-Side & Google Cardboard Format"
+            ]
+          }
+        ]
+      },
+
+      "solidworks": {
+        description: "Industry-leading parametric design software training. Master 3D solid modeling, sheet metal, and assembly design for mechanical engineering.",
+        title: "SolidWorks — Parametric Design & Simulation",
+        duration: "10 Weeks | 30 Modules | 120 Hours",
+        category: "Mechanical Product Design",
+        tools: ["SolidWorks 2024", "SolidWorks Simulation", "SolidWorks CAM", "eDrawings"],
+        careers: ["Mechanical Design Engineer", "Product Designer", "Tooling Engineer", "R&D Engineer", "Manufacturing Engineer"],
+        cert: "Certified SolidWorks Associate (CSWA) / Professional (CSWP)",
+        phases: [
+          {
+            title: "Phase 1 — Sketching & Part Modeling (Week 1–2)",
+            items: [
+              "SolidWorks Interface: Feature Manager, Command Manager & Keyboard Shortcuts",
+              "Sketch Tools: Lines, Circles, Smart Dimension, Relations & Trim/Extend",
+              "Parametric Modeling: Extrude, Revolve, Loft, Sweep & Boundary Boss",
+              "Feature Management: Fillet, Chamfer, Shell, Draft & Rib Commands",
+              "Hole Wizard: ANSI/ISO Standard Holes, Counterbore, Countersink & Threads",
+              "Part Templates, Material Properties & Design Table (Excel) Configurations"
+            ]
+          },
+          {
+            title: "Phase 2 — Assembly Design & Motion (Week 3–4)",
+            items: [
+              "Bottom-Up & Top-Down Assembly Strategies",
+              "Mates: Coincident, Concentric, Parallel, Distance, Angle & Width Mate",
+              "Smart Mates: Drag-and-Drop Mating & Mechanical Mates (Cam, Gear, Screw)",
+              "Exploded Views: Animate Explode/Collapse & Step-by-Step Assembly Guide",
+              "Motion Study: Basic Motion, Physics-based Motion & Motor Definitions",
+              "Bill of Materials (BOM): Auto-Balloons, Custom Properties & Item Numbers"
+            ]
+          },
+          {
+            title: "Phase 3 — Sheet Metal & Weldments (Week 5–6)",
+            items: [
+              "Sheet Metal: Base Flange, Edge Flange, Hem, Jog & Miter Flange",
+              "Bend Deduction, K-Factor & Bend Allowance Tables for Manufacturing",
+              "Flat Pattern: Unfold/Fold & DXF Export for Laser/Water-Jet Cutting",
+              "Forming Tools: Louver, Lance, Dimple & Custom Tool Creation",
+              "Weldments: Structural Member Profiles, Gusset, End Cap & Trim/Extend",
+              "Weld Bead Annotations, Cut List & Weldment Drawing Templates"
+            ]
+          },
+          {
+            title: "Phase 4 — Simulation & FEA (Week 7–8)",
+            items: [
+              "SolidWorks Simulation: Static Study Setup, Mesh & Material Assignment",
+              "Fixtures: Fixed Geometry, Hinge, Symmetry & Elastic Supports",
+              "External Loads: Force, Pressure, Torque, Gravity & Remote Load",
+              "Results: Von Mises Stress, Displacement, Strain & Factor of Safety",
+              "Fatigue Analysis: S-N Curves, Loading Cycles & Damage Percent",
+              "Thermal Analysis: Heat Flux, Temperature & Convection Boundary Conditions"
+            ]
+          },
+          {
+            title: "Phase 5 — Drawings, Rendering & CAM (Week 9–10)",
+            items: [
+              "Engineering Drawings: Projected Views, Section, Detail, Crop & Broken Views",
+              "GD&T Annotations: Geometric Tolerances, Datum References & Surface Finish",
+              "Title Block Customization & Drawing Sheet Formats",
+              "SolidWorks Visualize: PhotoView 360 Materials, HDRI Lighting & Camera",
+              "SolidWorks CAM: Feature Recognition, 2.5D Milling & Turning Toolpaths",
+              "STEP/IGES/Parasolid Export for Multi-CAD Compatibility"
+            ]
+          }
+        ]
+      },
+
+      "3ds-max": {
+        description: "Professional 3D modeling, animation, and rendering course. Ideal for architectural visualization, game asset creation, and VFX.",
+        title: "Autodesk 3ds Max — 3D Modeling & Visualization",
+        duration: "10 Weeks | 30 Modules | 120 Hours",
+        category: "3D Modeling & Architectural Visualization",
+        tools: ["3ds Max 2025", "V-Ray 6", "Arnold", "Corona Renderer", "Forest Pack"],
+        careers: ["3D Visualizer", "Architectural CGI Artist", "Game Asset Artist", "VFX Artist", "Motion Graphics Designer"],
+        cert: "Autodesk Certified User — 3ds Max",
+        phases: [
+          {
+            title: "Phase 1 — Interface & Polygon Modeling (Week 1–2)",
+            items: [
+              "3ds Max Interface: Viewports, Command Panel, Ribbon & Quad Menus",
+              "Primitive Objects: Box, Sphere, Cylinder, Cone, Torus & Teapot",
+              "Editable Poly: Vertex, Edge, Border, Face & Element Sub-Object Editing",
+              "Modifiers: TurboSmooth, Symmetry, FFD, Bend, Twist, Taper & Shell",
+              "Boolean Operations: Union, Subtract, Intersection & ProBoolean",
+              "Spline Modeling: Line, Rectangle, Loft, Sweep & Extrude Modifiers"
+            ]
+          },
+          {
+            title: "Phase 2 — Materials & UV Mapping (Week 3–4)",
+            items: [
+              "Material Editor: Compact & Slate Material Editor Overview",
+              "Standard Materials: Diffuse, Specular, Reflection, Refraction & Bump",
+              "V-Ray Materials: VRayMtl, VRayLightMtl, VRay2SidedMtl & VRayBlendMtl",
+              "UV Unwrapping: UVW Map, UVW Xform & Unwrap UVW Modifier",
+              "Substance Textures: PBR Workflow with Albedo, Normal, Metalness & Roughness",
+              "Multi/Sub-Object Material: Assigning Different Materials per Face ID"
+            ]
+          },
+          {
+            title: "Phase 3 — Lighting & Rendering Setup (Week 5–6)",
+            items: [
+              "3ds Max Lights: Omni, Spot, Direct, Skylight & Photometric IES Lights",
+              "V-Ray Sun, Sky & HDRI Dome Light for Exterior Scenes",
+              "Interior Lighting: V-Ray Rectangular, Sphere & Mesh Light Setups",
+              "V-Ray Frame Buffer: Color Correction, Exposure & LUT Controls",
+              "Global Illumination: Irradiance Map + Light Cache & Brute Force Methods",
+              "Render Elements: Diffuse, Reflection, Refraction, AO & Z-Depth Passes"
+            ]
+          },
+          {
+            title: "Phase 4 — Cameras & Animation (Week 7–8)",
+            items: [
+              "Camera Types: Free Camera, Target Camera & VRay Physical Camera",
+              "Camera Settings: Focal Length, DOF, Shutter Speed, ISO & White Balance",
+              "Architectural Walkthrough Animation: Path Constraint & Camera Follow",
+              "Animation Controllers: Keyframing, Track View & Dope Sheet Editing",
+              "Character Studio Basics: Biped, Motion Capture Import & Crowd Systems",
+              "Mental Ray Hair & Fur Modifier for Vegetation & Fabric Simulation"
+            ]
+          },
+          {
+            title: "Phase 5 — Scene Population & Project Delivery (Week 9–10)",
+            items: [
+              "Forest Pack Pro: Scatter Trees, Plants, People & Ground Cover on Surfaces",
+              "RailClone: Parametric Road Markings, Fences & Railings",
+              "Archinteriors / Archexteriors Scene Assembly Best Practices",
+              "Post-Production in Photoshop: Compositing Render Passes & Sky Replacement",
+              "High-Resolution Batch Rendering & Network Rendering with Backburner",
+              "3ds Max to Unreal Engine: Datasmith Export for Real-time Visualization"
+            ]
+          }
+        ]
+      },
+
+      "civil-3d": {
+        description: "Comprehensive training in civil engineering design and documentation. Learn land development, transportation, and environmental engineering workflows.",
+        title: "AutoCAD Civil 3D — Infrastructure Design",
+        duration: "10 Weeks | 30 Modules | 120 Hours",
+        category: "Civil Engineering & Infrastructure",
+        tools: ["AutoCAD Civil 3D 2025", "InfraWorks", "Navisworks", "Autodesk Docs"],
+        careers: ["Civil Engineer", "Site Design Engineer", "Highway Designer", "GIS Analyst", "Urban Planner"],
+        cert: "Autodesk Certified Professional — Civil 3D",
+        phases: [
+          {
+            title: "Phase 1 — Surfaces & Points (Week 1–2)",
+            items: [
+              "Civil 3D Interface: Toolspace, Panorama & Settings Hierarchy",
+              "Point Groups: Import from CSV, COGO Points & Description Keys",
+              "Surface Creation: TIN Surface from Points, Contours, DEM & LiDAR Data",
+              "Surface Analysis: Slope, Elevation, Aspect Bands & Watershed Analysis",
+              "Surface Editing: Raise/Lower, Smooth, Paste & Limit Boundaries",
+              "Grading Objects: Feature Lines, Grading Footprint & Volume Dashboard"
+            ]
+          },
+          {
+            title: "Phase 2 — Alignments & Profiles (Week 3–4)",
+            items: [
+              "Horizontal Alignment: Tangents, Circular Curves & Spiral Transitions",
+              "Alignment Properties: Design Criteria, Superelevation & Widening",
+              "Profile View: Existing Ground & Finished Grade Profile Creation",
+              "Vertical Geometry: PVI-based Design with K-Values & Sight Distance Check",
+              "Profile Labels & Band Sets: Elevation, Chainage & Cut/Fill Annotations",
+              "IRC / MoRTH Road Design Standards: Speed & Curvature Compliance"
+            ]
+          },
+          {
+            title: "Phase 3 — Corridors & Sections (Week 5–6)",
+            items: [
+              "Corridor Modeling: Assembly Subassemblies (Lane, Curb, Sidewalk, Ditch)",
+              "Region Targets: Surface, Alignment & Offset Targets for Complex Junctions",
+              "Sample Lines & Section Views: Plotting Cross-Sections at Set Chainage",
+              "Quantity Takeoff: End Area Volume & Average End Area Method Reports",
+              "Corridor Surface: Extraction & Use as Finished Surface in Grading",
+              "Roundabout & Intersection Design with AutoCAD Civil 3D Tools"
+            ]
+          },
+          {
+            title: "Phase 4 — Drainage & Pipe Networks (Week 7–8)",
+            items: [
+              "Pipe Network Creation: Gravity & Pressure Networks with Catalog Parts",
+              "Pipe Design: Slope, Cover Checks & Size-for-Flow Analysis",
+              "Structure Labels: Rim Elevation, Invert In/Out & Profile Display",
+              "Catchment Areas & Storm Water Hydrology using HEC-RAS/HydraFlow",
+              "Pressure Network: Valves, Fittings & Service Connections Routing",
+              "Interference Check: Pipe vs Pipe, Structure vs Corridor Clashes"
+            ]
+          },
+          {
+            title: "Phase 5 — Visualization & Output (Week 9–10)",
+            items: [
+              "InfraWorks: Import Civil 3D Model for 3D Context Visualization",
+              "Drive Simulation: Animated Vehicle Simulation along Corridor",
+              "Sheet Set Manager: Plan & Profile, Section, Summary Sheets",
+              "Data References & Vault: Sharing Surfaces, Alignments across Drawings",
+              "GIS Integration: Export to SHP / KML for ArcGIS & Google Earth",
+              "BIM 360 / Autodesk Docs: Cloud Collaboration & Model Coordination"
+            ]
+          }
+        ]
+      },
+
+      "staad-pro": {
+        description: "Master structural analysis and design. Learn to analyze and design steel, concrete, and timber structures using STAAD.Pro.",
+        title: "STAAD.Pro — Structural Analysis & Design",
+        duration: "8 Weeks | 24 Modules | 96 Hours",
+        category: "Structural Analysis & Civil Engineering",
+        tools: ["STAAD.Pro V8i / CONNECT", "STAAD.beava", "RAM Connection", "AutoCAD for Drawing"],
+        careers: ["Structural Engineer", "Civil Design Engineer", "Consultant", "Government PWD Engineer", "Site Engineer"],
+        cert: "Bentley STAAD.Pro Certified Professional",
+        phases: [
+          {
+            title: "Phase 1 — Interface & Geometry (Week 1–2)",
+            items: [
+              "STAAD.Pro Interface: Main Window, Data Area, Output Area & Model View",
+              "Structure Geometry: Node Creation, Member Incidences & Plate Connectivity",
+              "Geometry Wizards: Frame, Truss, Floor, Cylinder & Grid-based Auto-generators",
+              "Member Properties: Prismatic Sections, Steel Tables (IS, AISC) & Tapered",
+              "Support Conditions: Fixed, Pinned, Spring (Elastic) & Enforced Displacement",
+              "Group Commands: Primary, Geometry, Member Property & Load Groups"
+            ]
+          },
+          {
+            title: "Phase 2 — Loading & Analysis (Week 3–4)",
+            items: [
+              "Load Types: Self-Weight, Dead Load, Live Load, Wind Load & Seismic Load",
+              "IS 875 Part 1-5 Load Application: Pressure, UDL, Concentrated & Trapezoidal",
+              "IS 1893:2016 Seismic Analysis: Response Spectrum & Equivalent Static Method",
+              "Load Combinations: LRFD & ASD per IS 456 / IS 800 Combinations",
+              "Analysis Types: Linear Static, P-Delta, Dynamic & Response Spectrum",
+              "Post-Analysis: Viewing Bending Moment, Shear Force & Axial Diagrams"
+            ]
+          },
+          {
+            title: "Phase 3 — RCC Design (Week 5–6)",
+            items: [
+              "IS 456:2000 RC Design: Beams, Columns, Slabs & Foundations",
+              "Column Design: Axial, Uniaxial & Biaxial Bending with Interaction Curves",
+              "Beam Design: Flexure, Shear Reinforcement & Detailing Output",
+              "Footing Design: Isolated & Combined Footing under Axial & Moment",
+              "Concrete Design Parameters: fck, fy, Cover & Exposure Conditions",
+              "Shear Wall Design: IS Code Method & Reinforcement Zones"
+            ]
+          },
+          {
+            title: "Phase 4 — Steel & Composite Design (Week 6–7)",
+            items: [
+              "IS 800:2007 Steel Design: Compression, Tension, Bending & Combined Cases",
+              "Section Classification: Plastic, Compact, Semi-compact & Slender Sections",
+              "Connection Design: Bolted, Welded & Moment Connections",
+              "Purlin & Rafter Design for Industrial Pre-Engineered Buildings (PEB)",
+              "Composite Beam Design: Shear Stud Calculation & Partial Composite Action",
+              "Steel Take-off: Section Weight Summary & Cost Optimization"
+            ]
+          },
+          {
+            title: "Phase 5 — Reports, Detailing & Integration (Week 8)",
+            items: [
+              "Output Reports: Member Utilization, Design Briefs & Code Check Summary",
+              "STAAD.Pro to AutoCAD: Exporting Geometry & Annotation for Detailing",
+              "Rebar Detailing Export: Integration with RCDC / ETABS for Drawing Output",
+              "Foundation Analysis: STAAD.Foundation for Pile Caps & Mat Foundations",
+              "Model Review: RAM Connection Plugin for Connection Detail Verification",
+              "BIM Integration: IFC Export for Revit & Clash Detection in Navisworks"
+            ]
+          }
+        ]
+      },
+
+      "nav-nirman-bim": {
+        description: "A specialized, government-recognized BIM certification program covering end-to-end project lifecycles, clash detection, and advanced BIM management.",
+        title: "NAV NIRMAN — Professional BIM Management",
+        duration: "16 Weeks | 48 Modules | 192 Hours",
+        category: "BIM Management & Project Delivery",
+        tools: ["Revit 2025", "Navisworks Manage", "BIM 360 / Autodesk Docs", "Dynamo", "Microsoft Project"],
+        careers: ["BIM Manager", "BIM Coordinator", "Project Lead", "Construction Consultant", "Digital Delivery Head"],
+        cert: "Autodesk Certified Professional — BIM Management (Revit + Navisworks)",
+        phases: [
+          {
+            title: "Phase 1 — BIM Strategy & Standards (Week 1–3)",
+            items: [
+              "BIM Introduction: ISO 19650 Standards, EIR & BIM Execution Plan (BEP)",
+              "Level of Development (LOD) 100–500: Definition, Deliverables & Responsibilities",
+              "Common Data Environment (CDE): Folder Structure, Naming Conventions & Metadata",
+              "Project Roles: BIM Manager, Coordinator, Author & Clash Lead Responsibilities",
+              "Collaboration Protocols: Transmittal, Model Exchange & IFC Workflow",
+              "BIM Uses: Design Review, Clash Detection, Quantity Takeoff, Scheduling & FM"
+            ]
+          },
+          {
+            title: "Phase 2 — Multi-Discipline Revit Modeling (Week 4–7)",
+            items: [
+              "Architectural Revit: Complete Building Design from Concept to CD Set",
+              "Structural Revit: Framing, Foundation & Rebar-embedded BIM Models",
+              "MEP Revit: HVAC, Plumbing & Electrical Full-System Routing",
+              "Family Creation: Custom Parametric Families with Shared Parameters",
+              "Dynamo for Revit: Visual Scripting for Repetitive Modeling & Data Automation",
+              "Revit API Basics: Automating Annotation, Scheduling & View Duplication"
+            ]
+          },
+          {
+            title: "Phase 3 — Clash Detection & Coordination (Week 8–10)",
+            items: [
+              "Navisworks Manage: Append NWC/NWD Files & Federated Model Setup",
+              "Clash Detective: Running Tests, Clash Rules, Tolerance & Status Workflow",
+              "Clash Report: Generating HTML/XML Clash Reports & Coordination Meetings",
+              "Model Review: Redlines, Comments & Save Viewpoints for Issue Tracking",
+              "TimeLiner 4D: Linking Tasks to Model Elements & Construction Sequence",
+              "Quantification: Takeoff via Navisworks Quantification for Cost Estimation"
+            ]
+          },
+          {
+            title: "Phase 4 — 4D/5D BIM & Cloud Collaboration (Week 11–13)",
+            items: [
+              "4D BIM Scheduling: Gantt Linking, Baseline, Lag & Construction Phasing",
+              "5D Cost BIM: Parameter-driven Quantity Takeoff linked to Rate Schedule",
+              "Autodesk Docs: Model Publishing, Issue Tracking & Review Workflow",
+              "BIM 360 Design: Cloud Worksharing, Model Review & RFI Management",
+              "Reality Capture: Point Cloud Import, Registration & As-Built Comparison",
+              "GIS + BIM: InfraWorks Site Context & Civil Model Integration"
+            ]
+          },
+          {
+            title: "Phase 5 — FM, Handover & Capstone Project (Week 14–16)",
+            items: [
+              "Facility Management BIM: COBie Data, O&M Manuals & Asset Data Export",
+              "Digital Twin Concept: Sensor Data Integration & Live Model Dashboards",
+              "OpenBIM: IFC 4 Export, BCF Communication & BIM Collaboration Format",
+              "BIM Audit: Model Health Check, DWG Comparison & Deliverable Acceptance",
+              "Live Capstone: Full-building BIM project — Coordination, 4D Scheduling & Report",
+              "Portfolio & Interview Prep: BIM CV, Work Samples & Mock Technical Interview"
+            ]
+          }
+        ]
+      },
+
+      "nata-prep": {
+        description: "Complete preparation for the National Aptitude Test in Architecture (NATA). Covers drawing, aesthetic sensitivity, and architectural awareness.",
+        title: "LAKSHAYA NIRMAN — NATA / JEE Architecture Prep",
+        duration: "12 Weeks | 36 Modules | 144 Hours",
+        category: "Architecture Entrance Examination",
+        tools: ["Drawing Board Kit", "Staedtler Pencils", "SketchUp (basics)", "Mock Test Software"],
+        careers: ["Architecture Student (B.Arch)", "Interior Design Aspirant", "Urban Planning Student", "Landscape Architecture"],
+        cert: "NATA 2025 / JEE Paper-2 (B.Arch) — Exam Preparatory Programme",
+        phases: [
+          {
+            title: "Phase 1 — Freehand Sketching Foundations (Week 1–3)",
+            items: [
+              "Line Control Exercises: Horizontal, Vertical, Diagonal & Curved Lines",
+              "Geometric Shapes: Perspective Drawing of Cubes, Cylinders & Complex Forms",
+              "Isometric Drawing: Manual Drafting of Objects in Isometric View",
+              "Architectural Elements: Doors, Windows, Columns, Arches & Stair Drawing",
+              "Shading Techniques: Hatching, Cross-hatching, Gradient & Tone Rendering",
+              "Observational Sketching: Still Life, Urban Scenes & Architecture Studies"
+            ]
+          },
+          {
+            title: "Phase 2 — 2D & 3D Composition Drawing (Week 4–6)",
+            items: [
+              "Two-Point Perspective: Construction Grid, Eye Level & Vanishing Point Setup",
+              "Compositional Exercises: Turning 2D Shapes into 3D Volumetric Studies",
+              "Memory Drawing: Recalling and Reproducing Objects from Verbal Description",
+              "Texture & Pattern: Rendering Brick, Stone, Wood, Fabric & Water Surfaces",
+              "Color Theory: Hue, Value, Saturation & Color Harmony for NATA Drawing",
+              "Mixed Media: Pencil, Charcoal & Pen-Ink Techniques for NATA Part A"
+            ]
+          },
+          {
+            title: "Phase 3 — Aptitude (Visual & Spatial) (Week 6–8)",
+            items: [
+              "Visual Reasoning: Mirror Images, Rotation, Embedded Figures & Paper Folding",
+              "Spatial Visualization: 3D Views from Plans & Elevations",
+              "Pattern Completion: Analogy, Series & Odd-One-Out (Figures)",
+              "Architectural Awareness: Famous Architects, Buildings & Movements (Indian & Global)",
+              "Design Principles: Rhythm, Proportion, Balance, Scale & Unity",
+              "General Aptitude: Logical Reasoning, Data Interpretation & Verbal Skills"
+            ]
+          },
+          {
+            title: "Phase 4 — PCM & Scientific Aptitude (Week 9–10)",
+            items: [
+              "Mathematics: Mensuration, Coordinate Geometry, Trigonometry & Algebra",
+              "Physics: Optics, Waves, Electricity & Mechanics (Applied to Architecture)",
+              "Chemistry: Materials Science — Cement, Concrete, Steel & Glass Properties",
+              "Environmental Science: Climate, Bioclimatic Design & Sustainable Concepts",
+              "Basic Structure: Loads, Beams & Column Behaviour for Architecture Students",
+              "Statistics & Probability: Set Theory, Permutations & Combinations"
+            ]
+          },
+          {
+            title: "Phase 5 — Mock Tests & Exam Strategy (Week 11–12)",
+            items: [
+              "Full NATA 2025 Paper Pattern: Part A (Drawing) + Part B (PCM + Aptitude)",
+              "Timed Mock Exams: 3 Full-Length NATA Simulation Tests under Real Conditions",
+              "JEE Paper-2 Mock: Mathematics + Aptitude + Drawing Combined Tests",
+              "Answer Sheet Review: Individual Feedback on Drawing Quality & Marks Distribution",
+              "Portfolio Preparation: Architecture Design Folio for B.Arch Interviews",
+              "Top College Guidance: NIT, CEPT, SPA, Parul, Ganpat University Selection Criteria"
+            ]
+          }
+        ]
+      }
+    };
+
+    const syllabusModal = document.getElementById('syllabus-modal');
+    const modalContent = document.getElementById('syllabus-modal-content');
+    const modalTitle = document.getElementById('modal-course-title');
+    const modalCat = document.getElementById('modal-course-cat');
+    const modalDur = document.getElementById('modal-course-duration');
+
+    const courseKeyMap = {
+      "Autodesk Revit Architecture": "revit-arch",
+      "AutoCAD Civil 3D": "civil-3d",
+      "STAAD.Pro": "staad-pro",
+      "AutoCAD Mechanical": "autocad",
+      "SolidWorks": "solidworks",
+      "CATIA": "catia",
+      "Autodesk Fusion 360": "fusion-360",
+      "Trimble SketchUp Pro": "sketchup-pro",
+      "Lumion 3D": "lumion-3d",
+      "3ds Max": "3ds-max",
+      "Nav Nirman BIM Professional": "nav-nirman-bim",
+      "NATA Preparation": "nata-prep"
+    };
+
+    function openSyllabusModal(courseKeyOrName, catLabel) {
+      let course = courseSyllabus[courseKeyOrName] || courseSyllabus[courseKeyMap[courseKeyOrName]];
+      if (!course) {
+        course = {
+          title: courseKeyOrName,
+          duration: "Flexible | 4-12 Weeks",
+          category: catLabel || "Professional Training",
+          description: "This specialized program provides intensive, hands-on training tailored to current industry standards. You will master core concepts, advanced workflows, and real-world applications.",
+          careers: ["Industry Professional", "Specialist", "Consultant"],
+          cert: "Roshani Technologies Course Completion Certificate",
+          phases: [
+            {
+              title: "Core Curriculum & Training",
+              items: [
+                "Introduction to Software Interface & Environment Setup",
+                "Fundamental Techniques, Tools & Workflows",
+                "Advanced Methodologies & Optimization",
+                "Industry Best Practices & QA Standards",
+                "Live Project Implementation & Final Assessment"
+              ]
+            }
+          ]
+        };
+      }
+
+      modalTitle.innerText = course.title;
+      modalCat.innerText = course.category;
+      modalDur.innerText = `🕐 ${course.duration}`;
+
+      // --- Meta bar: tools & careers ---
+      const metaBar = document.getElementById('modal-meta-bar');
+      metaBar.innerHTML = '';
+      if (course.tools) {
+        course.tools.forEach(t => {
+          const badge = document.createElement('span');
+          badge.className = 'px-2.5 py-1 bg-brandBlue/10 border border-brandBlue/20 text-brandBlue rounded-lg';
+          badge.textContent = t;
+          metaBar.appendChild(badge);
+        });
+      }
+
+      // --- Career tags ---
+      const careerWrap = document.createElement('div');
+      careerWrap.className = 'flex flex-wrap gap-2 mt-2 mb-4';
+      if (course.careers) {
+        const label = document.createElement('span');
+        label.className = 'w-full text-[10px] font-black text-slate-400 tracking-widest uppercase';
+        label.textContent = 'Career Outcomes';
+        careerWrap.appendChild(label);
+        course.careers.forEach(c => {
+          const badge = document.createElement('span');
+          badge.className = 'px-2.5 py-1 bg-brandGreen/10 border border-brandGreen/20 text-brandGreen rounded-lg text-[10px] font-black tracking-wider uppercase';
+          badge.textContent = c;
+          careerWrap.appendChild(badge);
+        });
+      }
+
+      // --- Certification badge ---
+      let certNote = '* Certification & Assessment on completion';
+      if (course.cert) {
+        certNote = `🏆 ${course.cert}`;
+      }
+      document.getElementById('modal-cert-note').innerHTML = `<span class="text-brandBlue font-bold">${certNote}</span>`;
+
+      // --- Populate phases ---
+      const body = document.getElementById('modal-course-body');
+      body.innerHTML = '';
+
+      if (course.description) {
+        const descP = document.createElement('p');
+        descP.className = 'text-sm text-slate-600 dark:text-slate-300 font-medium mb-5 leading-relaxed bg-brandBlue/5 p-4 rounded-2xl border border-brandBlue/10';
+        descP.textContent = course.description;
+        body.appendChild(descP);
+      }
+
+      body.appendChild(careerWrap);
+
+      if (course.phases) {
+        course.phases.forEach((phase, pIdx) => {
+          // Phase heading
+          const phaseHead = document.createElement('h4');
+          phaseHead.className = 'text-xs font-black text-slate-950 dark:text-white uppercase tracking-wider border-b border-slate-100 dark:border-slate-800/60 pb-2 mt-5 mb-3 first:mt-0';
+          phaseHead.textContent = phase.title;
+          body.appendChild(phaseHead);
+
+          // Phase items
+          const ul = document.createElement('ul');
+          ul.className = 'space-y-2.5 font-medium text-sm mb-2';
+          phase.items.forEach((item, idx) => {
+            const li = document.createElement('li');
+            li.className = 'flex gap-2.5 items-start text-slate-700 dark:text-slate-300';
+            li.innerHTML = `
+              <span class="w-5 h-5 flex-shrink-0 flex items-center justify-center rounded bg-brandBlue/10 text-brandBlue text-[10px] font-black mt-0.5">${(pIdx * 10 + idx + 1).toString().padStart(2, '0')}</span>
+              <span>${item}</span>
+            `;
+            ul.appendChild(li);
+          });
+          body.appendChild(ul);
+        });
+      } else if (course.modules) {
+        // Fallback: flat list
+        const ul = document.createElement('ul');
+        ul.className = 'space-y-3 font-medium text-sm';
+        course.modules.forEach((mod, idx) => {
+          const li = document.createElement('li');
+          li.className = 'flex gap-2.5 items-start text-slate-700 dark:text-slate-300';
+          li.innerHTML = `
+            <span class="w-5 h-5 flex items-center justify-center rounded bg-brandBlue/10 text-brandBlue text-xs font-bold mt-0.5 flex-shrink-0">${idx + 1}</span>
+            <span>${mod}</span>
+          `;
+          ul.appendChild(li);
+        });
+        body.appendChild(ul);
+      }
+
+      // Update CTA subject selection click
+      document.getElementById('modal-enquire-btn').onclick = () => {
+        closeSyllabusModal();
+        setEnquirySubject(course.title);
+      };
+
+      // Show Modal with Animation
+      syllabusModal.classList.remove('hidden');
+      setTimeout(() => {
+        modalContent.classList.remove('scale-95', 'opacity-0');
+        modalContent.classList.add('scale-100', 'opacity-100');
+      }, 50);
+    }
+
+    function closeSyllabusModal() {
+      modalContent.classList.remove('scale-100', 'opacity-100');
+      modalContent.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        syllabusModal.classList.add('hidden');
+      }, 300);
+    }
+
+    // Close modal on background click
+    syllabusModal.addEventListener('click', (e) => {
+      if (e.target === syllabusModal) {
+        closeSyllabusModal();
+      }
+    });
+
+
+    /* ================= COMMITTEE / TEAM SWITCHER ================= */
+    const teamMembersData = [
+      {
+        id: "f1",
+        name: "Dipak O. Shah",
+        subject: "Director",
+        experience: "40+ Years of Corporate & Educational Governance",
+        education: "Visionary Leader, Strategic Management",
+        avatarSeed: "https://roshaninet.netlify.app/assets/dipakshahremove-bWqubSmV.png",
+        badge: "DIRECTOR",
+        roleSubtext: [
+          "Director - Roshani Technologies Pvt Ltd",
+          "Proprietor - Roshani Computer Services",
+          "President - Baroda Management Association (Year 2021-22)",
+          "Chairman - Computer Society of India (Year 2015-16)"
+        ],
+        about: "Providing premium engineering, design, analysis, and project management consultation. An industry leader committed to transforming governance and digital workflow."
+      },
+      {
+        id: "f2",
+        name: "Jagruti D. Shah",
+        subject: "Director",
+        experience: "20+ Years Executive Operations and Academic Standards",
+        education: "Advisory Board, Organizational Culture Specialist",
+        avatarSeed: "https://roshaninet.netlify.app/assets/jagrutishah-g2OhhiF7.png",
+        badge: "DIRECTOR",
+        roleSubtext: [
+          "Director - Roshani Technologies Pvt Ltd",
+          "Senior Executive Coordinator & Planner",
+          "Curriculum Advisory Lead for Vocational Programs"
+        ],
+        about: "Pioneering organizational structures, operations, quality assurance standards, and administrative excellence across institutions."
+      },
+      {
+        id: "f3",
+        name: "Nachiket D. Shah",
+        subject: "CEO",
+        experience: "Founder & Tech Innovator, Entrepreneurship Excellence",
+        education: "Corporate Vision, Growth & Partnerships",
+        avatarSeed: "https://roshaninet.netlify.app/assets/nachiketremove-CAJuasSp.png",
+        badge: "CHIEF EXECUTIVE",
+        roleSubtext: [
+          "CEO - Roshani Technologies Pvt Ltd",
+          "Lead Automation and Advanced Solutions Strategist",
+          "Key Coordinator for University Partner Collaborations"
+        ],
+        about: "Spearheading product development, digital simulations, robotics architectures, and strategic technological expansions."
+      },
+      {
+        id: "f4",
+        name: "Ujala D. Shah",
+        subject: "Technical Director",
+        experience: "15+ Years Designing Research & IoT Infrastructure",
+        education: "Lead Architect, Specialized Automation & Hardware Solutions",
+        avatarSeed: "assets/ujala.png",
+        badge: "TECH DIRECTOR",
+        roleSubtext: [
+          "Technical Director - Roshani Technologies Pvt Ltd",
+          "Chief Infrastructure & Hardware Design Architect",
+          "Lead BIM Auditor & Training Syllabus Overseer"
+        ],
+        about: "Driving software, CAD, analysis models, hardware testing, and technical system-level integrations across architectural projects."
+      }
+    ];
+
+    const teamDetailPhoto = document.getElementById('team-detail-photo');
+    const teamDetailBadge = document.getElementById('team-detail-badge');
+    const teamDetailName = document.getElementById('team-detail-name');
+    const teamDetailTitle = document.getElementById('team-detail-title');
+    const teamDetailRoles = document.getElementById('team-detail-roles');
+    const teamDetailAbout = document.getElementById('team-detail-about');
+    const teamDetailEdu = document.getElementById('team-detail-edu');
+    const teamDetailExp = document.getElementById('team-detail-exp');
+
+    function selectTeamMember(index) {
+      if (!document.getElementById('team-detail-photo')) return;
+      const member = teamMembersData[index];
+      if (!member) return;
+
+      // Update tabs UI
+      const tabs = document.querySelectorAll('.team-tab-btn');
+      tabs.forEach((tab, idx) => {
+        if (idx === index) {
+          tab.className = 'team-tab-btn p-4 rounded-2xl border text-left cursor-pointer transition-all flex items-center justify-between group focus:outline-none border-brandTeal shadow-lg ring-1 ring-brandTeal/30 font-black text-white bg-gradient-to-r from-brandTeal to-brandBlue';
+          tab.querySelector('div p').className = 'text-xs sm:text-sm font-bold opacity-90 mt-0.5';
+        } else {
+          tab.className = 'team-tab-btn p-4 rounded-2xl border text-left cursor-pointer transition-all flex items-center justify-between group focus:outline-none border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/35 hover:bg-slate-100 dark:hover:bg-slate-800 hover:border-brandTeal/40 text-slate-900 dark:text-slate-100';
+          tab.querySelector('div p').className = 'text-xs sm:text-sm font-bold text-slate-500 dark:text-slate-400 mt-0.5';
+        }
+      });
+
+      // Update Detail Content with transitions
+      teamDetailPhoto.style.opacity = 0;
+      teamDetailName.style.opacity = 0;
+      setTimeout(() => {
+        teamDetailPhoto.src = member.avatarSeed;
+        teamDetailPhoto.alt = member.name;
+        teamDetailBadge.innerText = member.badge;
+        teamDetailName.innerText = member.name;
+        teamDetailTitle.innerText = member.subject;
+        teamDetailAbout.innerText = member.about;
+        teamDetailEdu.innerText = member.education;
+        teamDetailExp.innerText = member.experience;
+
+        // Reset and populate roles list
+        teamDetailRoles.innerHTML = '';
+        member.roleSubtext.forEach(role => {
+          const li = document.createElement('li');
+          li.className = 'flex items-start gap-2 text-[13px] font-semibold';
+          li.innerHTML = `
+            <span class="text-yellow-300 text-xs mt-0.5 flex-shrink-0">✦</span>
+            <span>${role}</span>
+          `;
+          teamDetailRoles.appendChild(li);
+        });
+
+        // Apply scale transition for photos
+        if (member.id === 'f2') {
+          teamDetailPhoto.className = 'w-full h-full object-contain transition-transform duration-500 scale-100';
+        } else {
+          teamDetailPhoto.className = 'w-full h-full object-contain transition-transform duration-500 scale-110';
+        }
+
+        teamDetailPhoto.style.opacity = 1;
+        teamDetailName.style.opacity = 1;
+      }, 150);
+    }
+
+    // Populate initial team member
+    selectTeamMember(0);
+
+
+    /* ================= STUDENT TESTIMONIALS SLIDER ================= */
+    let currentTestimonialIdx = 0;
+    const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+    const testimonialIndicators = document.querySelectorAll('.testimonial-indicator');
+    const totalTestimonials = testimonialSlides.length;
+    let testimonialInterval = totalTestimonials > 0 ? setInterval(nextTestimonial, 6000) : null;
+
+    function setTestimonial(index) {
+      clearInterval(testimonialInterval);
+      testimonialSlides[currentTestimonialIdx].classList.remove('opacity-100', 'translate-x-0', 'relative', 'z-10');
+      testimonialSlides[currentTestimonialIdx].classList.add('opacity-0', 'translate-x-12', 'absolute', 'inset-0', 'z-0', 'pointer-events-none');
+      testimonialIndicators[currentTestimonialIdx].classList.remove('bg-white');
+      testimonialIndicators[currentTestimonialIdx].classList.add('bg-white/40');
+      currentTestimonialIdx = index;
+      testimonialSlides[currentTestimonialIdx].classList.remove('opacity-0', 'translate-x-12', 'absolute', 'inset-0', 'z-0', 'pointer-events-none');
+      testimonialSlides[currentTestimonialIdx].classList.add('opacity-100', 'translate-x-0', 'relative', 'z-10');
+      testimonialIndicators[currentTestimonialIdx].classList.remove('bg-white/40');
+      testimonialIndicators[currentTestimonialIdx].classList.add('bg-white');
+      testimonialInterval = setInterval(nextTestimonial, 6000);
+    }
+
+    function nextTestimonial() {
+      setTestimonial((currentTestimonialIdx + 1) % totalTestimonials);
+    }
+
+    function prevTestimonial() {
+      setTestimonial((currentTestimonialIdx - 1 + totalTestimonials) % totalTestimonials);
+    }
+
+
+    /* ================= COUNTER ANIMATIONS ON SCROLL ================= */
+    let countersAnimated = false;
+    const countersSection = document.getElementById('counters');
+
+    function animateCounters() {
+      document.querySelectorAll('.counter-val').forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const suffix = counter.getAttribute('data-suffix') || '';
+        let current = 0;
+        const stepTime = 2000 / 60;
+        const increment = target / 60;
+        const update = setInterval(() => {
+          current += increment;
+          if (current >= target) { counter.innerText = target.toLocaleString() + suffix; clearInterval(update); }
+          else { counter.innerText = Math.floor(current).toLocaleString() + suffix; }
+        }, stepTime);
+      });
+    }
+
+    const countersObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !countersAnimated) { countersAnimated = true; animateCounters(); }
+      });
+    }, { threshold: 0.2 });
+
+    if (countersSection) countersObserver.observe(countersSection);
+
+
+    /* ================= SECTION REVEAL FADE-INS ================= */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+
+    /* ================= BACK TO TOP BUTTON ================= */
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    if (backToTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+          backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+          backToTopBtn.classList.add('opacity-100');
+        } else {
+          backToTopBtn.classList.remove('opacity-100');
+          backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+
+    /* ================= CONTACT FORM VALIDATION ================= */
+    const enquiryForm = document.getElementById('enquiry-form');
+    const successCard = document.getElementById('form-success-card');
+    const errorMsg = document.getElementById('form-error-msg');
+
+    function setEnquirySubject(courseName) {
+      const courseSelect = document.getElementById('contact-course');
+      if (courseSelect) courseSelect.value = courseName;
+      localStorage.setItem('rtpl_selected_course', courseName);
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const phone = document.getElementById('contact-phone').value.trim();
+      const course = document.getElementById('contact-course').value;
+      errorMsg.classList.add('hidden');
+      errorMsg.innerText = '';
+      if (!name) { showError('Full name is required.'); return; }
+      if (!email || !validateEmail(email)) { showError('Please enter a valid email address.'); return; }
+      if (!phone || !validatePhone(phone)) { showError('Please enter a valid phone number (minimum 10 digits).'); return; }
+      if (!course) { showError('Please select a course of interest.'); return; }
+      successCard.classList.remove('hidden');
+      setTimeout(() => { successCard.style.opacity = 1; }, 50);
+    }
+
+    function showError(message) { errorMsg.innerText = message; errorMsg.classList.remove('hidden'); }
+    function validateEmail(email) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); }
+    function validatePhone(phone) { return phone.replace(/\D/g, '').length >= 10; }
+    function resetEnquiryForm() {
+      enquiryForm.reset();
+      successCard.style.opacity = 0;
+      setTimeout(() => successCard.classList.add('hidden'), 300);
+    }
+
+
+    /* ================= GST WIDGET COPY LOGIC ================= */
+    function copyGST() {
+      const gstNum = document.getElementById('gst-number').innerText;
+      const copyIcon = document.getElementById('copy-icon');
+      const tooltip = document.getElementById('copied-tooltip');
+      navigator.clipboard.writeText(gstNum).then(() => {
+        copyIcon.setAttribute('data-lucide', 'check'); lucide.createIcons();
+        tooltip.classList.remove('hidden');
+        setTimeout(() => { copyIcon.setAttribute('data-lucide', 'copy'); lucide.createIcons(); tooltip.classList.add('hidden'); }, 2000);
+      }).catch(err => console.error('Failed to copy text: ', err));
+    }
+
+
+    /* ================= PARTNER & ACCREDITATIONS SEARCH MODAL ================= */
+    const partnerData = {
+      "Adani University": { details: "Collaborating on advanced civil engineering tools, structure visualization internships, and BIM software execution training.", courses: [{ name: "AutoCAD Civil 3D", key: "civil-3d" }, { name: "Autodesk Revit Architecture", key: "revit-arch" }] },
+      "Dharmsinh Desai University": { details: "Strategic academic alliance offering expert seminars and certification modules in structural design, civil engineering simulations, and infrastructure CAD.", courses: [{ name: "STAAD.Pro Structural Design", key: "staad-pro" }, { name: "AutoCAD Civil 3D", key: "civil-3d" }] },
+      "Ganpat University": { details: "Collaborative advisory for vocational courses, technical syllabus alignment, and entrance prep pathways for architectural studies.", courses: [{ name: "LAKSHAYA NIRMAN Prep (NATA/JEE)", key: "nata-prep" }, { name: "BIM Management Professional", key: "nav-nirman-bim" }] },
+      "Indus University": { details: "Technical training hub specializing in parametric mechanical designs, sheet metal simulations, and CAD/CAM practical labs.", courses: [{ name: "SolidWorks Mechanical Design", key: "solidworks" }, { name: "CATIA Advanced Part Modeling", key: "catia" }] },
+      "Navrachana University": { details: "Fostering architectural visualization training, interior CGI portfolios, and smart digital design workflows.", courses: [{ name: "Lumion 3D Architectural Visualizer", key: "lumion-3d" }, { name: "Autodesk Revit Architecture", key: "revit-arch" }] },
+      "Parul University": { details: "Partnering on extensive student training programs, certified BIM coordination workshops, and professional placement support.", courses: [{ name: "NAV NIRMAN BIM Management", key: "nav-nirman-bim" }, { name: "LAKSHAYA NIRMAN Prep (NATA/JEE)", key: "nata-prep" }] },
+      "GTU": { details: "Syllabus alignment with Gujarat Technological University directives for engineering students, offering certified career-ready credits.", courses: [{ name: "BIM Professional Masterclass", key: "nav-nirman-bim" }, { name: "STAAD.Pro Structural Design", key: "staad-pro" }] },
+      "VUDA": { details: "Public planning and infrastructure systems design consultancy, enabling highway and GIS mapping training for local municipality projects.", courses: [{ name: "AutoCAD Civil 3D", key: "civil-3d" }, { name: "STAAD.Pro Structural Design", key: "staad-pro" }] },
+      "GIDC": { details: "Accredited training provider supporting industrial design, factory layouts, and structural blueprints for manufacturing zones.", courses: [{ name: "AutoCAD Mechanical Design", key: "autocad" }, { name: "SolidWorks Mechanical Design", key: "solidworks" }] },
+      "GUDC": { details: "Recognized pathway for urban infrastructure design, sewage network modeling, and municipal utility planning.", courses: [{ name: "AutoCAD Civil 3D", key: "civil-3d" }, { name: "STAAD.Pro Structural Design", key: "staad-pro" }] },
+      "GIDB": { details: "Approved curriculum aligning with infrastructure board standards, focusing on high-speed rail, transit hubs, and structural safety codes.", courses: [{ name: "STAAD.Pro Structural Design", key: "staad-pro" }, { name: "NAV NIRMAN BIM Management", key: "nav-nirman-bim" }] },
+      "ISRO": { details: "Delivered customized geospatial layout analysis, high-fidelity mechanical component simulations, and satellite component modeling tools.", courses: [{ name: "SolidWorks Mechanical Design", key: "solidworks" }, { name: "CATIA Advanced Part Modeling", key: "catia" }] },
+      "Indian Railways": { details: "Certified alignment for railway alignment systems, bridge layouts, and transportation tracking projects.", courses: [{ name: "AutoCAD Civil 3D", key: "civil-3d" }, { name: "STAAD.Pro Structural Design", key: "staad-pro" }] },
+      "Government of India": { details: "Fully registered and recognized skill development programs matching official Ministry guidelines and national certification standards.", courses: [{ name: "BIM Professional Masterclass", key: "nav-nirman-bim" }, { name: "LAKSHAYA NIRMAN Prep (NATA/JEE)", key: "nata-prep" }] },
+      "Forest Department": { details: "Environmental layout modeling, eco-tourism site visualization, and GIS terrain contour analysis.", courses: [{ name: "Lumion 3D Architectural Visualizer", key: "lumion-3d" }, { name: "AutoCAD Civil 3D", key: "civil-3d" }] },
+      "Sardar Sarovar Narmada": { details: "Fostering heavy civil structures engineering, water flow pipe network mapping, and canal site survey alignments.", courses: [{ name: "AutoCAD Civil 3D", key: "civil-3d" }, { name: "STAAD.Pro Structural Design", key: "staad-pro" }] },
+      "GETCO": { details: "Transmission substation modeling, layout engineering, and high-voltage grid construction scheduling.", courses: [{ name: "AutoCAD Mechanical Design", key: "autocad" }, { name: "STAAD.Pro Structural Design", key: "staad-pro" }] },
+      "Roads and Buildings Department": { details: "Approved training for public sector engineers focusing on MoRTH highway code alignments, structural validation, and building design clearances.", courses: [{ name: "AutoCAD Civil 3D", key: "civil-3d" }, { name: "STAAD.Pro Structural Design", key: "staad-pro" }] },
+      "Town Planning": { details: "Accredited syllabus for town planners, smart city grid layouts, building height constraints, and visual presentation portfolios.", courses: [{ name: "Autodesk Revit Architecture", key: "revit-arch" }, { name: "Lumion 3D Architectural Visualizer", key: "lumion-3d" }] }
+    };
+
+    const partnerModal = document.getElementById('partner-modal');
+    const partnerModalContent = document.getElementById('partner-modal-content');
+
+    function openPartnerSearch(partnerName, logoUrl) {
+      const data = partnerData[partnerName];
+      if (!data) return;
+      const logoEl = document.getElementById('partner-modal-logo');
+      if (logoUrl) {
+        logoEl.src = logoUrl;
+        logoEl.alt = partnerName;
+        logoEl.style.display = '';
+      } else {
+        logoEl.src = '';
+        logoEl.alt = partnerName;
+        logoEl.style.display = 'none';
+      }
+      document.getElementById('partner-modal-name').innerText = partnerName;
+      document.getElementById('partner-modal-details').innerText = data.details;
+      const courseContainer = document.getElementById('partner-modal-courses');
+      courseContainer.innerHTML = '';
+      data.courses.forEach(course => {
+        const btn = document.createElement('button');
+        btn.className = 'w-full flex items-center justify-between p-3.5 rounded-xl border border-slate-200/85 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/25 hover:bg-brandBlue/5 dark:hover:bg-brandBlue/10 hover:border-brandBlue/35 text-slate-800 dark:text-slate-100 font-bold text-xs text-left transition-all cursor-pointer group focus:outline-none';
+        btn.onclick = () => {
+          closePartnerModal();
+          setTimeout(() => {
+            openSyllabusModal(course.key);
+            const t = document.getElementById('syllabus-modal');
+            if (t) t.scrollIntoView({ behavior: 'smooth' });
+          }, 350);
+        };
+        btn.innerHTML = `<span>${course.name}</span><i data-lucide="arrow-right" class="w-4 h-4 text-slate-400 group-hover:text-brandBlue group-hover:translate-x-0.5 transition-all"></i>`;
+        courseContainer.appendChild(btn);
+      });
+      document.getElementById('partner-modal-google-btn').href = `https://www.google.com/search?q=${encodeURIComponent('Roshani Technologies ' + partnerName)}`;
+      partnerModal.classList.remove('hidden');
+      setTimeout(() => {
+        partnerModalContent.classList.remove('scale-95', 'opacity-0');
+        partnerModalContent.classList.add('scale-100', 'opacity-100');
+        lucide.createIcons();
+      }, 50);
+    }
+
+    function closePartnerModal() {
+      if (partnerModalContent) {
+        partnerModalContent.classList.remove('scale-100', 'opacity-100');
+        partnerModalContent.classList.add('scale-95', 'opacity-0');
+      }
+      if (partnerModal) {
+        setTimeout(() => partnerModal.classList.add('hidden'), 300);
+      }
+    }
+
+    if (partnerModal) {
+      partnerModal.addEventListener('click', (e) => {
+        if (e.target === partnerModal) closePartnerModal();
+      });
+    }
+  </script>
+  <script src="./assets/js/auth-session.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>
