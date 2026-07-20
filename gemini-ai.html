@@ -1669,16 +1669,22 @@
         currentUtterance.voice = preferred;
         currentUtterance.lang = preferred.lang; // Force utterance to match voice lang to prevent silent failures
       } else {
-        // Default English fallback if no specific voice was found
-        const fallbackVoice = voices.find(v => v.lang && v.lang.toLowerCase().replace('_', '-').startsWith('en') && v.name && v.name.toLowerCase().includes('google'))
-          || voices.find(v => v.lang && v.lang.toLowerCase().replace('_', '-').startsWith('en') && v.name && !v.name.toLowerCase().includes('microsoft zira'))
-          || voices[0];
-
-        if (fallbackVoice) {
-          currentUtterance.voice = fallbackVoice;
-          currentUtterance.lang = fallbackVoice.lang;
+        if (detectedLang === 'gu') {
+          currentUtterance.lang = 'gu-IN';
+        } else if (detectedLang === 'hi') {
+          currentUtterance.lang = 'hi-IN';
         } else {
-          currentUtterance.lang = 'en-IN';
+          // Default English fallback if no specific voice was found
+          const fallbackVoice = voices.find(v => v.lang && v.lang.toLowerCase().replace('_', '-').startsWith('en') && v.name && v.name.toLowerCase().includes('google'))
+            || voices.find(v => v.lang && v.lang.toLowerCase().replace('_', '-').startsWith('en') && v.name && !v.name.toLowerCase().includes('microsoft zira'))
+            || voices[0];
+
+          if (fallbackVoice) {
+            currentUtterance.voice = fallbackVoice;
+            currentUtterance.lang = fallbackVoice.lang;
+          } else {
+            currentUtterance.lang = 'en-IN';
+          }
         }
       }
 
