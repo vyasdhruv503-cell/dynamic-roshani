@@ -9,7 +9,7 @@
     content="India's Premier AutoCAD & BIM Reseller & Trainer. Learn Revit, AutoCAD, SketchUp, CATIA, Fusion 360, and Lumion with industry experts.">
 
   <!-- Tailwind CSS Compiled Local Stylesheet -->
-  <link rel="stylesheet" href="./styles/output.css">
+  <link rel="stylesheet" href="./styles/output.css?v=1.0.1">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,7 +83,10 @@
 </head>
 
 <body
-  class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 overflow-x-hidden">
+  class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress" class="fixed top-0 left-0 w-0 h-1 bg-brandBlue z-[100] transition-all duration-100"></div>
 
   <!-- ================= HEADER / STICKY NAVBAR ================= -->
   <header id="main-navigation"
@@ -385,37 +388,7 @@
   </section>
 
 
-  <!-- ================= TRUSTED PARTNERS / ACCREDITATIONS ================= -->
-  <section class="py-8 bg-slate-50 dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 transition-colors duration-300">
-    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-center text-xs font-black text-slate-400 dark:text-slate-500 tracking-widest uppercase mb-5">
-        Authorized Partner & Certified Course Curriculums
-      </p>
-      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 opacity-70">
-        <div class="text-[10px] sm:text-xs font-black tracking-wider uppercase text-slate-600 dark:text-slate-300 border border-slate-300/40 dark:border-slate-700/40 px-3.5 py-1.5 rounded-xl select-none">
-          Autodesk ATC
-        </div>
-        <div class="text-[10px] sm:text-xs font-black tracking-wider uppercase text-slate-600 dark:text-slate-300 border border-slate-300/40 dark:border-slate-700/40 px-3.5 py-1.5 rounded-xl select-none">
-          Bentley Partner
-        </div>
-        <div class="text-[10px] sm:text-xs font-black tracking-wider uppercase text-slate-600 dark:text-slate-300 border border-slate-300/40 dark:border-slate-700/40 px-3.5 py-1.5 rounded-xl select-none">
-          Graphisoft Partner
-        </div>
-        <div class="text-[10px] sm:text-xs font-black tracking-wider uppercase text-slate-600 dark:text-slate-300 border border-slate-300/40 dark:border-slate-700/40 px-3.5 py-1.5 rounded-xl select-none">
-          Lumion Partner
-        </div>
-        <div class="text-[10px] sm:text-xs font-black tracking-wider uppercase text-slate-600 dark:text-slate-300 border border-slate-300/40 dark:border-slate-700/40 px-3.5 py-1.5 rounded-xl select-none">
-          Trimble Authorized
-        </div>
-        <div class="text-[10px] sm:text-xs font-black tracking-wider uppercase text-slate-600 dark:text-slate-300 border border-slate-300/40 dark:border-slate-700/40 px-3.5 py-1.5 rounded-xl select-none">
-          Chaos V-Ray/Corona
-        </div>
-        <div class="text-[10px] sm:text-xs font-black tracking-wider uppercase text-slate-600 dark:text-slate-300 border border-slate-300/40 dark:border-slate-700/40 px-3.5 py-1.5 rounded-xl select-none">
-          Unity Academic
-        </div>
-      </div>
-    </div>
-  </section>
+
 
 
   <!-- ================= ANIMATED STATS / COUNTERS ================= -->
@@ -426,13 +399,13 @@
         <!-- Stat 1 -->
         <div class="space-y-1 sm:space-y-2 reveal">
           <div class="font-display font-black text-2xl sm:text-4xl text-brandBlue counter-val" data-target="40"
-            data-suffix="+ Years">0+ Years</div>
+            data-suffix="+ Years">40+ Years</div>
           <div class="text-[10px] sm:text-xs font-bold text-slate-500 dark:text-slate-400 tracking-widest uppercase">
             Experience</div>
         </div>
         <!-- Stat 2 -->
         <div class="space-y-1 sm:space-y-2 reveal">
-          <div class="font-display font-black text-2xl sm:text-4xl text-[#ABB851] counter-val" data-target="1"
+          <div class="font-display font-black text-2xl sm:text-4xl text-[#ABB851] counter-val" data-target="10"
             data-suffix="M+">0M+</div>
           <div class="text-[10px] sm:text-xs font-bold text-slate-500 dark:text-slate-400 tracking-widest uppercase">
             Professionals Trained</div>
@@ -446,17 +419,17 @@
         </div>
         <!-- Stat 4 -->
         <div class="space-y-1 sm:space-y-2 reveal">
-          <div class="font-display font-black text-2xl sm:text-4xl text-brandBlue counter-val" data-target="500"
+          <div class="font-display font-black text-2xl sm:text-4xl text-brandBlue counter-val" data-target="25000"
             data-suffix="+">0+</div>
           <div class="text-[10px] sm:text-xs font-bold text-slate-500 dark:text-slate-400 tracking-widest uppercase">
-            Corporate Clients</div>
+          engineers placed</div>
         </div>
         <!-- Stat 5 -->
         <div class="space-y-1 sm:space-y-2 reveal">
-          <div class="font-display font-black text-2xl sm:text-4xl text-[#ABB851] counter-val" data-target="50"
+          <div class="font-display font-black text-2xl sm:text-4xl text-[#ABB851] counter-val" data-target="10000"
             data-suffix="+">0+</div>
           <div class="text-[10px] sm:text-xs font-bold text-slate-500 dark:text-slate-400 tracking-widest uppercase">
-            Certified Trainers</div>
+            Corporate Clients</div>
         </div>
       </div>
     </div>
@@ -481,22 +454,21 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 items-stretch">
         <!-- Card 1 -->
         <div
-          class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[280px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-white/[0.07] hover:border-cyan-500/30 cursor-default relative overflow-hidden">
+          class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[290px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-gradient-to-br hover:from-white/[0.08] hover:to-brandBlue/[0.03] hover:border-brandBlue/50 hover:-translate-y-2 hover:shadow-[0_15px_30px_-5px_rgba(56,189,248,0.15)] cursor-default relative overflow-hidden">
           <div
             class="absolute top-1 left-2 text-white/[0.07] font-serif text-8xl select-none leading-none pointer-events-none">
             "
           </div>
           <div
-            class="w-11 h-11 rounded-2xl bg-brandBlue/15 border border-brandBlue/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-            <i data-lucide="users" class="w-5 h-5 text-brandBlue"></i>
+            class="w-12 h-12 rounded-2xl bg-brandBlue/15 border border-brandBlue/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="users" class="w-6 h-6 text-brandBlue"></i>
           </div>
-          <div class="relative z-10">
-            <h3 class="text-lg sm:text-xl font-black text-white tracking-tight leading-snug uppercase">Highly
-              Experienced Faculty</h3>
+          <div class="relative z-10 min-h-[56px] flex items-center text-left">
+            <h3 class="text-lg font-black text-white tracking-tight leading-snug uppercase">Highly Experienced Faculty</h3>
           </div>
-          <div class="mt-6 pt-4 border-t border-white/10">
-            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-1.5">Industry Experts</span>
-            <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">Learn from professionals with
+          <div class="mt-6 pt-4 border-t border-white/10 text-left">
+            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-3">Industry Experts</span>
+            <p class="text-xs sm:text-sm text-slate-200 font-medium leading-relaxed">Learn from professionals with
               real-world corporate experience. Our mentors have worked on live government and infrastructure projects.
             </p>
           </div>
@@ -504,117 +476,100 @@
 
         <!-- Card 2 -->
         <div
-          class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[280px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-white/[0.07] hover:border-cyan-500/30 cursor-default relative overflow-hidden">
+          class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[290px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-gradient-to-br hover:from-white/[0.08] hover:to-brandBlue/[0.03] hover:border-brandBlue/50 hover:-translate-y-2 hover:shadow-[0_15px_30px_-5px_rgba(56,189,248,0.15)] cursor-default relative overflow-hidden">
           <div
             class="absolute top-1 left-2 text-white/[0.07] font-serif text-8xl select-none leading-none pointer-events-none">
             "
           </div>
           <div
-            class="w-11 h-11 rounded-2xl bg-cyan-500/15 border border-cyan-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-            <i data-lucide="user-check" class="w-5 h-5 text-cyan-400"></i>
+            class="w-12 h-12 rounded-2xl bg-cyan-500/15 border border-cyan-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="user-check" class="w-6 h-6 text-cyan-400"></i>
           </div>
-          <div class="relative z-10">
-            <h3 class="text-lg sm:text-xl font-black text-white tracking-tight leading-snug uppercase">Personalized
-              Learning</h3>
+          <div class="relative z-10 min-h-[56px] flex items-center text-left">
+            <h3 class="text-lg font-black text-white tracking-tight leading-snug uppercase">Personalized Learning</h3>
           </div>
-          <div class="mt-6 pt-4 border-t border-white/10">
-            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-1.5">No Batch System</span>
-            <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">One-to-one attention and flexible
+          <div class="mt-6 pt-4 border-t border-white/10 text-left">
+            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-3">No Batch System</span>
+            <p class="text-xs sm:text-sm text-slate-200 font-medium leading-relaxed">One-to-one attention and flexible
               timings for every learner. You learn at your speed, on your schedule, with dedicated mentoring.</p>
           </div>
         </div>
 
         <!-- Card 3 -->
         <div
-          class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[280px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-white/[0.07] hover:border-cyan-500/30 cursor-default relative overflow-hidden">
+          class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[290px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-gradient-to-br hover:from-white/[0.08] hover:to-brandBlue/[0.03] hover:border-brandBlue/50 hover:-translate-y-2 hover:shadow-[0_15px_30px_-5px_rgba(56,189,248,0.15)] cursor-default relative overflow-hidden">
           <div
             class="absolute top-1 left-2 text-white/[0.07] font-serif text-8xl select-none leading-none pointer-events-none">
             "
           </div>
           <div
-            class="w-11 h-11 rounded-2xl bg-yellow-400/15 border border-yellow-400/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-            <i data-lucide="briefcase" class="w-5 h-5 text-yellow-400"></i>
+            class="w-12 h-12 rounded-2xl bg-yellow-400/15 border border-yellow-400/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="briefcase" class="w-6 h-6 text-yellow-400"></i>
           </div>
-          <div class="relative z-10">
-            <h3 class="text-lg sm:text-xl font-black text-white tracking-tight leading-snug uppercase">100% Placement
-            </h3>
+          <div class="relative z-10 min-h-[56px] flex items-center text-left">
+            <h3 class="text-lg font-black text-white tracking-tight leading-snug uppercase">100% Placement</h3>
           </div>
-          <div class="mt-6 pt-4 border-t border-white/10">
-            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-1.5">Career Focused</span>
-            <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">Active job placement assistance,
+          <div class="mt-6 pt-4 border-t border-white/10 text-left">
+            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-3">Career Focused</span>
+            <p class="text-xs sm:text-sm text-slate-200 font-medium leading-relaxed">Active job placement assistance,
               resume prep, and interview coaching. 25,000+ engineers placed across India and abroad.</p>
           </div>
         </div>
 
         <!-- Card 4 -->
         <div
-          class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[280px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-white/[0.07] hover:border-cyan-500/30 cursor-default relative overflow-hidden">
+          class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[290px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-gradient-to-br hover:from-white/[0.08] hover:to-brandBlue/[0.03] hover:border-brandBlue/50 hover:-translate-y-2 hover:shadow-[0_15px_30px_-5px_rgba(56,189,248,0.15)] cursor-default relative overflow-hidden">
           <div
             class="absolute top-1 left-2 text-white/[0.07] font-serif text-8xl select-none leading-none pointer-events-none">
             "
           </div>
           <div
-            class="w-11 h-11 rounded-2xl bg-violet-500/15 border border-violet-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-            <i data-lucide="refresh-cw" class="w-5 h-5 text-violet-400"></i>
+            class="w-12 h-12 rounded-2xl bg-violet-500/15 border border-violet-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="refresh-cw" class="w-6 h-6 text-violet-400"></i>
           </div>
-          <div class="relative z-10">
-            <h3 class="text-lg sm:text-xl font-black text-white tracking-tight leading-snug uppercase">Learn Until
-              Satisfaction</h3>
+          <div class="relative z-10 min-h-[56px] flex items-center text-left">
+            <h3 class="text-lg font-black text-white tracking-tight leading-snug uppercase">Learn Until You Succeed</h3>
           </div>
-          <div class="mt-6 pt-4 border-t border-white/10">
-            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-1.5">Master Every
-              Topic</span>
-            <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">Study at your own pace until every
-              concept is crystal clear. We never rush — your mastery is our measure of success.</p>
+          <div class="mt-6 pt-4 border-t border-white/10 text-left">
+            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-3">Master Every Topic</span>
+            <p class="text-xs sm:text-sm text-slate-200 font-medium leading-relaxed">Study at your own pace until every
+              concept is crystal clear. We never rush your learning — your mastery is our measure of success.</p>
           </div>
         </div>
 
         <!-- Card 5 -->
         <div
-          class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[280px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-white/[0.07] hover:border-cyan-500/30 cursor-default relative overflow-hidden">
+          class="prop-card reveal flex flex-col justify-between p-6 border border-white/10 rounded-3xl w-full min-h-[290px] bg-white/[0.03] backdrop-blur-md transition-all duration-300 group hover:bg-gradient-to-br hover:from-white/[0.08] hover:to-brandBlue/[0.03] hover:border-brandBlue/50 hover:-translate-y-2 hover:shadow-[0_15px_30px_-5px_rgba(56,189,248,0.15)] cursor-default relative overflow-hidden">
           <div
             class="absolute top-1 left-2 text-white/[0.07] font-serif text-8xl select-none leading-none pointer-events-none">
             "
           </div>
           <div
-            class="w-11 h-11 rounded-2xl bg-orange-500/15 border border-orange-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-            <i data-lucide="book-open" class="w-5 h-5 text-orange-400"></i>
+            class="w-12 h-12 rounded-2xl bg-orange-500/15 border border-orange-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="book-open" class="w-6 h-6 text-orange-400"></i>
           </div>
-          <div class="relative z-10">
-            <h3 class="text-lg sm:text-xl font-black text-white tracking-tight leading-snug uppercase">Expert Curriculum
-            </h3>
+          <div class="relative z-10 min-h-[56px] flex items-center text-left">
+            <h3 class="text-lg font-black text-white tracking-tight leading-snug uppercase">Expert Curriculum</h3>
           </div>
-          <div class="mt-6 pt-4 border-t border-white/10">
-            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-1.5">Industry Ready</span>
-            <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">Syllabus designed by professionals
+          <div class="mt-6 pt-4 border-t border-white/10 text-left">
+            <span class="block text-xs font-black text-sky-400 tracking-wider uppercase mb-3">Industry Ready</span>
+            <p class="text-xs sm:text-sm text-slate-200 font-medium leading-relaxed">Syllabus designed by professionals
               to align with job demands. Updated regularly with the latest software versions and industry standards.</p>
           </div>
         </div>
       </div>
 
       <!-- Highlights row -->
-      <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5 reveal">
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-4xl mx-auto reveal">
         <div
           class="flex items-center gap-4 bg-white/[0.04] border border-white/10 rounded-2xl px-5 py-4 hover:border-brandBlue/30 transition-all">
           <div
             class="w-10 h-10 rounded-xl bg-brandBlue/15 border border-brandBlue/20 flex items-center justify-center flex-shrink-0">
             <i data-lucide="map-pin" class="w-4 h-4 text-brandBlue"></i>
           </div>
-          <div>
+          <div class="text-left">
             <div class="text-sm font-black text-white">PAN India Distributor</div>
             <div class="text-[11px] text-slate-400 font-medium mt-0.5">Authorized Autodesk reseller across the nation
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex items-center gap-4 bg-white/[0.04] border border-white/10 rounded-2xl px-5 py-4 hover:border-brandBlue/30 transition-all">
-          <div
-            class="w-10 h-10 rounded-xl bg-yellow-400/15 border border-yellow-400/20 flex items-center justify-center flex-shrink-0">
-            <i data-lucide="award" class="w-4 h-4 text-yellow-400"></i>
-          </div>
-          <div>
-            <div class="text-sm font-black text-white">11 Govt. Accreditations</div>
-            <div class="text-[11px] text-slate-400 font-medium mt-0.5">ISRO, Indian Railways, Govt of India &amp; more
             </div>
           </div>
         </div>
@@ -624,7 +579,7 @@
             class="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-500/20 flex items-center justify-center flex-shrink-0">
             <i data-lucide="graduation-cap" class="w-4 h-4 text-cyan-400"></i>
           </div>
-          <div>
+          <div class="text-left">
             <div class="text-sm font-black text-white">8 University Partners</div>
             <div class="text-[11px] text-slate-400 font-medium mt-0.5">Parul, Ganpat, Indus, Adani University &amp; more
             </div>
@@ -677,16 +632,20 @@
               <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&auto=format&fit=crop&q=80"
                 alt="AutoCAD"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute top-4 left-4 flex gap-2">
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-brandBlue text-white rounded-lg">CAD & Drafting</span>
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/60 backdrop-blur-md text-white rounded-lg">80 Hours</span>
+                <span
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/65 backdrop-blur-md text-white rounded-lg">Hybrid</span>
               </div>
             </div>
             <div class="p-6 space-y-4">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Autodesk AutoCAD</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
+              <div class="min-h-[56px] flex items-center text-left">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Autodesk AutoCAD</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
                 Master 2D drafting and 3D architectural layout detailing.
               </p>
 
@@ -694,11 +653,11 @@
               <div class="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800">
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Beginner Friendly</span>
+                  <span>✔ Beginner-Friendly</span>
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Industry Certificate</span>
+                  <span>✔ Industry-Recognized Certificate</span>
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
@@ -732,16 +691,20 @@
             <div class="h-56 relative overflow-hidden">
               <img src="assets/revit-architecture.jpg" alt="Revit Architecture"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute top-4 left-4 flex gap-2">
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span
-                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-brandBlue text-white rounded-lg">BIM Modeling</span>
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-brandGreen text-white rounded-lg">BIM Modeling</span>
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/60 backdrop-blur-md text-white rounded-lg">120 Hours</span>
+                <span
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/65 backdrop-blur-md text-white rounded-lg">Hybrid</span>
               </div>
             </div>
             <div class="p-6 space-y-4">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Revit Architecture</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
+              <div class="min-h-[56px] flex items-center text-left">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Revit Architecture</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
                 Master BIM workflows, structural assemblies, and multi-discipline coordination.
               </p>
 
@@ -749,11 +712,11 @@
               <div class="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800">
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Beginner Friendly</span>
+                  <span>✔ Beginner-Friendly</span>
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Industry Certificate</span>
+                  <span>✔ Industry-Recognized Certificate</span>
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
@@ -788,28 +751,32 @@
               <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&auto=format&fit=crop&q=80"
                 alt="SketchUp Pro"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute top-4 left-4 flex gap-2">
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span
-                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-brandBlue text-white rounded-lg">3D Presentation</span>
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-purple-600 text-white rounded-lg">3D Presentation</span>
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/60 backdrop-blur-md text-white rounded-lg">40 Hours</span>
+                <span
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/65 backdrop-blur-md text-white rounded-lg">Hybrid</span>
               </div>
             </div>
             <div class="p-6 space-y-4">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Trimble SketchUp Pro</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
-                Create intuitive 3D designs, schematic elevations, and layout plans.
+              <div class="min-h-[56px] flex items-center text-left">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Trimble SketchUp Pro</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
+                Create professional 3D architectural, interior, and landscape designs using SketchUp Pro.
               </p>
 
               <!-- Key Features -->
               <div class="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800">
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Beginner Friendly</span>
+                  <span>✔ Beginner-Friendly</span>
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Industry Certificate</span>
+                  <span>✔ Industry-Recognized Certificate</span>
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
@@ -843,17 +810,21 @@
             <div class="h-56 relative overflow-hidden">
               <img src="assets/catia.png" alt="CATIA V5"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute top-4 left-4 flex gap-2">
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-brandBlue text-white rounded-lg">Advanced CAD</span>
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/60 backdrop-blur-md text-white rounded-lg">120 Hours</span>
+                <span
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/65 backdrop-blur-md text-white rounded-lg">Hybrid</span>
               </div>
             </div>
             <div class="p-6 space-y-4">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">CATIA V5</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
-                Aerospace and automotive hybrid part modeling, surfacing, and assembly.
+              <div class="min-h-[56px] flex items-center text-left">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">CATIA V5</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
+                Master advanced product design, surfacing, assembly design, and automotive engineering workflows.
               </p>
 
               <!-- Key Features -->
@@ -864,7 +835,7 @@
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Industry Certificate</span>
+                  <span>✔ Industry-Recognized Certificate</span>
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
@@ -898,16 +869,20 @@
             <div class="h-56 relative overflow-hidden">
               <img src="assets/fusion360.jpg" alt="Fusion 360"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute top-4 left-4 flex gap-2">
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-brandBlue text-white rounded-lg">Cloud CAD</span>
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/60 backdrop-blur-md text-white rounded-lg">80 Hours</span>
+                <span
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/65 backdrop-blur-md text-white rounded-lg">Hybrid</span>
               </div>
             </div>
             <div class="p-6 space-y-4">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Autodesk Fusion 360</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
+              <div class="min-h-[56px] flex items-center text-left">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Autodesk Fusion 360</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
                 Master cloud-based CAD, CAM and product design with Autodesk Fusion 360.
               </p>
 
@@ -919,7 +894,7 @@
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Industry Certificate</span>
+                  <span>✔ Industry-Recognized Certificate</span>
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
@@ -927,7 +902,7 @@
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Autodesk Certified Trainers</span>
+                  <span>✔ Cloud Collaboration</span>
                 </div>
               </div>
             </div>
@@ -953,16 +928,20 @@
             <div class="h-56 relative overflow-hidden">
               <img src="assets/lumion.jpg" alt="Lumion 3D"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute top-4 left-4 flex gap-2">
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span
-                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-brandBlue text-white rounded-lg">Rendering</span>
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-purple-600 text-white rounded-lg">Rendering</span>
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/60 backdrop-blur-md text-white rounded-lg">40 Hours</span>
+                <span
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/65 backdrop-blur-md text-white rounded-lg">Hybrid</span>
               </div>
             </div>
             <div class="p-6 space-y-4">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Lumion 3D</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
+              <div class="min-h-[56px] flex items-center text-left">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Lumion 3D</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
                 Create photorealistic architectural visualizations with Lumion.
               </p>
 
@@ -982,7 +961,7 @@
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ LiveSync Revit / SketchUp Plugins</span>
+                  <span>✔ Animation & Walkthroughs</span>
                 </div>
               </div>
             </div>
@@ -1008,16 +987,20 @@
             <div class="h-56 relative overflow-hidden">
               <img src="assets/solidworks.png" alt="SolidWorks"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute top-4 left-4 flex gap-2">
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span
-                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-brandTeal text-white rounded-lg">Product Design</span>
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-brandBlue text-white rounded-lg">Product Design</span>
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/60 backdrop-blur-md text-white rounded-lg">120 Hours</span>
+                <span
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/65 backdrop-blur-md text-white rounded-lg">Hybrid</span>
               </div>
             </div>
             <div class="p-6 space-y-4">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">SolidWorks</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
+              <div class="min-h-[56px] flex items-center text-left">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">SolidWorks</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
                 Industry-leading parametric solid modeler for mechanical engineering and simulation.
               </p>
 
@@ -1025,11 +1008,11 @@
               <div class="space-y-2 pt-2 border-t border-slate-100 dark:border-slate-800">
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Beginner Friendly</span>
+                  <span>✔ Beginner-Friendly</span>
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Industry Certificate</span>
+                  <span>✔ Industry-Recognized Certificate</span>
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
@@ -1063,17 +1046,21 @@
             <div class="h-56 relative overflow-hidden">
               <img src="assets/3dsmax.jpg" alt="3ds Max"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute top-4 left-4 flex gap-2">
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span
-                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-brandBlue text-white rounded-lg">3D & Animation</span>
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-purple-600 text-white rounded-lg">3D & Animation</span>
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/60 backdrop-blur-md text-white rounded-lg">120 Hours</span>
+                <span
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/65 backdrop-blur-md text-white rounded-lg">Hybrid</span>
               </div>
             </div>
             <div class="p-6 space-y-4">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Autodesk 3ds Max</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
-                Professional 3D modeling, asset texturing, and interior visualization.
+              <div class="min-h-[56px] flex items-center text-left">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">Autodesk 3ds Max</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
+                Learn professional 3D modeling, texturing, lighting, animation, and photorealistic rendering.
               </p>
 
               <!-- Key Features -->
@@ -1084,7 +1071,7 @@
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Industry Certificate</span>
+                  <span>✔ Industry-Recognized Certificate</span>
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
@@ -1119,17 +1106,21 @@
               <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&auto=format&fit=crop&q=80"
                 alt="Civil 3D"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute top-4 left-4 flex gap-2">
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-brandBlue text-white rounded-lg">Civil Engineering</span>
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/60 backdrop-blur-md text-white rounded-lg">80 Hours</span>
+                <span
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/65 backdrop-blur-md text-white rounded-lg">Hybrid</span>
               </div>
             </div>
             <div class="p-6 space-y-4">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">AutoCAD Civil 3D</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
-                Infrastructure design for road networks, surfaces, and grading models.
+              <div class="min-h-[56px] flex items-center text-left">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">AutoCAD Civil 3D</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
+              Design roads, highways, grading, drainage, and land development projects using Civil 3D.
               </p>
 
               <!-- Key Features -->
@@ -1140,7 +1131,7 @@
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Industry Certificate</span>
+                  <span>✔ Industry-Recognized Certificate</span>
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
@@ -1175,16 +1166,20 @@
               <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80"
                 alt="STAAD.Pro"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute top-4 left-4 flex gap-2">
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span
-                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-brandBlue text-white rounded-lg">Structural Analysis</span>
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-brandGreen text-white rounded-lg">Structural Analysis</span>
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/60 backdrop-blur-md text-white rounded-lg">80 Hours</span>
+                <span
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/65 backdrop-blur-md text-white rounded-lg">Hybrid</span>
               </div>
             </div>
             <div class="p-6 space-y-4">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">STAAD.Pro</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
+              <div class="min-h-[56px] flex items-center text-left">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">STAAD.Pro</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
                 RCC frames and steel structures analysis for IS/ACI code compliance.
               </p>
 
@@ -1196,7 +1191,7 @@
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Industry Certificate</span>
+                  <span>✔ Industry-Recognized Certificate</span>
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
@@ -1231,19 +1226,23 @@
               <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&auto=format&fit=crop&q=80"
                 alt="Nav Nirman BIM"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute top-4 left-4 flex gap-2">
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-brandGreen text-white rounded-lg">BIM Professional</span>
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/60 backdrop-blur-md text-white rounded-lg">160 Hours</span>
+                <span
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/65 backdrop-blur-md text-white rounded-lg">Hybrid</span>
               </div>
               <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-950/80 to-transparent px-4 py-3">
                 <span class="text-[10px] font-black text-brandGreen tracking-widest uppercase">⭐ Roshani Signature Programme</span>
               </div>
             </div>
             <div class="p-6 space-y-4">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">NAV NIRMAN — Professional BIM</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
+              <div class="min-h-[56px] flex items-center text-left">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">NAV NIRMAN — Professional BIM</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
                 Flagship BIM professional suite from schematic design to Enscape walkthrough renderings.
               </p>
 
@@ -1255,7 +1254,7 @@
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
-                  <span>✔ Signature Certificate</span>
+                  <span>✔ Industry-Recognized Certificate</span>
                 </div>
                 <div class="flex gap-2 items-start text-xs font-semibold">
                   <i data-lucide="check-circle" class="w-4 h-4 text-brandGreen flex-shrink-0 mt-0.5"></i>
@@ -1289,19 +1288,23 @@
             <div class="h-56 relative overflow-hidden">
               <img src="assets/nata.png" alt="NATA Preparation"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-              <div class="absolute top-4 left-4 flex gap-2">
+              <div class="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-purple-600 text-white rounded-lg">Architecture Entrance</span>
                 <span
                   class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/60 backdrop-blur-md text-white rounded-lg">12 Weeks Target</span>
+                <span
+                  class="px-2.5 py-1 text-[10px] font-black tracking-wider uppercase bg-slate-950/65 backdrop-blur-md text-white rounded-lg">Hybrid</span>
               </div>
               <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-950/80 to-transparent px-4 py-3">
                 <span class="text-[10px] font-black text-purple-300 tracking-widest uppercase">⭐ Roshani LAKSHAYA NIRMAN</span>
               </div>
             </div>
             <div class="p-6 space-y-4">
-              <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">NATA / JEE Architecture Prep</h3>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
+              <div class="min-h-[56px] flex items-center text-left">
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white leading-tight">NATA / JEE Architecture Prep</h3>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">
                 India's premier coaching program for NATA & JEE (B.Arch) entrance examinations.
               </p>
 
@@ -1704,7 +1707,7 @@
               <span class="text-slate-300">Ministry of Corporate Affairs (MCA) Approved</span>
             </li>
             <li class="flex gap-2">
-              <span class="text-brandBlue">Hours:</span>
+              <span class="text-brandBlue">Timing:</span>
               <span class="text-slate-300">Mon - Sat (7:00 AM - 10:00 PM)</span>
             </li>
             <li class="flex gap-2">
@@ -3284,8 +3287,25 @@
 
     function animateCounters() {
       document.querySelectorAll('.counter-val').forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-target'));
+        const targetAttr = counter.getAttribute('data-target');
+        const target = parseInt(targetAttr);
         const suffix = counter.getAttribute('data-suffix') || '';
+        
+        if (isNaN(target)) {
+          // Smooth typewriter typing effect for text targets like "PAN INDIA"
+          counter.innerText = '';
+          let index = 0;
+          const typingInterval = setInterval(() => {
+            if (index < targetAttr.length) {
+              counter.innerText += targetAttr.charAt(index);
+              index++;
+            } else {
+              clearInterval(typingInterval);
+            }
+          }, 120); // typing speed (120ms per character)
+          return;
+        }
+
         let current = 0;
         const stepTime = 2000 / 60;
         const increment = target / 60;
@@ -3330,6 +3350,18 @@
 
       backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     }
+
+
+    /* ================= SCROLL PROGRESS INDICATOR ================= */
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+      const progress = document.getElementById('scroll-progress');
+      if (progress) {
+        progress.style.width = scrolled + '%';
+      }
+    });
 
 
     /* ================= CONTACT FORM VALIDATION ================= */

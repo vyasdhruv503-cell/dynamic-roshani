@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms & Conditions | Roshani Technologies</title>
   <meta name="description" content="Terms & Conditions for Roshani Technologies Pvt. Ltd.">
-  <link rel="stylesheet" href="./styles/output.css">
+  <link rel="stylesheet" href="./styles/output.css?v=1.0.1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -21,10 +21,11 @@
     ::-webkit-scrollbar-thumb:hover{background:#94A3B8;}
     .glass-light{background:rgba(255,255,255,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
     .glass-dark{background:rgba(15,23,42,0.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
+    [id] { scroll-margin-top: 6.5rem; }
   </style>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300 overflow-x-hidden">
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300">
 
 <!-- NAVBAR -->
 <header id="main-navigation" class="sticky top-0 z-50 transition-all duration-300 border-b border-slate-200/80 dark:border-slate-800/80 glass-light dark:glass-dark shadow-sm">
@@ -98,10 +99,9 @@
     
     <!-- Section Header -->
     <div class="mb-16 text-center reveal" data-aos="fade-up">
-      <span class="text-xs sm:text-sm font-black text-brandBlue tracking-widest uppercase">Effective Date: July 13, 2026</span>
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black font-display tracking-tight text-white mt-2">Terms & Conditions</h2>
       <p class="mt-4 text-slate-400 font-medium max-w-3xl mx-auto text-sm sm:text-base">
-        Welcome to Roshani Technologies Pvt. Ltd. These Terms & Conditions ("Terms") govern your access to and use of our website, training programs, educational services, and related facilities. By accessing our website or enrolling in any course, you agree to comply with these Terms.
+        Welcome to Roshani Technologies Pvt. These Terms & Conditions govern your access to our website, courses, and services. By using our platform or enrolling in a course, you agree to these Terms.
       </p>
     </div>
 
@@ -113,7 +113,7 @@
         <div class="sticky top-28 p-6 bg-white/[0.02] border border-white/10 rounded-3xl backdrop-blur-md">
           <h3 class="text-sm font-black tracking-wider uppercase text-sky-400 mb-4" data-aos="fade-right">Terms Navigation</h3>
           <ul class="space-y-2.5 font-semibold text-xs sm:text-sm text-slate-300" data-aos="fade-right" data-aos-delay="100">
-            <li><a href="#acceptance" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">1. Acceptance of Terms</a></li>
+            <li><a href="#terms-conditions" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">1. Acceptance of Terms</a></li>
             <li><a href="#eligibility" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">2. Eligibility</a></li>
             <li><a href="#enrollment" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">3. Course Enrollment</a></li>
             <li><a href="#fees" class="hover:text-brandBlue transition-colors block py-1 border-b border-white/5">4. Fees & Payments</a></li>
@@ -474,7 +474,7 @@
         <ul class="space-y-3 font-semibold">
           <li class="flex gap-2"><span class="text-brandBlue">GSTIN:</span><span class="font-mono text-slate-300">24AANCR6249L17S</span></li>
           <li class="flex gap-2"><span class="text-brandBlue">Registration:</span><span class="text-slate-300">Ministry of Corporate Affairs (MCA) Approved</span></li>
-          <li class="flex gap-2"><span class="text-brandBlue">Hours:</span><span class="text-slate-300">Mon - Sat (7:00 AM - 10:00 PM)</span></li>
+          <li class="flex gap-2"><span class="text-brandBlue">Timing:</span><span class="text-slate-300">Mon - Sat (7:00 AM - 10:00 PM)</span></li>
           <li class="flex gap-2"><span class="text-brandBlue">Head Office:</span><span class="text-slate-300">Karelibaug Water Tank Road, Vadodara, Gujarat</span></li>
         </ul>
       </div>
@@ -546,6 +546,42 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
   }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+  // Smooth anchor scrolling with dynamic header offset
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        const header = document.getElementById('main-navigation');
+        const headerHeight = header ? header.offsetHeight : 80;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 24;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+        history.pushState(null, null, targetId);
+      }
+    });
+  });
+
+  // Handle initial page load with hash
+  if (window.location.hash) {
+    setTimeout(() => {
+      const targetElement = document.querySelector(window.location.hash);
+      if (targetElement) {
+        const header = document.getElementById('main-navigation');
+        const headerHeight = header ? header.offsetHeight : 80;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 24;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 300);
+  }
 </script>
 <script src="./assets/js/auth-session.js"></script>
 
