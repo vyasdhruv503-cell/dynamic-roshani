@@ -23,3 +23,6 @@ leads_fallback.json
 # Operating System Files
 .DS_Store
 Thumbs.db
+
+# Nested clone directory
+dynamic-roshani/
