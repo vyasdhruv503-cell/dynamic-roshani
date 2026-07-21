@@ -87,36 +87,36 @@
 
   <!-- ================= HEADER / STICKY NAVBAR ================= -->
   <header id="main-navigation"
-    class="sticky top-0 z-50 transition-all duration-300 border-b border-slate-200/80 dark:border-slate-800/80 glass-light dark:glass-dark shadow-sm">
+    class="sticky top-0 z-50 transition-all duration-300 border-b border-slate-200/80 dark:border-slate-800/80 glass-header-light dark:glass-header-dark shadow-sm">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
-        <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
+        <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
           <img src="https://roshaninet.netlify.app/assets/RoshaniLogo2-removebg-preview-CBNwlsGI.png"
             alt="Roshani Technologies Logo"
             class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center gap-7">
+        <nav class="hidden lg:flex items-center gap-8">
           <a href="index.html"
-            class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Home</a>
-          <a href="about-us.html" class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">About Us</a>
+            class="text-sm font-semibold tracking-wide text-slate-700 dark:text-slate-200 hover:text-brandBlue dark:hover:text-brandBlue transition-colors">Home</a>
+          <a href="about-us.html" class="text-sm font-semibold tracking-wide text-slate-700 dark:text-slate-200 hover:text-brandBlue dark:hover:text-brandBlue transition-colors">About Us</a>
           <a href="all-courses.html"
-            class="inline-flex items-center justify-center px-4 py-1.5 border border-rose-600 text-rose-600 hover:bg-rose-600 hover:text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all hover:shadow-[0_0_15px_rgba(225,29,72,0.65)]">All Courses</a>
+            class="inline-flex items-center justify-center px-4 py-1.5 bg-gradient-to-r from-brandBlue to-brandPurple text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md shadow-brandBlue/20 hover:shadow-brandBlue/40 hover:-translate-y-0.5">All Courses</a>
           <a href="leadership.html"
-            class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Leadership</a>
+            class="text-sm font-semibold tracking-wide text-slate-700 dark:text-slate-200 hover:text-brandBlue dark:hover:text-brandBlue transition-colors">Leadership</a>
           <a href="partners.html"
-            class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Partners</a>
+            class="text-sm font-semibold tracking-wide text-slate-700 dark:text-slate-200 hover:text-brandBlue dark:hover:text-brandBlue transition-colors">Partners</a>
           <a href="contact.html"
-            class="text-sm font-semibold tracking-wide hover:text-brandBlue transition-colors">Contact</a>
+            class="text-sm font-semibold tracking-wide text-slate-700 dark:text-slate-200 hover:text-brandBlue dark:hover:text-brandBlue transition-colors">Contact</a>
         </nav>
 
         <!-- Actions (Theme Toggle + Mobile Menu Trigger) -->
         <div class="flex items-center gap-4">
           <!-- Dark Mode Toggle Button -->
           <button id="theme-toggle"
-            class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brandBlue transition-all cursor-pointer"
+            class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-brandBlue transition-all cursor-pointer shadow-sm"
             aria-label="Toggle dark mode">
             <!-- Sun Icon (for Dark Mode) -->
             <svg id="theme-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -134,11 +134,11 @@
           <!-- Sign In / Sign Up (Desktop) -->
           <div id="desktop-auth-buttons" class="hidden sm:flex items-center gap-3">
             <a href="login.html"
-              class="inline-flex items-center justify-center px-4 py-2.5 border border-slate-205 dark:border-slate-850 text-slate-700 dark:text-slate-202 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold text-xs uppercase tracking-wider rounded-xl transition-all">
+              class="inline-flex items-center justify-center px-4 py-2.5 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm">
               Sign In
             </a>
             <a href="signup.html"
-              class="inline-flex items-center justify-center px-4 py-2.5 bg-brandBlue hover:bg-brandBlue/90 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm hover:shadow hover:-translate-y-0.5">
+              class="inline-flex items-center justify-center px-4 py-2.5 bg-gradient-to-r from-brandBlue to-brandPurple hover:from-brandBlue/90 hover:to-brandPurple/90 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md shadow-brandBlue/20 hover:shadow-brandBlue/35 hover:-translate-y-0.5">
               Sign Up
             </a>
           </div>
